@@ -47,7 +47,7 @@ Research date: **October 14, 2026**. The 12 primary clothing references total **
 
 `verifiedLive` intentionally stays false: page observations are not a live inventory feed. `priceVerified` and `lastVerifiedAt` identify the six price observations; `lastCheckedAt` records the research attempt for every item. After new research, update both fields and the accompanying note. Product links serve as primary-source references. No affiliate tracking is added. Two optional Quince alternatives were confirmed in a real browser: a navy overshirt at $52 and a pale-blue Oxford at $42. Their prices are dated observations; comparing them does not change the primary-plan budget.
 
-Shopping artwork is original stylized SVG. Family and individual outfit views are clearly labeled AI-generated wardrobe visualizations, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Cormorant Garamond and Manrope are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
+Shopping artwork is original stylized SVG. Family and individual outfit views are clearly labeled AI-generated wardrobe visualizations, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Cormorant Garamond and Source Sans 3 are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
 
 ## Privacy
 
@@ -69,6 +69,10 @@ Original family photographs, names, children's ages, private reference materials
 `vercel.json` declares the requested build settings and basic security headers. This is a static, anchor-navigated site. Unknown routes correctly return 404 rather than masking missing assets with HTML. No Vercel CLI production deployment is part of this workflow.
 
 ## Local design review
+
+The interface typography and color system is centralized in `src/tokens.css`, with role mappings in `src/typography.css` and layout rules in `src/style.css`. Wardrobe palette colors remain in the content JSON. See `DESIGN.md` for the selected font weights, type scale, semantic colors and responsive treatment.
+
+For matching typography/color captures, run `TEST_BASE_URL=http://127.0.0.1:4173 CAPTURE_STAGE=before node scripts/capture-type-color.mjs` before changes and use `CAPTURE_STAGE=after` afterward. This captures four widths, every page section, computed text styles and loaded font resources in ignored `.qa/type-color/`. It does not alter public assets. The local October 14 review includes a three-direction comparison and before/after viewer at `.qa/type-color/index.html`; these review artifacts are not part of the deployed site. Regression tests cover readable hover/focus on the dark recommendation band and discernible native field boundaries.
 
 The normal development and production builds now display the approved image-rich studio. `npm run dev:private` opens the same studio at `http://127.0.0.1:5174/` with an additional link to the private design-comparison harness at `/__private/prototypes`. Mockups, original references and generation notes remain in ignored `.local-reference/` storage and are absent from fresh clones.
 

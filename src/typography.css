@@ -1,0 +1,367 @@
+/* One role system across all five concepts; layout lives in style.css. */
+@media screen {
+  /* Type roles. The layouts and image framing are inherited unchanged. */
+
+  html {
+    scrollbar-color: var(--control-border) var(--paper);
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--inverse);
+  }
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+  button:disabled {
+    opacity: 1;
+    color: var(--muted);
+  }
+  strong,
+  b {
+    font-weight: 600;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--serif);
+    font-weight: var(--display-weight);
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-heading);
+    text-wrap: balance;
+  }
+  h2 {
+    font-size: var(--type-section);
+  }
+  h3,
+  h4 {
+    font-size: var(--type-title);
+    line-height: var(--leading-title);
+  }
+  p {
+    font-size: var(--type-body);
+    line-height: var(--leading-body);
+    text-wrap: pretty;
+  }
+  em {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .eyebrow {
+    font: 600 var(--type-label)/var(--leading-ui) var(--sans);
+    letter-spacing: var(--tracking-label);
+  }
+  .small,
+  small {
+    font-size: var(--type-caption);
+    line-height: var(--leading-ui);
+  }
+  .wordmark {
+    font: var(--display-weight) 2.125rem/1 var(--serif);
+    letter-spacing: var(--tracking-heading);
+  }
+  .wordmark > span {
+    font: 600 var(--type-micro)/var(--leading-ui) var(--sans);
+    letter-spacing: 0.16em;
+  }
+  .masthead nav a {
+    font-size: var(--type-detail);
+  }
+  .edition {
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-label);
+  }
+  .nav-count {
+    font-size: var(--type-caption);
+    font-variant-numeric: tabular-nums;
+  }
+  .button,
+  .text-button,
+  .text-link,
+  .product-link,
+  .shop-filters button {
+    font-size: var(--type-ui);
+    font-weight: 600;
+    line-height: var(--leading-ui);
+  }
+  .text-link,
+  .product-link {
+    color: var(--accent);
+  }
+  .visual-studio .concept-switch button {
+    font: var(--display-weight) 1.25rem/var(--leading-title) var(--serif);
+  }
+  .visual-studio .concept-switch small {
+    font: 600 var(--type-micro)/1.3 var(--sans);
+    letter-spacing: 0.02em;
+  }
+  .visual-studio .concept-intro h1 {
+    font-size: var(--type-display);
+  }
+  .concept-deck {
+    font: italic 400 var(--type-deck)/1.4 var(--serif);
+  }
+  .intro-text {
+    font-size: var(--type-ui);
+    line-height: var(--leading-body);
+  }
+  .family-scene figcaption,
+  .illustration-note {
+    font-size: var(--type-caption);
+    line-height: var(--leading-body);
+  }
+  .visual-studio .palette button {
+    font-size: var(--type-detail);
+    line-height: var(--leading-ui);
+  }
+  .palette-note,
+  .palette-note .hex,
+  .palette-note small {
+    font-size: var(--type-caption);
+    line-height: var(--leading-ui);
+  }
+  .palette-note .hex {
+    font-variant-numeric: tabular-nums;
+  }
+  .board-heading > span {
+    font-size: var(--type-micro);
+    letter-spacing: 0.04em;
+    line-height: var(--leading-ui);
+  }
+  .outfit-name {
+    font: var(--display-weight) var(--type-member)/var(--leading-title)
+      var(--serif);
+  }
+  .outfit-name > span {
+    font: 400 var(--type-body)/1 var(--sans);
+  }
+  .visual-studio .outfit-texture {
+    font-size: var(--type-caption);
+    line-height: var(--leading-ui);
+  }
+  .outfit-detail h3 {
+    font-size: var(--type-title);
+  }
+  .outfit-detail p,
+  .styling-notes p,
+  .comparison p {
+    font-size: var(--type-ui);
+    line-height: var(--leading-body);
+  }
+  .member-study summary {
+    font-size: var(--type-ui);
+    font-weight: 600;
+  }
+  .member-study p,
+  .study-labels {
+    font-size: var(--type-caption);
+    line-height: var(--leading-ui);
+  }
+  .recommendation {
+    --muted: var(--inverse-muted);
+  }
+  .recommendation-seal {
+    font: var(--display-weight) var(--type-seal)/1 var(--serif);
+  }
+  .recommendation-seal span {
+    font: italic 400 var(--type-seal-ampersand)/1 var(--serif);
+  }
+  .recommendation h2 {
+    font-size: clamp(2.625rem, 4.2vw, 3.5rem);
+  }
+  .recommendation p {
+    font-size: var(--type-body);
+  }
+  .recommendation .rec-small {
+    font-size: var(--type-detail);
+  }
+  .recommendation .text-link {
+    color: var(--inverse);
+  }
+  .recommendation :focus-visible {
+    outline-color: var(--inverse);
+  }
+  .compare-select,
+  .checklist-heading label {
+    font-size: var(--type-detail);
+  }
+  .compare-select select,
+  .piece-status select,
+  .checklist-heading select {
+    font: 400 var(--type-body)/var(--leading-ui) var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .compare-number {
+    font: italic 400 var(--type-title)/1 var(--serif);
+  }
+  .compare-number {
+    background: var(--paper);
+    padding: 2px 5px;
+  }
+  .comparison h3 {
+    font-size: var(--type-title);
+  }
+  .shop-heading p {
+    font-size: var(--type-ui);
+  }
+  .budget strong {
+    font: var(--display-weight) clamp(3rem, 4.5vw, 3.75rem)/var(--leading-title)
+      var(--serif);
+    letter-spacing: var(--tracking-heading);
+  }
+  .budget > span:not(.eyebrow),
+  .budget small {
+    font-size: var(--type-caption);
+    line-height: var(--leading-body);
+  }
+  .budget strong,
+  .piece-price strong,
+  .product-title > span:last-child {
+    font-variant-numeric: tabular-nums;
+  }
+  .verification summary,
+  .product-verification summary,
+  .alternative summary,
+  .closet-disclosure summary {
+    font-size: var(--type-detail);
+    line-height: var(--leading-ui);
+  }
+  .verification p,
+  .product-verification p,
+  .alternative p {
+    font-size: var(--type-detail);
+  }
+  .product-person,
+  .image-shop-label {
+    font-size: var(--type-caption);
+    line-height: var(--leading-ui);
+  }
+  .product-image .priority {
+    font-size: var(--type-micro);
+    font-weight: 600;
+    letter-spacing: var(--tracking-label);
+    line-height: var(--leading-ui);
+  }
+  .product h3,
+  .piece-description > strong {
+    font: var(--display-weight) var(--type-product)/var(--leading-title)
+      var(--serif);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .product-title > span:last-child,
+  .piece-price strong {
+    font-size: var(--type-body);
+    font-weight: 600;
+    line-height: var(--leading-ui);
+  }
+  .product-name,
+  .product-color,
+  .piece-description > span,
+  .outfit-shop-heading > span {
+    font-size: var(--type-detail);
+    line-height: var(--leading-ui);
+  }
+  .rationale {
+    font-size: var(--type-detail);
+    line-height: var(--leading-body);
+  }
+  .price-status,
+  .product-verification,
+  .storage-note,
+  .piece-price small,
+  .alternative small {
+    font-size: var(--type-caption);
+    line-height: var(--leading-body);
+  }
+  .price-status {
+    color: var(--muted);
+  }
+  .price-status.observed {
+    color: var(--accent);
+  }
+  .shopping-caution,
+  .piece-description > .shopping-caution {
+    font-size: var(--type-caption);
+    font-weight: 600;
+    line-height: var(--leading-body);
+  }
+  .shopping-helper {
+    font-size: var(--type-ui);
+    line-height: var(--leading-body);
+  }
+  .closet-row strong {
+    font-size: var(--type-ui);
+    font-weight: 600;
+  }
+  .closet-row span,
+  .closet-row small {
+    font-size: var(--type-caption);
+    line-height: var(--leading-body);
+  }
+  .member-checklist h4 {
+    font: var(--display-weight) var(--type-title)/var(--leading-title)
+      var(--serif);
+  }
+  .checklist-empty {
+    font-size: var(--type-body);
+  }
+  .plan-number {
+    font: italic 400 var(--type-member)/var(--leading-title) var(--serif);
+  }
+  .plan-columns p,
+  .cost-options p {
+    font-size: var(--type-ui);
+    line-height: var(--leading-body);
+  }
+  .plan-columns .small {
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-label);
+  }
+  .cost-options strong {
+    font: var(--display-weight) 2.5rem/var(--leading-title) var(--serif);
+    font-variant-numeric: tabular-nums;
+  }
+  footer > span {
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-label);
+  }
+  footer > a:last-child {
+    font-size: var(--type-detail);
+  }
+  @media (max-width: 700px) {
+    .visual-studio .concept-switch button {
+      font-size: 1.125rem;
+    }
+    .visual-studio .concept-switch small {
+      font-size: var(--type-micro);
+    }
+    .visual-studio .concept-intro h1 {
+      font-size: clamp(2.25rem, 10vw, 2.625rem);
+    }
+    .product h3 {
+      font-size: var(--type-member);
+    }
+    .comparison h3 {
+      font-size: var(--type-product);
+    }
+    .product-title {
+      gap: 4px 8px;
+    }
+  }
+
+  .hero h1 {
+    font-size: var(--type-display);
+  }
+  .hero-copy > p,
+  .editor-note > p {
+    font-size: var(--type-body);
+  }
+  .art-script {
+    font-family: var(--serif);
+    font-style: italic;
+  }
+}

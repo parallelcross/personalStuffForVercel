@@ -2,7 +2,9 @@
 
 Garment SVG artwork and the social image are original to this project. No family or merchant photographs are included.
 
-Fontsource packages bundle **Cormorant Garamond** and **Manrope**. Both fonts use the SIL Open Font License 1.1. Their license texts and copyright notices are included in the installed packages and copied to `public/licenses/` for distribution with the website. Source packages: https://www.npmjs.com/package/@fontsource/cormorant-garamond and https://www.npmjs.com/package/@fontsource/manrope.
+Fontsource packages bundle **Cormorant Garamond** (500 normal, 400 italic) and **Source Sans 3** (400 and 600 normal). Both fonts use the SIL Open Font License 1.1. Their license texts and copyright notices are included in the installed packages and copied to `public/licenses/` for distribution with the website. Source packages: https://www.npmjs.com/package/@fontsource/cormorant-garamond and https://www.npmjs.com/package/@fontsource/source-sans-3. The site self-hosts the Latin font files; it makes no runtime request to a font service.
+
+The local typography comparison also rendered Bodoni Moda, Manrope and Newsreader. Those comparison assets are excluded from Git and the production build; they are not application dependencies.
 
 React, React DOM and Vite are used under their respective MIT licenses, available with the installed packages. Other tools listed in package.json are development-only and are not application services.
 

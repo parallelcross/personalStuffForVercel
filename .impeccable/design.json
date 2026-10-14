@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T21:48:06.604688+00:00",
+  "title": "Design System: Wear Family Photo Outfit Selection",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "canonical": "#faf8f3",
+        "tonalRamp": [
+          "oklch(15% 0.00695 88.64)",
+          "oklch(26% 0.00695 88.64)",
+          "oklch(38% 0.00695 88.64)",
+          "oklch(49% 0.00695 88.64)",
+          "oklch(61% 0.00695 88.64)",
+          "oklch(72% 0.00695 88.64)",
+          "oklch(84% 0.00695 88.64)",
+          "oklch(95% 0.00695 88.64)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Linen inset",
+        "canonical": "#f0ede5",
+        "tonalRamp": [
+          "oklch(15% 0.01113 89.72)",
+          "oklch(26% 0.01113 89.72)",
+          "oklch(38% 0.01113 89.72)",
+          "oklch(49% 0.01113 89.72)",
+          "oklch(61% 0.01113 89.72)",
+          "oklch(72% 0.01113 89.72)",
+          "oklch(84% 0.01113 89.72)",
+          "oklch(95% 0.01113 89.72)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#282923",
+        "tonalRamp": [
+          "oklch(15% 0.01083 114.79)",
+          "oklch(26% 0.01083 114.79)",
+          "oklch(38% 0.01083 114.79)",
+          "oklch(49% 0.01083 114.79)",
+          "oklch(61% 0.01083 114.79)",
+          "oklch(72% 0.01083 114.79)",
+          "oklch(84% 0.01083 114.79)",
+          "oklch(95% 0.01083 114.79)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Secondary ink",
+        "canonical": "#5e6259",
+        "tonalRamp": [
+          "oklch(15% 0.01491 126.60)",
+          "oklch(26% 0.01491 126.60)",
+          "oklch(38% 0.01491 126.60)",
+          "oklch(49% 0.01491 126.60)",
+          "oklch(61% 0.01491 126.60)",
+          "oklch(72% 0.01491 126.60)",
+          "oklch(84% 0.01491 126.60)",
+          "oklch(95% 0.01491 126.60)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Evergreen",
+        "canonical": "#384d40",
+        "tonalRamp": [
+          "oklch(15% 0.03410 157.29)",
+          "oklch(26% 0.03410 157.29)",
+          "oklch(38% 0.03410 157.29)",
+          "oklch(49% 0.03410 157.29)",
+          "oklch(61% 0.03410 157.29)",
+          "oklch(72% 0.03410 157.29)",
+          "oklch(84% 0.03410 157.29)",
+          "oklch(95% 0.03410 157.29)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Deep evergreen",
+        "canonical": "#263a2d",
+        "tonalRamp": [
+          "oklch(15% 0.03452 155.51)",
+          "oklch(26% 0.03452 155.51)",
+          "oklch(38% 0.03452 155.51)",
+          "oklch(49% 0.03452 155.51)",
+          "oklch(61% 0.03452 155.51)",
+          "oklch(72% 0.03452 155.51)",
+          "oklch(84% 0.03452 155.51)",
+          "oklch(95% 0.03452 155.51)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control edge",
+        "canonical": "#818579",
+        "tonalRamp": [
+          "oklch(15% 0.01833 121.98)",
+          "oklch(26% 0.01833 121.98)",
+          "oklch(38% 0.01833 121.98)",
+          "oklch(49% 0.01833 121.98)",
+          "oklch(61% 0.01833 121.98)",
+          "oklch(72% 0.01833 121.98)",
+          "oklch(84% 0.01833 121.98)",
+          "oklch(95% 0.01833 121.98)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Quiet rule",
+        "canonical": "#d3d1c7",
+        "tonalRamp": [
+          "oklch(15% 0.01378 97.47)",
+          "oklch(26% 0.01378 97.47)",
+          "oklch(38% 0.01378 97.47)",
+          "oklch(49% 0.01378 97.47)",
+          "oklch(61% 0.01378 97.47)",
+          "oklch(72% 0.01378 97.47)",
+          "oklch(84% 0.01378 97.47)",
+          "oklch(95% 0.01378 97.47)"
+        ]
+      },
+      "inverse": {
+        "role": "neutral",
+        "displayName": "Warm inverse",
+        "canonical": "#f7f4ec",
+        "tonalRamp": [
+          "oklch(15% 0.01107 89.72)",
+          "oklch(26% 0.01107 89.72)",
+          "oklch(38% 0.01107 89.72)",
+          "oklch(49% 0.01107 89.72)",
+          "oklch(61% 0.01107 89.72)",
+          "oklch(72% 0.01107 89.72)",
+          "oklch(84% 0.01107 89.72)",
+          "oklch(95% 0.01107 89.72)"
+        ]
+      },
+      "inverse-muted": {
+        "role": "neutral",
+        "displayName": "Inverse secondary",
+        "canonical": "#d4ddd2",
+        "tonalRamp": [
+          "oklch(15% 0.01772 140.02)",
+          "oklch(26% 0.01772 140.02)",
+          "oklch(38% 0.01772 140.02)",
+          "oklch(49% 0.01772 140.02)",
+          "oklch(61% 0.01772 140.02)",
+          "oklch(72% 0.01772 140.02)",
+          "oklch(84% 0.01772 140.02)",
+          "oklch(95% 0.01772 140.02)"
+        ]
+      },
+      "inverse-border": {
+        "role": "neutral",
+        "displayName": "Inverse edge",
+        "canonical": "#849086",
+        "tonalRamp": [
+          "oklch(15% 0.02023 150.38)",
+          "oklch(26% 0.02023 150.38)",
+          "oklch(38% 0.02023 150.38)",
+          "oklch(49% 0.02023 150.38)",
+          "oklch(61% 0.02023 150.38)",
+          "oklch(72% 0.02023 150.38)",
+          "oklch(84% 0.02023 150.38)",
+          "oklch(95% 0.02023 150.38)"
+        ]
+      },
+      "attention": {
+        "role": "secondary",
+        "displayName": "Clay caution",
+        "canonical": "#7b4133",
+        "tonalRamp": [
+          "oklch(15% 0.08396 34.58)",
+          "oklch(26% 0.08396 34.58)",
+          "oklch(38% 0.08396 34.58)",
+          "oklch(49% 0.08396 34.58)",
+          "oklch(61% 0.08396 34.58)",
+          "oklch(72% 0.08396 34.58)",
+          "oklch(84% 0.08396 34.58)",
+          "oklch(95% 0.08396 34.58)"
+        ]
+      },
+      "hover": {
+        "role": "primary",
+        "displayName": "Quiet green wash",
+        "canonical": "#eef1e9",
+        "tonalRamp": [
+          "oklch(15% 0.01106 123.46)",
+          "oklch(26% 0.01106 123.46)",
+          "oklch(38% 0.01106 123.46)",
+          "oklch(49% 0.01106 123.46)",
+          "oklch(61% 0.01106 123.46)",
+          "oklch(72% 0.01106 123.46)",
+          "oklch(84% 0.01106 123.46)",
+          "oklch(95% 0.01106 123.46)"
+        ]
+      },
+      "selected": {
+        "role": "primary",
+        "displayName": "Selected wash",
+        "canonical": "#e6ece4",
+        "tonalRamp": [
+          "oklch(15% 0.01241 137.79)",
+          "oklch(26% 0.01241 137.79)",
+          "oklch(38% 0.01241 137.79)",
+          "oklch(49% 0.01241 137.79)",
+          "oklch(61% 0.01241 137.79)",
+          "oklch(72% 0.01241 137.79)",
+          "oklch(84% 0.01241 137.79)",
+          "oklch(95% 0.01241 137.79)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Concept and fallback hero heading."
+      },
+      "display-mobile": {
+        "displayName": "Display Mobile",
+        "purpose": "Concept heading only at screen widths ≤700px."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "recommendation-heading": {
+        "displayName": "Recommendation Heading",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "comparison-title-mobile": {
+        "displayName": "Comparison Title Mobile",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "product": {
+        "displayName": "Product",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "product-mobile": {
+        "displayName": "Product Mobile",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "member": {
+        "displayName": "Member",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "deck": {
+        "displayName": "Deck",
+        "purpose": "Concept deck; font-style: italic."
+      },
+      "concept": {
+        "displayName": "Concept",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "concept-mobile": {
+        "displayName": "Concept Mobile",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "ui-body": {
+        "displayName": "Ui Body",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "detail": {
+        "displayName": "Detail",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "detail-body": {
+        "displayName": "Detail Body",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "caption-body": {
+        "displayName": "Caption Body",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "caution": {
+        "displayName": "Caution",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Existing edition and footer text."
+      },
+      "micro-caption": {
+        "displayName": "Micro Caption",
+        "purpose": "Existing compact preparation notes."
+      },
+      "micro-board": {
+        "displayName": "Micro Board",
+        "purpose": "Existing compact board metadata."
+      },
+      "micro-concept": {
+        "displayName": "Micro Concept",
+        "purpose": "Existing compact concept subtitles."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "wordmark-caption": {
+        "displayName": "Wordmark Caption",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "budget": {
+        "displayName": "Budget",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "cost": {
+        "displayName": "Cost",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "seal": {
+        "displayName": "Seal",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "seal-mobile": {
+        "displayName": "Seal Mobile",
+        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      },
+      "seal-ampersand": {
+        "displayName": "Seal Ampersand",
+        "purpose": "Recommendation ampersand; font-style: italic."
+      },
+      "seal-ampersand-mobile": {
+        "displayName": "Seal Ampersand Mobile",
+        "purpose": "Recommendation ampersand at ≤700px; font-style: italic."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selection-underline",
+        "value": "inset 0 -2px var(--ink)",
+        "purpose": "Persistent selected concept and portrait indication."
+      },
+      {
+        "name": "completed-product",
+        "value": "inset 0 0 0 1px var(--accent)",
+        "purpose": "Completed product illustration boundary."
+      },
+      {
+        "name": "shopping-garment",
+        "value": "drop-shadow(3px 5px 3px #34362b22)",
+        "purpose": "Existing shopping illustration depth; not a card-elevation rule."
+      }
+    ],
+    "motion": [
+      {
+        "name": "concept-switch",
+        "value": "none",
+        "purpose": "Immediate concept switches; intro and outfit-detail animation disabled."
+      },
+      {
+        "name": "outfit-hover",
+        "value": "background 180ms",
+        "purpose": "Existing fine-pointer portrait-hover background transition."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.98)",
+        "purpose": "Buttons and filled link actions while pressed; disabled under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Global reduced-motion response."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "studio-small",
+        "value": "600px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "scene-stack",
+        "value": "900px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark action",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Filled action retained by the fallback hero.",
+      "html": "<a class=\"ds-dark\" href=\"#lookbook\">Explore the looks</a>",
+      "css": ".ds-dark{display:inline-flex;align-items:center;min-height:48px;padding:15px 22px;background:var(--ink);color:var(--paper);text-decoration:none;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-dark:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-dark:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-dark:hover{background:var(--accent-hover)}}@media(prefers-reduced-motion:reduce){.ds-dark:active{transform:none}}"
+    },
+    {
+      "name": "Text button",
+      "kind": "button",
+      "refersTo": "text-button",
+      "description": "Underlined actions for outfit shopping and plan utilities.",
+      "html": "<button class=\"ds-text-button\">Print plan</button>",
+      "css": ".ds-text-button{background:none;color:var(--ink);border:0;border-bottom:1px solid;padding:10px 0;min-height:44px;white-space:nowrap;cursor:pointer;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-text-button:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-text-button:active:not(:disabled){transform:scale(.98)}.ds-text-button:disabled{color:var(--muted);opacity:1;cursor:default}@media(prefers-reduced-motion:reduce){.ds-text-button:active{transform:none}}"
+    },
+    {
+      "name": "Text link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Evergreen editorial action with an underline.",
+      "html": "<a class=\"ds-link\" href=\"#shop\">Shop the look</a>",
+      "css": ".ds-link{display:inline-block;padding:7px 0;min-height:36px;color:var(--accent);text-decoration:none;border-bottom:1px solid;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-link:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}@media(hover:hover) and (pointer:fine){.ds-link:hover{color:var(--accent-hover)}}"
+    },
+    {
+      "name": "Shopping filter",
+      "kind": "chip",
+      "refersTo": "shopping-filter",
+      "description": "A square text filter with a persistent selected edge.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">Everyone</button>",
+      "css": ".ds-filter{background:none;color:var(--ink);border:1px solid transparent;padding:10px 13px;min-height:44px;cursor:pointer;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-filter[aria-pressed=\"true\"]{border-color:var(--accent)}.ds-filter:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-filter:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-filter:hover{border-color:var(--control-border)}}@media(max-width:1100px){.ds-filter{padding:9px}}@media(max-width:700px){.ds-filter{padding:8px 10px}}@media(prefers-reduced-motion:reduce){.ds-filter:active{transform:none}}"
+    },
+    {
+      "name": "Status select",
+      "kind": "input",
+      "refersTo": "status-select",
+      "description": "Native shopping status control.",
+      "html": "<select class=\"ds-select\" aria-label=\"Item status\"><option>Need</option><option>Already own</option><option>Purchased</option></select>",
+      "css": ".ds-select{width:100%;min-height:44px;padding:8px 24px 8px 10px;border:1px solid var(--control-border);border-radius:0;background:var(--paper);color:var(--ink);font:400 var(--type-body)/var(--leading-ui) var(--sans)}.ds-select:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}"
+    },
+    {
+      "name": "Concept navigation",
+      "kind": "nav",
+      "refersTo": "concept-navigation",
+      "description": "Immediate concept choice with a persistent ink underline.",
+      "html": "<nav class=\"ds-concepts\" aria-label=\"Wardrobe concepts\"><button class=\"ds-concept\" aria-pressed=\"true\">Hill Country Heritage<small class=\"ds-concept-small\">THE RECOMMENDED LOOK</small></button><button class=\"ds-concept\" aria-pressed=\"false\">Texas Organic</button></nav>",
+      "css": ".ds-concepts{display:flex;border-block:1px solid var(--line)}.ds-concept{flex:1;min-width:0;min-height:56px;padding:12px 16px;text-align:left;background:none;color:var(--ink);border:0;font:var(--display-weight) 1.25rem/var(--leading-title) var(--serif);cursor:pointer;transition:none}.ds-concept[aria-pressed=\"true\"]{box-shadow:inset 0 -2px var(--ink)}.ds-concept-small{display:block;margin-top:7px;font:600 var(--type-micro)/1.3 var(--sans);letter-spacing:.02em}.ds-concept:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-concept:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-concept:not([aria-pressed=\"true\"]):hover{background:var(--hover)}}@media(max-width:700px){.ds-concept{font-size:1.125rem}}@media(max-width:600px){.ds-concept{padding:12px 8px}}@media(prefers-reduced-motion:reduce){.ds-concept:active{transform:none}}"
+    },
+    {
+      "name": "Palette choice",
+      "kind": "chip",
+      "refersTo": "palette-choice",
+      "description": "Named content swatch with a contrasting selected dot; sample uses a neutral interface value only.",
+      "html": "<button class=\"ds-palette\" aria-pressed=\"true\"><span class=\"ds-swatch\"><span class=\"ds-dot\"></span></span>Color name</button>",
+      "css": ".ds-palette{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;min-height:44px;background:none;color:var(--ink);border:0;padding:0;text-align:left;font:400 var(--type-detail)/var(--leading-ui) var(--sans);cursor:pointer}.ds-swatch{display:flex;width:48px;height:40px;align-items:center;justify-content:center;background:var(--surface)}.ds-dot{width:10px;height:10px;border:2px solid var(--ink);border-radius:50%;outline:1px solid var(--paper);background:var(--paper)}.ds-palette:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-palette:active{transform:scale(.98)}@media(prefers-reduced-motion:reduce){.ds-palette:active{transform:none}}"
+    },
+    {
+      "name": "Product text stack",
+      "kind": "card",
+      "refersTo": "product",
+      "description": "Open product text hierarchy; no invented image or price.",
+      "html": "<article class=\"ds-product\"><h3 class=\"ds-product-title\">Outfit piece</h3><p class=\"ds-product-name\">Retailer description</p><small class=\"ds-product-status\">Unverified reference</small><a class=\"ds-product-link\" href=\"#shop\">View shopping details</a></article>",
+      "css": ".ds-product{display:flex;flex-direction:column;min-width:0;color:var(--ink);font-family:var(--sans)}.ds-product-title{margin:5px 0 0;font:var(--display-weight) var(--type-product)/var(--leading-title) var(--serif);letter-spacing:-.01em;text-wrap:balance}.ds-product-name{margin:7px 0 0;min-height:35px;color:var(--muted);font:400 var(--type-detail)/var(--leading-ui) var(--sans)}.ds-product-status{color:var(--muted);font:400 var(--type-caption)/var(--leading-body) var(--sans)}.ds-product-link{display:flex;min-height:44px;border-top:1px solid var(--line);padding:13px 0 5px;color:var(--accent);text-decoration:none;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-product-link:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}@media(hover:hover) and (pointer:fine){.ds-product-link:hover{color:var(--accent-hover)}}@media(max-width:700px){.ds-product-title{font-size:var(--type-member)}.ds-product-name{min-height:50px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Quiet editorial spread",
+    "overview": "The wardrobe studio pairs a quiet editorial spread with a catalog-style six-person outfit board. Warm paper, expressive serif titles, practical sans-serif details and restrained rules let the approved family imagery carry the visual richness. The five wardrobe concepts keep distinct clothing palettes within one consistent interface.\n\nThe original composition studies established the editorial family view and direct individual selection. Surrounding garments from the rejected stylist-board study competed with faces and required too much rearrangement on phones. Preserve the complete family image without cropping; separately framed individual studies are not a scale chart.",
+    "keyCharacteristics": [
+      "Image-led editorial composition with open paper fields.",
+      "Substantial serif names and clear sans-serif shopping details.",
+      "Quiet boundaries, persistent selection and immediate concept switching."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** preserve the five concepts, six individualized outfits per concept, existing section order, responsive grids and image framing.",
+      "**Do** use the interface tokens independently from the wardrobe palette values in structured content.",
+      "**Do** label generated images as approximate AI wardrobe visualizations and preserve complete family framing.",
+      "**Do** keep concept switches immediate, selection persistent, visible keyboard focus and global reduced-motion support.",
+      "**Do** preserve shopping facts, verification limits, safe external-link attributes and accessible labels.",
+      "**Do** keep original photos and design mockups private; only the reviewed generated copies recorded in `content/published-assets.json` may be public."
+    ],
+    "donts": [
+      "**Don't** reintroduce Manrope or synthesize missing font weights/styles.",
+      "**Don't** use the subtle divider color as a substitute for a meaningful control boundary.",
+      "**Don't** indicate selection with color alone or crossfade family images into double-exposed faces.",
+      "**Don't** import, embed, hotlink, log, commit or deploy private original photos or reference HTML containing them.",
+      "**Don't** publish new imagery without separate approval; an approved public website copy is public.",
+      "**Don't** push, create a repository or deploy without the user's explicit instruction and review of what will be public."
+    ]
+  }
+}
