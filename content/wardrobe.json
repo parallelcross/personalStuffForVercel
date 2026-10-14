@@ -1,0 +1,622 @@
+{
+  "lastReferenceReview": "2026-10-14",
+  "priceDisclaimer": "Planning prices in USD, checked October 14, 2026. Only explicitly marked prices were observed on retailer pages; all others are original reference estimates. Taxes, delivery, shoes and accessories excluded. Verify color, size, price and stock before buying.",
+  "recommendedConceptId": "heritage",
+  "family": [
+    "Dad",
+    "Mom",
+    "Eldest son",
+    "Daughter",
+    "Middle son",
+    "Youngest son"
+  ],
+  "concepts": [
+    {
+      "id": "heritage",
+      "title": "Hill Country Heritage",
+      "label": "Stylist's pick",
+      "tagline": "Refined Americana, relaxed for Austin",
+      "palette": [
+        {
+          "name": "Ink navy",
+          "hex": "#263247"
+        },
+        {
+          "name": "Warm cream",
+          "hex": "#F0E5D4"
+        },
+        {
+          "name": "Olive",
+          "hex": "#65705A"
+        },
+        {
+          "name": "Wine",
+          "hex": "#793B49"
+        },
+        {
+          "name": "Brick",
+          "hex": "#9A5945"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#40586A"
+        },
+        {
+          "name": "Sandstone/cognac",
+          "hex": "#B99873"
+        }
+      ],
+      "location": "Golden grass, limestone and mature oaks at golden hour",
+      "why": "Navy and wine anchor the parents; green, indigo and brick add diagonal color repetition across the kids without matching.",
+      "textures": [
+        "cotton twill",
+        "cable-knit cotton",
+        "silk",
+        "Oxford cotton",
+        "denim",
+        "corduroy",
+        "suede"
+      ],
+      "members": [
+        {
+          "name": "Dad",
+          "outfit": "Open ink-navy chore jacket, cream textured knit polo, sandstone chinos",
+          "shoes": "Dark-brown suede chukkas",
+          "accessories": "Brown leather belt",
+          "topColor": "#263247",
+          "bottomColor": "#b99873",
+          "texture": "Cotton twill + textured knit",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "polo"
+        },
+        {
+          "name": "Mom",
+          "outfit": "Deep wine midi dress",
+          "shoes": "Cognac low-heeled ankle boots or flats",
+          "accessories": "Understated gold hoops and fine necklace",
+          "topColor": "#793b49",
+          "bottomColor": "#793b49",
+          "texture": "Fluid silk",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Eldest son",
+          "outfit": "Light-blue Oxford, olive chinos",
+          "shoes": "Clean off-white sneakers",
+          "accessories": "Brown belt if needed",
+          "topColor": "#aec0cb",
+          "bottomColor": "#65705a",
+          "texture": "Oxford cotton",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Daughter",
+          "outfit": "Cream blouse, medium-indigo denim midi skirt",
+          "shoes": "Cognac loafers or ankle boots",
+          "accessories": "Small gold earrings",
+          "topColor": "#f0e5d4",
+          "bottomColor": "#40586a",
+          "texture": "Cotton lace + denim",
+          "shape": "skirt",
+          "layer": false,
+          "topKind": "blouse"
+        },
+        {
+          "name": "Middle son",
+          "outfit": "Quarry/forest-green cable-knit sweater polo, sandstone corduroys",
+          "shoes": "Brown casual suede shoes",
+          "accessories": "None",
+          "topColor": "#65705a",
+          "bottomColor": "#b99873",
+          "texture": "Cable knit + corduroy",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "polo"
+        },
+        {
+          "name": "Youngest son",
+          "outfit": "Muted brick cotton Henley, dark brown/olive chinos",
+          "shoes": "Taupe or brown casual sneakers",
+          "accessories": "None",
+          "topColor": "#9a5945",
+          "bottomColor": "#494a3a",
+          "texture": "Slub cotton",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "henley"
+        }
+      ]
+    },
+    {
+      "id": "organic",
+      "title": "Texas Organic",
+      "label": "Earthy + easy",
+      "tagline": "Soft textures and Hill Country warmth",
+      "palette": [
+        {
+          "name": "Terracotta",
+          "hex": "#A5634A"
+        },
+        {
+          "name": "Sage",
+          "hex": "#79806B"
+        },
+        {
+          "name": "Dusty blue",
+          "hex": "#718996"
+        },
+        {
+          "name": "Oatmeal",
+          "hex": "#D5C8B3"
+        },
+        {
+          "name": "Chocolate",
+          "hex": "#594137"
+        },
+        {
+          "name": "Cream",
+          "hex": "#EEE6D8"
+        },
+        {
+          "name": "Tobacco",
+          "hex": "#9B7252"
+        }
+      ],
+      "location": "Tall golden grass with warm sunlight and gentle distance blur",
+      "why": "Linen and gauze make a softer, more nature-forward story; deeper trousers prevent the family from washing into a beige background.",
+      "textures": [
+        "linen",
+        "cotton gauze",
+        "slub cotton",
+        "soft jersey",
+        "washed canvas",
+        "suede"
+      ],
+      "members": [
+        {
+          "name": "Dad",
+          "outfit": "Dusty-blue linen shirt, tobacco five-pocket trousers",
+          "shoes": "Brown suede loafers",
+          "accessories": "Simple brown belt",
+          "topColor": "#718996",
+          "bottomColor": "#9b7252",
+          "texture": "Washed linen",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Mom",
+          "outfit": "Clay/terracotta cotton-gauze midi dress",
+          "shoes": "Tan leather sandals or ankle boots",
+          "accessories": "Subtle gold earrings",
+          "topColor": "#a5634a",
+          "bottomColor": "#a5634a",
+          "texture": "Cotton gauze",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Eldest son",
+          "outfit": "Oatmeal knit polo, chocolate chinos",
+          "shoes": "Cream sneakers",
+          "accessories": "None",
+          "topColor": "#d5c8b3",
+          "bottomColor": "#594137",
+          "texture": "Soft knit",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "polo"
+        },
+        {
+          "name": "Daughter",
+          "outfit": "Muted dusty-blue midi dress",
+          "shoes": "Cognac ankle boots",
+          "accessories": "Small earrings",
+          "topColor": "#718996",
+          "bottomColor": "#718996",
+          "texture": "Matte cotton",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Middle son",
+          "outfit": "Sage cotton overshirt over an ecru tee, tan trousers",
+          "shoes": "Taupe sneakers",
+          "accessories": "None",
+          "topColor": "#79806b",
+          "bottomColor": "#b99873",
+          "texture": "Cotton layers",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "henley"
+        },
+        {
+          "name": "Youngest son",
+          "outfit": "Faded clay/rust Henley, dark indigo trousers or jeans",
+          "shoes": "Brown casual shoes",
+          "accessories": "None",
+          "topColor": "#a5634a",
+          "bottomColor": "#263247",
+          "texture": "Slub cotton",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "henley"
+        }
+      ]
+    },
+    {
+      "id": "editorial",
+      "title": "Austin Editorial",
+      "label": "Clean + modern",
+      "tagline": "Modern classics against restrained architecture",
+      "palette": [
+        {
+          "name": "Ink navy",
+          "hex": "#242C3B"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#444548"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#EEE7D9"
+        },
+        {
+          "name": "Oxblood",
+          "hex": "#713944"
+        },
+        {
+          "name": "Steel blue",
+          "hex": "#637989"
+        },
+        {
+          "name": "Camel",
+          "hex": "#B08B61"
+        },
+        {
+          "name": "Espresso",
+          "hex": "#49372E"
+        }
+      ],
+      "location": "Limestone architecture, simple urban courtyard or neutral studio",
+      "why": "A cleaner, sharper silhouette story that pops against pale stone. More formal and fashion-led than the other two.",
+      "textures": [
+        "fine-gauge knit",
+        "cotton poplin",
+        "soft tailoring",
+        "matte crepe",
+        "smooth leather",
+        "suede"
+      ],
+      "members": [
+        {
+          "name": "Dad",
+          "outfit": "Ecru knit polo, charcoal unstructured overshirt, navy trousers",
+          "shoes": "Brown loafers",
+          "accessories": "Simple watch",
+          "topColor": "#444548",
+          "bottomColor": "#242c3b",
+          "texture": "Fine knit + soft tailoring",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "polo"
+        },
+        {
+          "name": "Mom",
+          "outfit": "Clean dark-navy midi dress",
+          "shoes": "Oxblood or cognac flats",
+          "accessories": "Sculptural gold earrings",
+          "topColor": "#242c3b",
+          "bottomColor": "#242c3b",
+          "texture": "Matte crepe",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Eldest son",
+          "outfit": "Steel-blue knit polo, charcoal trousers",
+          "shoes": "Ivory sneakers",
+          "accessories": "None",
+          "topColor": "#637989",
+          "bottomColor": "#444548",
+          "texture": "Fine-gauge knit",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "polo"
+        },
+        {
+          "name": "Daughter",
+          "outfit": "Ivory blouse, camel A-line skirt, optional oxblood cardigan",
+          "shoes": "Brown loafers",
+          "accessories": "Small gold earrings",
+          "topColor": "#eee7d9",
+          "bottomColor": "#b08b61",
+          "texture": "Cotton poplin",
+          "shape": "skirt",
+          "layer": false,
+          "topKind": "blouse"
+        },
+        {
+          "name": "Middle son",
+          "outfit": "Ecru polo, navy chinos",
+          "shoes": "Suede sneakers",
+          "accessories": "None",
+          "topColor": "#eee7d9",
+          "bottomColor": "#242c3b",
+          "texture": "Smooth cotton",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "polo"
+        },
+        {
+          "name": "Youngest son",
+          "outfit": "Camel overshirt over soft white tee, espresso trousers",
+          "shoes": "Neutral sneakers",
+          "accessories": "None",
+          "topColor": "#b08b61",
+          "bottomColor": "#49372e",
+          "texture": "Soft twill",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "henley"
+        }
+      ]
+    }
+  ],
+  "shopping": [
+    {
+      "member": "Dad",
+      "item": "Navy chore jacket",
+      "store": "Quince",
+      "product": "Organic Comfort Stretch Chore Jacket",
+      "color": "Navy",
+      "referencePriceUsd": 62,
+      "url": "https://www.quince.com/men/organic-stretch-chore-jacket?color=navy",
+      "stylistRationale": "The dark structured anchor; open to reveal lighter cream underneath.",
+      "verifiedLive": false,
+      "id": "piece-1",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product, Navy color and $62 price observed. Confirm size stock with retailer.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
+      "linkStatus": "page-observed",
+      "buyFirst": true,
+      "kind": "jacket",
+      "illustrationColor": "#263247"
+    },
+    {
+      "member": "Dad",
+      "item": "Textured polo",
+      "store": "H&M",
+      "product": "Regular Fit Textured-Knit Polo",
+      "color": "White / warm white",
+      "referencePriceUsd": 44.99,
+      "url": "https://www2.hm.com/en_us/productpage.1238964006.html",
+      "stylistRationale": "Texture lightens the jacket without a graphic or logo.",
+      "verifiedLive": false,
+      "id": "piece-2",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product, White color and $44.99 price observed. Confirm size stock with retailer.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
+      "linkStatus": "page-observed",
+      "buyFirst": false,
+      "kind": "polo",
+      "illustrationColor": "#f0e5d4"
+    },
+    {
+      "member": "Dad",
+      "item": "Sandstone trousers",
+      "store": "Quince",
+      "product": "Ultra-Stretch 24/7 Smart Chinos",
+      "color": "Sand Dune",
+      "referencePriceUsd": 60,
+      "url": "https://www.quince.com/men/performance-lounge-trouser?color=sand-dune",
+      "stylistRationale": "Warm stone grounds the navy and harmonizes with landscape.",
+      "verifiedLive": false,
+      "id": "piece-3",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located; current price and Sand Dune availability could not be confirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": false,
+      "kind": "trousers",
+      "illustrationColor": "#b99873"
+    },
+    {
+      "member": "Mom",
+      "item": "Midi dress",
+      "store": "Quince",
+      "product": "Washable Stretch Silk Tank Midi Dress",
+      "color": "Wine Tasting Red",
+      "referencePriceUsd": 79.9,
+      "url": "https://www.quince.com/women/-washable-stretch-silk-tank-midi-dress?color=wine-tasting-red",
+      "stylistRationale": "The rich, soft-textured family color anchor.",
+      "verifiedLive": false,
+      "id": "piece-4",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product, Wine Tasting Red color and $79.90 price observed. Confirm size stock with retailer.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
+      "linkStatus": "page-observed",
+      "buyFirst": true,
+      "kind": "dress",
+      "illustrationColor": "#793b49"
+    },
+    {
+      "member": "Eldest son",
+      "item": "Oxford shirt",
+      "store": "J.Crew Factory",
+      "product": "Classic-Fit Everyday Oxford",
+      "color": "Light Blue Cross Dye",
+      "referencePriceUsd": 49,
+      "url": "https://factory.jcrew.com/p/mens/categories/clothing/shirts/oxford-shirts/classic-fit-everyday-oxford-shirt/CQ736",
+      "stylistRationale": "Pale blue bridges the deep navy and cream; works in sibling photos.",
+      "verifiedLive": false,
+      "id": "piece-5",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located; the page showed a different color. Confirm Light Blue Cross Dye and price.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": false,
+      "kind": "shirt",
+      "illustrationColor": "#aec0cb"
+    },
+    {
+      "member": "Eldest son",
+      "item": "Chinos",
+      "store": "J.Crew Factory",
+      "product": "Slim-Fit Original Chino",
+      "color": "Catskill Green",
+      "referencePriceUsd": 49.95,
+      "url": "https://factory.jcrew.com/m/mens/categories/clothing/pants-and-khakis/slim/slim-fit-original-chino-pant/MF988",
+      "stylistRationale": "The olive gives the oldest son his own color story.",
+      "verifiedLive": false,
+      "id": "piece-6",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located; Catskill Green and current price could not be confirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": false,
+      "kind": "trousers",
+      "illustrationColor": "#65705a"
+    },
+    {
+      "member": "Daughter",
+      "item": "Blouse",
+      "store": "Abercrombie",
+      "product": "100% Cotton Lace-Trim Button-Through Blouse",
+      "color": "Cream",
+      "referencePriceUsd": 80,
+      "url": "https://www.abercrombie.com/shop/us/p/lace-trim-button-through-blouse-62161320",
+      "stylistRationale": "Tonal detail brings texture without a busy print.",
+      "verifiedLive": false,
+      "id": "piece-7",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located with a regional redirect; US price and Cream availability unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": true,
+      "kind": "blouse",
+      "illustrationColor": "#f0e5d4"
+    },
+    {
+      "member": "Daughter",
+      "item": "Midi skirt",
+      "store": "Abercrombie",
+      "product": "Linen-Blend Denim Midi Skirt",
+      "color": "Medium Denim",
+      "referencePriceUsd": 39.99,
+      "url": "https://www.abercrombie.com/shop/us/p/linen-blend-denim-midi-skirt-63716825",
+      "stylistRationale": "The single denim bottom keeps her youthful and distinct.",
+      "verifiedLive": false,
+      "id": "piece-8",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located; current US price and Medium Denim availability unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": true,
+      "kind": "skirt",
+      "illustrationColor": "#40586a"
+    },
+    {
+      "member": "Middle son",
+      "item": "Sweater polo",
+      "store": "J.Crew Factory",
+      "product": "Boys\u2019 100% Cotton Cable-Knit Sweater Polo",
+      "color": "Quarry Green",
+      "referencePriceUsd": 39.5,
+      "url": "https://factory.jcrew.com/p/boys/categories/clothing/sweatshirts-and-sweaters/sweaters/boys-100-cotton-cable-knit-sweater-polo/CV470",
+      "stylistRationale": "Fall-worthy texture without a heavy jacket.",
+      "verifiedLive": false,
+      "id": "piece-9",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product and Quarry Green observed; current price and size stock unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": true,
+      "kind": "polo",
+      "illustrationColor": "#65705a"
+    },
+    {
+      "member": "Middle son",
+      "item": "Corduroys",
+      "store": "J.Crew Factory",
+      "product": "Boys\u2019 Slim Flex Corduroy Pant",
+      "color": "Vintage Sandstone",
+      "referencePriceUsd": 35,
+      "url": "https://factory.jcrew.com/p/boys/categories/clothing/pants/cord/J4274",
+      "stylistRationale": "Sandstone corduroy provides depth and variation.",
+      "verifiedLive": false,
+      "id": "piece-10",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Merchant search result found; product page could not be retrieved. Color, price and stock unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "search-only",
+      "buyFirst": false,
+      "kind": "trousers",
+      "illustrationColor": "#b99873"
+    },
+    {
+      "member": "Youngest son",
+      "item": "Cotton Henley",
+      "store": "J.Crew Factory",
+      "product": "Boys\u2019 100% Cotton Henley Tee",
+      "color": "Aztec Brick",
+      "referencePriceUsd": 12.95,
+      "url": "https://factory.jcrew.com/m/boys/categories/clothing/tees-and-polos/long-sleeve/boys-100-cotton-henley-tee/MF437?colorProductCode=BT291&color_name=aztec-brick&display=standard&fit=Classic",
+      "stylistRationale": "Brick adds a small lively accent without a bright print.",
+      "verifiedLive": false,
+      "id": "piece-11",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Merchant search result confirms Aztec Brick; current price and size stock unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "search-only",
+      "buyFirst": true,
+      "kind": "henley",
+      "illustrationColor": "#9a5945"
+    },
+    {
+      "member": "Youngest son",
+      "item": "Chinos",
+      "store": "J.Crew Factory",
+      "product": "Boys\u2019 Slim-Fit Tech Chino",
+      "color": "Dark Trout",
+      "referencePriceUsd": 34.5,
+      "url": "https://factory.jcrew.com/p/boys/categories/clothing/pants/khakis/boys-slim-fit-tech-chino-pant/CB985",
+      "stylistRationale": "Very dark olive-brown balances the warm brick top.",
+      "verifiedLive": false,
+      "id": "piece-12",
+      "lastCheckedAt": "2026-10-14",
+      "verificationNote": "Product page located; Dark Trout and current price unconfirmed.",
+      "lastVerifiedAt": null,
+      "priceVerified": false,
+      "linkStatus": "page-observed",
+      "buyFirst": false,
+      "kind": "trousers",
+      "illustrationColor": "#494a3a"
+    }
+  ],
+  "estimatedTotals": {
+    "allPrimaryClothingUsdApprox": [590, 605],
+    "closetAndLowerCostUsdApprox": [315, 325]
+  }
+}

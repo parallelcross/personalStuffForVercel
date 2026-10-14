@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+.local-reference/
+# The family's original photo is NOT included in the public starter.
+# If explicitly approved for publication, use a deliberate /public/images/... asset.
+*.tsbuildinfo
+test-results/
+playwright-report/
+.qa/
+*.zip
+*.pem
+*.key
+.agents/
+.codex/
+# Original brief is retained locally; public content lives in sanitized JSON.
+CODEX_PROMPT.md
