@@ -1,4 +1,11 @@
 import { useState } from "react";
+import {
+  FamilyScene,
+  MemberPortrait,
+  MemberStudy,
+  privatePreview,
+  showVisualizations,
+} from "./FamilyScene";
 import data from "../content/wardrobe.json";
 import { Garment, Outfit } from "./Garment";
 const money = (n: number) =>
@@ -30,13 +37,20 @@ function readChecked(): string[] {
   }
 }
 export default function App() {
-  const [conceptIndex, setConceptIndex] = useState(0);
+  const [conceptIndex, setConceptIndex] = useState(() => {
+    const id = new URLSearchParams(location.search).get("concept");
+    return Math.max(
+      0,
+      data.concepts.findIndex((c) => c.id === id),
+    );
+  });
   const [memberIndex, setMemberIndex] = useState(0);
   const [colorIndex, setColorIndex] = useState(0);
   const [compareMember, setCompareMember] = useState(0);
   const [filter, setFilter] = useState("All");
   const [checked, setChecked] = useState<string[]>(readChecked);
   const [notice, setNotice] = useState("");
+  const [resetBackup, setResetBackup] = useState<string[] | null>(null);
   const [storageError, setStorageError] = useState(false);
   const concept = data.concepts[conceptIndex],
     member = concept.members[memberIndex];
@@ -54,6 +68,9 @@ export default function App() {
     .reduce((s, p) => s + p.referencePriceUsd, 0);
   const chooseConcept = (i: number) => {
     setConceptIndex(i);
+    const url = new URL(location.href);
+    url.searchParams.set("concept", data.concepts[i].id);
+    history.replaceState(null, "", url);
     setColorIndex(0);
   };
   const toggle = (id: string) =>
@@ -89,7 +106,16 @@ export default function App() {
         </nav>
         <span className="edition">FALL EDITION · No. 01</span>
       </header>
-      <main id="main">
+      <main
+        id="main"
+        className={showVisualizations ? "visual-studio" : "public-studio"}
+      >
+        {privatePreview && (
+          <p className="private-banner">
+            Local design review · Approved visualizations are public.{" "}
+            <a href="/__private/prototypes">Compare design studies</a>
+          </p>
+        )}
         <section className="hero">
           <div className="hero-copy">
             <span className="eyebrow">
@@ -185,38 +211,49 @@ export default function App() {
               <span className="eyebrow">
                 {concept.label} / {concept.tagline}
               </span>
-              <h2>{concept.title}</h2>
+              {showVisualizations ? (
+                <h1>{concept.title}</h1>
+              ) : (
+                <h2>{concept.title}</h2>
+              )}
               <p className="concept-deck">{descriptions[conceptIndex]}</p>
             </div>
             <p className="intro-text">{intros[conceptIndex]}</p>
           </div>
-          <div className="palette-area">
-            <div
-              className="palette"
-              aria-label={`${concept.title} color palette`}
-            >
-              {concept.palette.map((p, i) => (
-                <button
-                  key={p.hex}
-                  aria-label={`${p.name}, ${p.hex}`}
-                  aria-pressed={colorIndex === i}
-                  onClick={() => setColorIndex(i)}
-                >
-                  <span className="swatch" style={{ background: p.hex }}>
-                    {colorIndex === i && <span className="swatch-dot" />}
-                  </span>
-                  <span>{p.name}</span>
-                </button>
-              ))}
+          <div className="scene-spread">
+            <FamilyScene
+              key={concept.id}
+              id={concept.id}
+              title={concept.title}
+            />
+            <div className="palette-area">
+              <div
+                className="palette"
+                aria-label={`${concept.title} color palette`}
+              >
+                {concept.palette.map((p, i) => (
+                  <button
+                    key={p.hex}
+                    aria-label={`${p.name}, ${p.hex}`}
+                    aria-pressed={colorIndex === i}
+                    onClick={() => setColorIndex(i)}
+                  >
+                    <span className="swatch" style={{ background: p.hex }}>
+                      {colorIndex === i && <span className="swatch-dot" />}
+                    </span>
+                    <span>{p.name}</span>
+                  </button>
+                ))}
+              </div>
+              <p className="palette-note" aria-live="polite">
+                <span>THE PALETTE</span> {concept.palette[colorIndex].name}{" "}
+                <span className="hex">{concept.palette[colorIndex].hex}</span>
+                <small>Tap a shade to explore</small>
+              </p>
             </div>
-            <p className="palette-note" aria-live="polite">
-              <span>THE PALETTE</span> {concept.palette[colorIndex].name}{" "}
-              <span className="hex">{concept.palette[colorIndex].hex}</span>
-              <small>Tap a shade to explore</small>
-            </p>
           </div>
-          <div className="board-heading">
-            <h3>The family, in full.</h3>
+          <div className="board-heading" id="outfits">
+            <h3>The outfit plan.</h3>
             <span>
               SELECT AN OUTFIT FOR THE DETAILS <span aria-hidden="true">↓</span>
             </span>
@@ -231,7 +268,15 @@ export default function App() {
                 aria-label={`View ${m.name} outfit`}
               >
                 <span className="outfit-index">0{i + 1}</span>
-                <Outfit member={m} index={i} />
+                {showVisualizations ? (
+                  <MemberPortrait
+                    memberIndex={i}
+                    conceptIndex={conceptIndex}
+                    name={m.name}
+                  />
+                ) : (
+                  <Outfit member={m} index={i} />
+                )}
                 <span className="outfit-name">
                   {m.name}
                   <span aria-hidden="true">
@@ -243,8 +288,9 @@ export default function App() {
             ))}
           </div>
           <p className="illustration-note">
-            Illustrated styling concepts; silhouettes and colors are
-            approximate.
+            {showVisualizations
+              ? "AI-generated individual styling studies; likeness, proportions and garment details are approximate."
+              : "Illustrated styling concepts; silhouettes and colors are approximate."}
           </p>
           <div className="outfit-detail" aria-live="polite">
             <div>
@@ -290,6 +336,11 @@ export default function App() {
               )}
             </div>
           </div>
+          <MemberStudy
+            key={memberIndex}
+            memberIndex={memberIndex}
+            name={member.name}
+          />
           <div className="styling-notes">
             <div>
               <span className="eyebrow">WHY IT WORKS</span>
@@ -442,7 +493,7 @@ export default function App() {
           </details>
           <div className="shop-toolbar">
             <div className="shop-filters" aria-label="Filter shopping list">
-              {["All", ...data.family].map((n) => (
+              {["All", "Buy first", ...data.family].map((n) => (
                 <button
                   key={n}
                   aria-pressed={filter === n}
@@ -455,6 +506,7 @@ export default function App() {
             <button
               className="text-button"
               onClick={() => {
+                setResetBackup(checked);
                 saveChecked([]);
                 setNotice("Checklist reset.");
               }}
@@ -463,9 +515,29 @@ export default function App() {
               Reset checklist
             </button>
           </div>
+          {resetBackup && (
+            <p className="reset-undo">
+              Checklist cleared.{" "}
+              <button
+                className="text-button"
+                onClick={() => {
+                  saveChecked(resetBackup);
+                  setResetBackup(null);
+                  setNotice("Checklist restored.");
+                }}
+              >
+                Undo reset
+              </button>
+            </p>
+          )}
           <div className="shopping-grid">
             {data.shopping
-              .filter((p) => filter === "All" || p.member === filter)
+              .filter(
+                (p) =>
+                  filter === "All" ||
+                  p.member === filter ||
+                  (filter === "Buy first" && p.buyFirst),
+              )
               .map((p) => (
                 <article
                   className={`product ${checked.includes(p.id) ? "is-ready" : ""}`}
@@ -581,6 +653,35 @@ export default function App() {
               </p>
               <span className="small">TEXTURE OVER LOGOS. EASE OVER FUSS.</span>
             </article>
+          </div>
+          <div className="cost-options">
+            <h3>Total estimated cost</h3>
+            <div>
+              <strong>{money(total)}</strong>
+              <p>
+                All 12 Heritage clothing references. Three observed prices; nine
+                estimates.
+              </p>
+            </div>
+            <div>
+              <strong>
+                {money(
+                  data.shopping
+                    .filter((p) => p.buyFirst)
+                    .reduce((sum, p) => sum + p.referencePriceUsd, 0),
+                )}
+              </strong>
+              <p>
+                Buy only the six defining pieces. Assumes the other six clothing
+                pieces, shoes and accessories come from your closets. No
+                replacement purchases included.
+              </p>
+            </div>
+            <p>
+              Planning totals in USD, reviewed October 14, 2026. Tax and
+              shipping excluded. Confirm every size, color and price with the
+              retailer.
+            </p>
           </div>
           <div className="print-outfits">
             <h3>{concept.title} · The outfit plan</h3>

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { privatePreviewPlugin } from "./scripts/private-preview";
 
 // Vercel supplies its public production hostname at build time. Only the
 // validated origin is used, so no other environment values reach the client.
@@ -9,9 +10,10 @@ const origin =
     ? `https://${hostname}`
     : undefined;
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => ({
   plugins: [
     react(),
+    privatePreviewPlugin(command === "serve" && mode === "private"),
     {
       name: "public-sharing-metadata",
       transformIndexHtml(html) {
@@ -37,4 +39,4 @@ export default defineConfig({
       },
     },
   ],
-});
+}));

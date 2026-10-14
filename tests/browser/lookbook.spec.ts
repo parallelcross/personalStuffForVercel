@@ -12,14 +12,16 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
   });
   await page.goto("/");
   await page.evaluate(() => document.fonts.ready);
-  await expect(page.locator("h1")).toContainText("Six personalities");
+  await expect(page.locator(".concept-intro h1")).toHaveText(
+    "Hill Country Heritage",
+  );
   for (const title of [
     "Hill Country Heritage",
     "Texas Organic",
     "Austin Editorial",
   ]) {
     await page.getByRole("button", { name: new RegExp(title) }).click();
-    await expect(page.locator(".concept-intro h2")).toHaveText(title);
+    await expect(page.locator(".concept-intro h1")).toHaveText(title);
     await expect(page.locator(".outfit-choice")).toHaveCount(6);
     for (let i = 0; i < 6; i++) {
       await page.locator(".outfit-choice").nth(i).click();
@@ -57,6 +59,9 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
   await page.locator(".outfit-choice").first().click();
   await page.locator(".compare-select select").selectOption("3");
   await expect(page.locator(".comparison")).toHaveCount(3);
+  await page.getByRole("button", { name: "Buy first", exact: true }).click();
+  await expect(page.locator(".product")).toHaveCount(6);
+  await page.getByRole("button", { name: "All", exact: true }).click();
   await expect(page.locator(".product")).toHaveCount(12);
   await expect(page.locator(".budget strong")).toHaveText("$587.78");
   await page.locator(".check-control input").first().check();
@@ -68,6 +73,11 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
   await page.getByRole("button", { name: "All", exact: true }).click();
   await page.getByRole("button", { name: "Reset checklist" }).click();
   await expect(page.locator(".budget strong")).toHaveText("$587.78");
+  await page.getByRole("button", { name: "Undo reset", exact: true }).click();
+  await expect(page.locator(".budget strong")).toHaveText("$525.78");
+  await page
+    .getByRole("button", { name: "Reset checklist", exact: true })
+    .click();
   for (const link of await page.locator(".product-link").all()) {
     await expect(link).toHaveAttribute("href", /^https:\/\//);
     await expect(link).toHaveAttribute("rel", "noopener noreferrer");
@@ -97,7 +107,7 @@ test("keyboard navigation, reduced motion, narrow layout and print", async ({
   await page.keyboard.press("Enter");
   await page.getByRole("button", { name: /Texas Organic/ }).focus();
   await page.keyboard.press("Enter");
-  await expect(page.locator(".concept-intro h2")).toHaveText("Texas Organic");
+  await expect(page.locator(".concept-intro h1")).toHaveText("Texas Organic");
   expect(
     await page
       .locator(".concept-intro")
@@ -105,11 +115,11 @@ test("keyboard navigation, reduced motion, narrow layout and print", async ({
   ).toBe("none");
   await page.setViewportSize({ width: 320, height: 720 });
   await page.evaluate(() => document.fonts.ready);
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
+  await expect
+    .poll(() =>
+      page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+    )
+    .toBe(true);
   await page.emulateMedia({ media: "print" });
   await expect(page.locator(".print-outfits")).toBeVisible();
   await expect(page.locator(".print-outfits")).toContainText("Texas Organic");

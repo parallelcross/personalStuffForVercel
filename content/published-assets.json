@@ -1,0 +1,78 @@
+{
+  "approvedOn": "2026-10-14",
+  "scope": "Reviewed AI-generated family visualizations and individual studies; original photographs and design mockups remain private.",
+  "files": [
+    {
+      "path": "images/wardrobe/editorial-small.webp",
+      "sha256": "9ff79494f074ce382e21392829b5a98bbaf88cf62641352fa29076f861754705"
+    },
+    {
+      "path": "images/wardrobe/editorial.webp",
+      "sha256": "9884b7d0105fc05e25dfd03608e20f5644b874ba541c6b7a47c36bc7b5ca9d9f"
+    },
+    {
+      "path": "images/wardrobe/heritage-small.webp",
+      "sha256": "1631e8f8791e0dfba9be26b3a89d02017314deaf0e2e14b66bdd7efe0ab58da3"
+    },
+    {
+      "path": "images/wardrobe/heritage.webp",
+      "sha256": "b404d176a2126c7d8d415b0ee7ab0a8e3191f2687f99a9cc5fbc2068e5725165"
+    },
+    {
+      "path": "images/wardrobe/member-0-small.webp",
+      "sha256": "f5fe5509e24871b0387bf379612c7510fe33f186c5ed6ea1106a4340b27b5fba"
+    },
+    {
+      "path": "images/wardrobe/member-0.webp",
+      "sha256": "4e5b35838eab24f0c2fdad1cafeb86c6e4a18bdcf903071ba5bbd5cb8f6e4b30"
+    },
+    {
+      "path": "images/wardrobe/member-1-small.webp",
+      "sha256": "d3ad3920fb829f3f4a37895b437693a3cd8ef2ccb6fe5e589c630a5a3e768c2e"
+    },
+    {
+      "path": "images/wardrobe/member-1.webp",
+      "sha256": "4efb7520139554a34e8a25798a288c289bb499bc6c5328f8656557c11e49a3c3"
+    },
+    {
+      "path": "images/wardrobe/member-2-small.webp",
+      "sha256": "1a5bb01086d0612fece4792a4dac6f6ad43025bd4ebc6dddf9089c1fd023c2ae"
+    },
+    {
+      "path": "images/wardrobe/member-2.webp",
+      "sha256": "fdd738564baf8cd3e3e91f2711752d59ffaddeff7a2629a638cc08d5242cc1d0"
+    },
+    {
+      "path": "images/wardrobe/member-3-small.webp",
+      "sha256": "95b0d91f001a1c76597f27c56dc5a8ccd53e476ebffb1e8a1afe0bdf52c4af65"
+    },
+    {
+      "path": "images/wardrobe/member-3.webp",
+      "sha256": "ba5b260bf7ebd6174d3d2e24dab9e0a1a4379f2bb7c007bff098c431f7c76dc6"
+    },
+    {
+      "path": "images/wardrobe/member-4-small.webp",
+      "sha256": "909f401190ab62ba4be33a6d370174ac333d7d0e60fe8ab9af615b6f468d08bc"
+    },
+    {
+      "path": "images/wardrobe/member-4.webp",
+      "sha256": "0a7194b8474fa0b806b319b9449a152f9b86350252f3f00fc183cf54954bf906"
+    },
+    {
+      "path": "images/wardrobe/member-5-small.webp",
+      "sha256": "b73f897459ab5ccd42760fb07f88fbce28dfacc8ac2b2bff3090ba8ad944fb38"
+    },
+    {
+      "path": "images/wardrobe/member-5.webp",
+      "sha256": "4d986397a7700c56f6fc1c150a4bc2834f25ba21ab2df4738cbb430626bf54b8"
+    },
+    {
+      "path": "images/wardrobe/organic-small.webp",
+      "sha256": "459274339dd76137e08681cb3683bb99792a6339648c765d0c1f8b131064d62c"
+    },
+    {
+      "path": "images/wardrobe/organic.webp",
+      "sha256": "d0b5f627abfe045068e3bb35a1373d100215545910708abe458641879ab1b053"
+    }
+  ]
+}

@@ -1819,3 +1819,421 @@ footer > a:last-child {
     font-size: clamp(46px, 14.2vw, 72px);
   }
 }
+
+/* The private editorial spread shares the public outfit and shopping data. */
+.private-banner {
+  margin: 0;
+  padding: 12px 4%;
+  font-size: 12px;
+  background: #ebe5d8;
+  color: #403a30;
+  text-align: center;
+}
+.private-banner a {
+  margin-left: 12px;
+  text-underline-offset: 4px;
+}
+.visual-studio > .hero,
+.visual-studio > .editor-note {
+  display: none;
+}
+.visual-studio .lookbook {
+  padding-top: 32px;
+}
+.visual-studio .lookbook > .section-top {
+  display: none;
+}
+.visual-studio .concept-switch {
+  margin-bottom: 32px;
+}
+.visual-studio .concept-intro {
+  margin-bottom: 30px;
+}
+.visual-studio .concept-intro .eyebrow {
+  display: none;
+}
+.visual-studio .concept-intro h2 {
+  font-size: clamp(40px, 5vw, 76px);
+}
+.visual-studio .concept-deck {
+  font-size: 24px;
+}
+.scene-spread {
+  display: block;
+}
+.visual-studio .scene-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+.family-scene {
+  margin: 0;
+  min-width: 0;
+}
+.family-scene a {
+  display: block;
+}
+.family-scene img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e9e1d4;
+}
+.family-scene figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #524c43;
+}
+.family-scene figcaption strong {
+  font-weight: 600;
+}
+.scene-unavailable {
+  min-height: 320px;
+  padding: 40px;
+  background: #e9e1d4;
+}
+.visual-studio .palette-area {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.visual-studio .palette {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+}
+.visual-studio .palette button {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  text-align: left;
+  gap: 14px;
+  width: 100%;
+  min-height: 44px;
+}
+.visual-studio .palette .swatch {
+  width: 48px;
+  height: 40px;
+  border-radius: 0;
+  margin: 0;
+}
+.visual-studio .palette-note {
+  margin-top: 24px;
+  text-align: left;
+}
+.visual-studio .palette-note > span:first-child {
+  display: none;
+}
+.visual-studio .palette-note small {
+  display: block;
+  margin-top: 8px;
+}
+.reset-undo {
+  padding: 14px 0;
+  border-bottom: 1px solid #c9c1b4;
+}
+.concept-switch button {
+  transition: none;
+}
+.concept-intro,
+.outfit-detail {
+  animation: none;
+}
+@media (max-width: 900px) {
+  .visual-studio .scene-spread {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .visual-studio .palette {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .visual-studio .palette button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 11px;
+  }
+  .visual-studio .palette .swatch {
+    width: 100%;
+    max-width: 64px;
+  }
+  .visual-studio .palette-note {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .private-banner {
+    font-size: 11px;
+    padding: 10px 20px;
+  }
+  .private-banner a {
+    display: block;
+    margin: 4px 0 0;
+  }
+  .visual-studio .lookbook {
+    padding-top: 20px;
+  }
+  .visual-studio .concept-intro {
+    margin-bottom: 24px;
+  }
+  .visual-studio .concept-intro h2 {
+    font-size: 44px;
+  }
+  .visual-studio .intro-text {
+    display: none;
+  }
+  .visual-studio .scene-spread {
+    margin-bottom: 40px;
+  }
+  .family-scene {
+    margin-inline: -20px;
+  }
+  .family-scene figcaption {
+    padding-inline: 20px;
+    font-size: 11px;
+  }
+  .visual-studio .palette button {
+    font-size: 10px;
+  }
+}
+@media print {
+  .family-scene,
+  .private-banner {
+    display: none;
+  }
+}
+.visual-studio .lookbook {
+  --theme-bg: #f5f1e8;
+}
+.visual-studio .concept-switch {
+  margin-bottom: 0;
+}
+.visual-studio .concept-switch button {
+  padding: 12px 16px;
+  font-size: 19px;
+  min-height: 56px;
+  border-right: 0;
+}
+.visual-studio .concept-switch button[aria-pressed="true"] {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 -2px var(--ink);
+}
+.visual-studio .concept-no,
+.visual-studio .concept-arrow {
+  display: none;
+}
+.visual-studio .concept-intro {
+  margin: 22px 0 24px;
+  gap: 32px;
+}
+.visual-studio .concept-intro h1 {
+  font-family: var(--serif);
+  font-size: clamp(40px, 4.8vw, 70px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+}
+.visual-studio .concept-deck {
+  margin: 0;
+  font-size: 23px;
+}
+.visual-studio .scene-spread {
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 24px;
+}
+.visual-studio .palette button {
+  font-size: 12px;
+}
+.visual-studio .palette-note {
+  display: block;
+}
+.visual-studio .palette-note .hex {
+  display: block;
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .visual-studio .scene-spread {
+    grid-template-columns: 1fr;
+  }
+  .visual-studio .palette button {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  .visual-studio .concept-switch button {
+    padding: 12px 8px;
+    font-size: 17px;
+  }
+  .visual-studio .concept-switch small {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  .visual-studio .concept-intro h1 {
+    font-size: 42px;
+  }
+  .visual-studio .concept-intro {
+    margin-top: 24px;
+  }
+  .visual-studio .palette {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .visual-studio .palette button {
+    font-size: 11px;
+  }
+}
+body:has(.visual-studio) .masthead {
+  padding-block: 16px;
+}
+body:has(.visual-studio) .wordmark > span {
+  display: none;
+}
+.visual-studio .private-banner {
+  padding-block: 8px;
+}
+.visual-studio .lookbook {
+  padding-top: 18px;
+}
+.visual-studio .concept-intro {
+  margin-top: 18px;
+}
+@media (min-width: 901px) {
+  .visual-studio .scene-spread {
+    grid-template-columns: minmax(0, 850px) minmax(170px, 1fr);
+  }
+  .visual-studio .concept-intro h1 {
+    font-size: clamp(40px, 4.5vw, 64px);
+  }
+}
+.member-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+  background: #e4dacb;
+}
+.member-portrait img {
+  display: block;
+  width: 300%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
+}
+.visual-studio .outfit-choice {
+  padding: 0 0 14px;
+  background: transparent;
+}
+.visual-studio .outfit-index {
+  display: none;
+}
+.visual-studio .outfit-name,
+.visual-studio .outfit-texture {
+  padding-inline: 12px;
+}
+.visual-studio .outfit-texture {
+  font-size: 11px;
+}
+.member-study {
+  margin-top: 24px;
+  padding: 16px 0;
+  border-block: 1px solid var(--line);
+}
+.member-study summary {
+  cursor: pointer;
+  min-height: 30px;
+  font-size: 14px;
+}
+.member-study img {
+  display: block;
+  width: min(100%, 960px);
+  height: auto;
+  margin-top: 20px;
+}
+.member-study p {
+  font-size: 12px;
+  max-width: 75ch;
+  margin-top: 14px;
+}
+.study-labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(100%, 960px);
+  gap: 12px;
+  padding-top: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .study-labels {
+    font-size: 11px;
+  }
+}
+@media print {
+  .member-study {
+    display: none;
+  }
+}
+.member-portrait {
+  aspect-ratio: auto;
+}
+.member-portrait img {
+  height: auto;
+  object-fit: contain;
+}
+.cost-options {
+  margin-top: 48px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+}
+.cost-options h3,
+.cost-options > p {
+  grid-column: 1 / -1;
+}
+.cost-options h3 {
+  margin: 0;
+  font: 36px var(--serif);
+}
+.cost-options strong {
+  font: 40px var(--serif);
+  font-variant-numeric: tabular-nums;
+}
+.cost-options p {
+  font-size: 13px;
+  max-width: 65ch;
+}
+@media (max-width: 600px) {
+  .cost-options {
+    grid-template-columns: 1fr;
+  }
+}
+.member-portrait {
+  aspect-ratio: 1484 / 3180;
+  display: flex;
+  align-items: center;
+}
+.member-portrait img {
+  flex-shrink: 0;
+}
+.visual-studio .lookbook {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+@media (max-width: 600px) {
+  .visual-studio .lookbook {
+    padding-inline: 20px;
+  }
+}

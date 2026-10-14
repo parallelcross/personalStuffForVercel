@@ -8,13 +8,15 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run verify:privacy",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc -b --pretty false",
     "lint": "eslint .",
     "test": "node --test tests/*.test.mjs",
     "test:e2e": "playwright test",
-    "format": "prettier --write src content tests scripts *.ts *.js *.json index.html README.md THIRD_PARTY_NOTICES.md"
+    "format": "prettier --write src content tests scripts *.ts *.js *.json index.html README.md THIRD_PARTY_NOTICES.md",
+    "dev:private": "vite --mode private --host 127.0.0.1 --port 5174",
+    "verify:privacy": "node scripts/verify-public.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.0",

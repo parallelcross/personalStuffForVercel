@@ -7,3 +7,14 @@ Fontsource packages bundle **Cormorant Garamond** and **Manrope**. Both fonts us
 React, React DOM and Vite are used under their respective MIT licenses, available with the installed packages. Other tools listed in package.json are development-only and are not application services.
 
 Retailer names and product names identify shopping sources. The site does not imply endorsement, partnership or image licensing by any retailer.
+
+## Retailer photography review — October 14, 2026
+
+No permission to republish exact product photographs was established. No retailer images were downloaded, redistributed or hotlinked. Shopping items retain original, labeled styling illustrations and direct retailer links.
+
+- Quince: https://www.quince.com/terms — Section 1 requires written permission for reproduction of service content.
+- J.Crew Factory: https://factory.jcrew.com/help/terms-of-use — Materials and Content provisions restrict public reproduction without specific permission.
+- H&M: https://www2.hm.com/en_us/customer-service/terms-link.html — terms reviewed; no reusable product-image license established for this project.
+- Abercrombie: no reusable exact-product image permission established. Its social-media submission terms are not a license to republish retailer images.
+
+Private AI wardrobe studies were generated with the built-in OpenAI image-generation service after the user approved that specific use of the supplied references. The reviewed, metadata-free generated copies were subsequently approved for publication on October 14, 2026. Original photographs and design mockups remain excluded from Git and public builds. The studies are approximate and have no association with or endorsement from the retailers.

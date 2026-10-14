@@ -1,6 +1,6 @@
 # Field & Family
 
-An editorial family wardrobe lookbook built with React, TypeScript and Vite. Three distinct concepts, six outfits per concept, original SVG garment studies, interactive palettes and comparison, and a browser-local shopping checklist for the recommended **Hill Country Heritage** look.
+An editorial family wardrobe lookbook built with React, TypeScript and Vite. Three distinct concepts, six outfits per concept, approved AI family visualizations and individual studies, original SVG product illustrations, interactive palettes and comparison, and a browser-local shopping checklist for the recommended **Hill Country Heritage** look.
 
 ## Develop
 
@@ -47,11 +47,13 @@ Research date: **October 14, 2026**. The 12 listed clothing references total **$
 
 `verifiedLive` intentionally stays false: page observations are not a live inventory feed. `priceVerified` and `lastVerifiedAt` identify the three price observations; `lastCheckedAt` records the research attempt for every item. After new research, update both fields and the accompanying note. Product links serve as primary-source references. No affiliate tracking is added. No unconfirmed lower-cost alternatives are presented as real products; closet substitutions reduce the estimate instead.
 
-All garment artwork is original stylized SVG, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Cormorant Garamond and Manrope are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
+Shopping artwork is original stylized SVG. Family and individual outfit views are clearly labeled AI-generated wardrobe visualizations, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Cormorant Garamond and Manrope are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
 
 ## Privacy
 
-No family photographs, names, children's ages, location bookings, or private reference materials are published. Public roles are Dad, Mom, Eldest son, Daughter, Middle son and Youngest son. Never import `.local-reference/` or an HTML file containing embedded family imagery. The original prompt remains local and ignored. Publication of any family photograph requires explicit approval and metadata removal. Keep `.env*`, credentials, `.codex/`, `.agents/`, `.vercel/`, browser reports and local reference files out of Git.
+The user approved publication of the reviewed AI-generated family visualizations on October 14, 2026. These recognizable generated images are public. Only the 18 optimized WebP files listed with SHA-256 hashes in `content/published-assets.json` are approved: three group images and six individual three-look studies, each in full and small sizes. Their metadata was removed; no EXIF or XMP is present.
+
+Original family photographs, names, children's ages, private reference materials, and design mockups remain excluded from Git and deployment. Public roles are Dad, Mom, Eldest son, Daughter, Middle son and Youngest son. Never import `.local-reference/` or publish new images without separate approval. Keep `.env*`, credentials, `.codex/`, `.agents/`, `.vercel/`, browser reports and local reference files out of Git. The production build runs a privacy audit that rejects unapproved raster images and private reference paths.
 
 ## Deploy through Vercel's GitHub integration
 
@@ -65,3 +67,13 @@ No family photographs, names, children's ages, location bookings, or private ref
 8. Vercel's `VERCEL_PROJECT_PRODUCTION_URL` system variable automatically supplies absolute social-image URLs, canonical metadata and `og:url` during the build. Keep **Automatically expose System Environment Variables** enabled. If you later add a custom domain, redeploy to refresh this metadata. Local builds retain relative image URLs without guessing a public domain. See [Vercel's system-variable documentation](https://vercel.com/docs/environment-variables/system-environment-variables).
 
 `vercel.json` declares the requested build settings and basic security headers. This is a static, anchor-navigated site. Unknown routes correctly return 404 rather than masking missing assets with HTML. No Vercel CLI production deployment is part of this workflow.
+
+## Local design review
+
+The normal development and production builds now display the approved image-rich studio. `npm run dev:private` opens the same studio at `http://127.0.0.1:5174/` with an additional link to the private design-comparison harness at `/__private/prototypes`. Mockups, original references and generation notes remain in ignored `.local-reference/` storage and are absent from fresh clones.
+
+The private middleware permits only allowlisted files, sends no-store/noindex headers, and requires loopback hosting. Direct access to `.local-reference` is denied. Never expose the development server through a tunnel or reverse proxy. An obscure deployment URL is not privacy protection.
+
+Images are AI-generated styling studies, not actual photographs or exact product-fit demonstrations. Their publication was approved after local review. Future image additions require their own approval and manifest update.
+
+`npm run test:e2e` includes the visual-studio suite at four widths, all concepts and individual studies, image loading, accessibility and failure recovery. With the private server running, set `PRIVATE_REVIEW=1` to additionally test the private middleware's access boundaries.
