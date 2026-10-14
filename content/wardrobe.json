@@ -392,7 +392,8 @@
       "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "jacket",
-      "illustrationColor": "#263247"
+      "illustrationColor": "#263247",
+      "shoppingCaution": ""
     },
     {
       "member": "Dad",
@@ -412,13 +413,14 @@
       "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "polo",
-      "illustrationColor": "#f0e5d4"
+      "illustrationColor": "#f0e5d4",
+      "shoppingCaution": ""
     },
     {
       "member": "Dad",
       "item": "Sandstone trousers",
       "store": "Quince",
-      "product": "Ultra-Stretch 24/7 Smart Chinos",
+      "product": "Ultra-Stretch 24/7 Smart Chinos - Athletic Tapered",
       "color": "Sand Dune",
       "referencePriceUsd": 60,
       "url": "https://www.quince.com/men/performance-lounge-trouser?color=sand-dune",
@@ -426,13 +428,14 @@
       "verifiedLive": false,
       "id": "piece-3",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Product page located; current price and Sand Dune availability could not be confirmed.",
-      "lastVerifiedAt": null,
-      "priceVerified": false,
+      "verificationNote": "Product, Sand Dune color and $60 price observed. Page specifies Athletic Tapered fit. Size stock not independently confirmed.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
       "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "trousers",
-      "illustrationColor": "#b99873"
+      "illustrationColor": "#b99873",
+      "shoppingCaution": ""
     },
     {
       "member": "Mom",
@@ -452,7 +455,8 @@
       "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "dress",
-      "illustrationColor": "#793b49"
+      "illustrationColor": "#793b49",
+      "shoppingCaution": ""
     },
     {
       "member": "Eldest son",
@@ -472,7 +476,8 @@
       "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "shirt",
-      "illustrationColor": "#aec0cb"
+      "illustrationColor": "#aec0cb",
+      "shoppingCaution": "Page opens in a different color; confirm Light Blue Cross Dye."
     },
     {
       "member": "Eldest son",
@@ -492,7 +497,8 @@
       "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "trousers",
-      "illustrationColor": "#65705a"
+      "illustrationColor": "#65705a",
+      "shoppingCaution": "Page opens in Dark Brown; Catskill Green unconfirmed."
     },
     {
       "member": "Daughter",
@@ -506,13 +512,14 @@
       "verifiedLive": false,
       "id": "piece-7",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Product page located with a regional redirect; US price and Cream availability unconfirmed.",
+      "verificationNote": "Cream blouse confirmed on a regional page; US price and size availability could not be independently verified.",
       "lastVerifiedAt": null,
       "priceVerified": false,
       "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "blouse",
-      "illustrationColor": "#f0e5d4"
+      "illustrationColor": "#f0e5d4",
+      "shoppingCaution": "Regional redirect; US price unconfirmed."
     },
     {
       "member": "Daughter",
@@ -526,19 +533,20 @@
       "verifiedLive": false,
       "id": "piece-8",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Product page located; current US price and Medium Denim availability unconfirmed.",
-      "lastVerifiedAt": null,
-      "priceVerified": false,
+      "verificationNote": "Medium Denim and $39.99 clearance price observed in retrieved retailer page; page says Almost Gone. Confirm size and price before buying.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
       "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "skirt",
-      "illustrationColor": "#40586a"
+      "illustrationColor": "#40586a",
+      "shoppingCaution": "Clearance listing · confirm your size."
     },
     {
       "member": "Middle son",
       "item": "Sweater polo",
       "store": "J.Crew Factory",
-      "product": "Boys\u2019 100% Cotton Cable-Knit Sweater Polo",
+      "product": "Boys’ 100% Cotton Cable-Knit Sweater Polo",
       "color": "Quarry Green",
       "referencePriceUsd": 39.5,
       "url": "https://factory.jcrew.com/p/boys/categories/clothing/sweatshirts-and-sweaters/sweaters/boys-100-cotton-cable-knit-sweater-polo/CV470",
@@ -552,33 +560,35 @@
       "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "polo",
-      "illustrationColor": "#65705a"
+      "illustrationColor": "#65705a",
+      "shoppingCaution": ""
     },
     {
       "member": "Middle son",
       "item": "Corduroys",
       "store": "J.Crew Factory",
-      "product": "Boys\u2019 Slim Flex Corduroy Pant",
+      "product": "Boys’ Slim Flex Corduroy Pant",
       "color": "Vintage Sandstone",
       "referencePriceUsd": 35,
-      "url": "https://factory.jcrew.com/p/boys/categories/clothing/pants/cord/J4274",
+      "url": "https://factory.jcrew.com/p/boys/categories/clothing/pants/cord/boys-slim-flex-corduroy-pant/J4274",
       "stylistRationale": "Sandstone corduroy provides depth and variation.",
       "verifiedLive": false,
       "id": "piece-10",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Merchant search result found; product page could not be retrieved. Color, price and stock unconfirmed.",
+      "verificationNote": "Original short URL could not be retrieved. Updated to the retailer’s full product URL. Product confirmed; retrieved page selects Midnight Burgundy. Vintage Sandstone appears in merchant search results, but its price and stock are unconfirmed.",
       "lastVerifiedAt": null,
       "priceVerified": false,
-      "linkStatus": "search-only",
+      "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "trousers",
-      "illustrationColor": "#b99873"
+      "illustrationColor": "#b99873",
+      "shoppingCaution": "Vintage Sandstone stock unconfirmed; page may open in Burgundy."
     },
     {
       "member": "Youngest son",
       "item": "Cotton Henley",
       "store": "J.Crew Factory",
-      "product": "Boys\u2019 100% Cotton Henley Tee",
+      "product": "Boys’ 100% Cotton Henley Tee",
       "color": "Aztec Brick",
       "referencePriceUsd": 12.95,
       "url": "https://factory.jcrew.com/m/boys/categories/clothing/tees-and-polos/long-sleeve/boys-100-cotton-henley-tee/MF437?colorProductCode=BT291&color_name=aztec-brick&display=standard&fit=Classic",
@@ -586,19 +596,20 @@
       "verifiedLive": false,
       "id": "piece-11",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Merchant search result confirms Aztec Brick; current price and size stock unconfirmed.",
-      "lastVerifiedAt": null,
-      "priceVerified": false,
-      "linkStatus": "search-only",
+      "verificationNote": "Aztec Brick and $12.95 sale price observed in retrieved retailer page. Confirm size stock and current promotion.",
+      "lastVerifiedAt": "2026-10-14",
+      "priceVerified": true,
+      "linkStatus": "page-observed",
       "buyFirst": true,
       "kind": "henley",
-      "illustrationColor": "#9a5945"
+      "illustrationColor": "#9a5945",
+      "shoppingCaution": ""
     },
     {
       "member": "Youngest son",
       "item": "Chinos",
       "store": "J.Crew Factory",
-      "product": "Boys\u2019 Slim-Fit Tech Chino",
+      "product": "Boys’ Slim-Fit Tech Chino",
       "color": "Dark Trout",
       "referencePriceUsd": 34.5,
       "url": "https://factory.jcrew.com/p/boys/categories/clothing/pants/khakis/boys-slim-fit-tech-chino-pant/CB985",
@@ -606,17 +617,40 @@
       "verifiedLive": false,
       "id": "piece-12",
       "lastCheckedAt": "2026-10-14",
-      "verificationNote": "Product page located; Dark Trout and current price unconfirmed.",
+      "verificationNote": "Product page opens in Scarborough Grey. Dark Trout availability and its price could not be independently verified.",
       "lastVerifiedAt": null,
       "priceVerified": false,
       "linkStatus": "page-observed",
       "buyFirst": false,
       "kind": "trousers",
-      "illustrationColor": "#494a3a"
+      "illustrationColor": "#494a3a",
+      "shoppingCaution": "Page opens in Grey; Dark Trout unconfirmed."
     }
   ],
   "estimatedTotals": {
     "allPrimaryClothingUsdApprox": [590, 605],
     "closetAndLowerCostUsdApprox": [315, 325]
-  }
+  },
+  "alternatives": [
+    {
+      "forPiece": "piece-1",
+      "product": "Double-Brushed Stretch Overshirt Jacket",
+      "store": "Quince",
+      "color": "Navy",
+      "priceUsd": 52,
+      "url": "https://www.quince.com/men/double-brushed-stretch-overshirt?color=navy&gender=men",
+      "lastVerifiedAt": "2026-10-14",
+      "note": "A softer shirt-jacket silhouette in the same navy family. Product, color and price observed in the browser; confirm size stock."
+    },
+    {
+      "forPiece": "piece-5",
+      "product": "100% Organic Cotton Oxford Shirt",
+      "store": "Quince",
+      "color": "Pale Blue",
+      "priceUsd": 42,
+      "url": "https://www.quince.com/men/100-organic-cotton-oxford-shirt?color=pale-blue&gender=men",
+      "lastVerifiedAt": "2026-10-14",
+      "note": "A pale-blue Oxford with a confirmed color listing. Below the original $49 planning estimate; its current retailer price is unconfirmed. Confirm size stock."
+    }
+  ]
 }

@@ -8,10 +8,23 @@ import {
 } from "./FamilyScene";
 import data from "../content/wardrobe.json";
 import { Garment, Outfit } from "./Garment";
-const money = (n: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
-    n,
-  );
+import {
+  Alternative,
+  ShoppingRow,
+  ClosetRows,
+  RetailLink,
+  StatusSelect,
+} from "./ShoppingPieces";
+import {
+  money,
+  priceLabel,
+  readChecklist,
+  checklistKey,
+  extras,
+  statusLabels,
+  type Checklist,
+  type PieceStatus,
+} from "./shopping";
 const descriptions = [
   "A little heritage. A little wild.",
   "Softly spoken, naturally together.",
@@ -22,20 +35,6 @@ const intros = [
   "Sun-faded clay, washed linen, and sage. An easy, tactile wardrobe with room to move and the landscape woven into every shade.",
   "Ink, ecru, and sculptural silhouettes. A more architectural take on the family portrait, with warm leather keeping it grounded.",
 ];
-const storageKey = "field-family-checklist-v1";
-function readChecked(): string[] {
-  try {
-    const value: unknown = JSON.parse(localStorage.getItem(storageKey) || "[]");
-    return Array.isArray(value)
-      ? value.filter(
-          (id): id is string =>
-            typeof id === "string" && data.shopping.some((p) => p.id === id),
-        )
-      : [];
-  } catch {
-    return [];
-  }
-}
 export default function App() {
   const [conceptIndex, setConceptIndex] = useState(() => {
     const id = new URLSearchParams(location.search).get("concept");
@@ -44,20 +43,32 @@ export default function App() {
       data.concepts.findIndex((c) => c.id === id),
     );
   });
-  const [memberIndex, setMemberIndex] = useState(0);
+  const [memberIndex, setMemberIndex] = useState(() =>
+    Math.max(
+      0,
+      data.family.indexOf(
+        new URLSearchParams(location.search).get("member") || "",
+      ),
+    ),
+  );
+  const [shopOpen, setShopOpen] = useState(false);
+  const [planFilter, setPlanFilter] = useState("all");
   const [colorIndex, setColorIndex] = useState(0);
   const [compareMember, setCompareMember] = useState(0);
   const [filter, setFilter] = useState("All");
-  const [checked, setChecked] = useState<string[]>(readChecked);
+  const [checklist, setChecklist] = useState<Checklist>(readChecklist);
+  const checked = data.shopping
+    .filter((p) => checklist[p.id] && checklist[p.id] !== "need")
+    .map((p) => p.id);
   const [notice, setNotice] = useState("");
-  const [resetBackup, setResetBackup] = useState<string[] | null>(null);
+  const [resetBackup, setResetBackup] = useState<Checklist | null>(null);
   const [storageError, setStorageError] = useState(false);
   const concept = data.concepts[conceptIndex],
     member = concept.members[memberIndex];
-  const saveChecked = (next: string[]) => {
-    setChecked(next);
+  const saveChecklist = (next: Checklist) => {
+    setChecklist(next);
     try {
-      localStorage.setItem(storageKey, JSON.stringify(next));
+      localStorage.setItem(checklistKey, JSON.stringify(next));
     } catch {
       setStorageError(true);
     }
@@ -73,12 +84,20 @@ export default function App() {
     history.replaceState(null, "", url);
     setColorIndex(0);
   };
-  const toggle = (id: string) =>
-    saveChecked(
-      checked.includes(id) ? checked.filter((x) => x !== id) : [...checked, id],
-    );
+  const setStatus = (id: string, status: PieceStatus) => {
+    saveChecklist({ ...checklist, [id]: status });
+    setResetBackup(null);
+  };
+  const chooseMember = (i: number) => {
+    setMemberIndex(i);
+    const url = new URL(location.href);
+    url.searchParams.set("member", data.family[i]);
+    history.replaceState(null, "", url);
+  };
+  const matchingPlan = (id: string) =>
+    planFilter === "all" || (checklist[id] || "need") === planFilter;
   const copy = async () => {
-    const text = `${concept.title}\n\n${concept.members.map((m) => `${m.name}: ${m.outfit}. ${m.shoes}. ${m.accessories}.`).join("\n\n")}`;
+    const text = `${concept.title}\n\n${concept.members.map((m) => `${m.name}: ${m.outfit}. ${m.shoes}. ${m.accessories}.`).join("\n\n")}\n\nHERITAGE SHOPPING CHECKLIST\n${data.shopping.map((p) => `${statusLabels[checklist[p.id] || "need"]} — ${p.member}: ${p.item}, ${p.color} — ${p.store} — ${money(p.referencePriceUsd)} (${priceLabel(p)})\n${p.url}`).join("\n\n")}\n\nCLOSET & OPTIONAL FINISHING TOUCHES\n${extras.map((p) => `${statusLabels[checklist[p.id] || "need"]} — ${p.member}: ${p.item}${p.optional ? " (optional)" : ""}`).join("\n")}`;
     try {
       await navigator.clipboard.writeText(text);
       setNotice("Outfit list copied.");
@@ -263,7 +282,7 @@ export default function App() {
               <button
                 key={m.name}
                 className={`outfit-choice ${memberIndex === i ? "selected" : ""}`}
-                onClick={() => setMemberIndex(i)}
+                onClick={() => chooseMember(i)}
                 aria-pressed={memberIndex === i}
                 aria-label={`View ${m.name} outfit`}
               >
@@ -320,22 +339,88 @@ export default function App() {
             <div>
               <span className="eyebrow">TEXTURE STORY</span>
               <p>{member.texture}</p>
-              {conceptIndex === 0 ? (
-                <a
-                  className="text-link"
-                  href="#shop"
-                  onClick={() => setFilter(member.name)}
-                >
-                  Shop {member.name.toLowerCase()}’s pieces ↗
-                </a>
-              ) : (
-                <span className="small">
-                  Style from your closet; retailer selections are curated for
-                  Heritage.
-                </span>
-              )}
+              <button
+                className="text-button outfit-shop-toggle"
+                aria-expanded={shopOpen}
+                aria-controls="outfit-shopping"
+                onClick={() => setShopOpen(!shopOpen)}
+              >
+                {shopOpen ? "Close outfit shopping" : "Shop this outfit"}
+              </button>
             </div>
           </div>
+          <section
+            id="outfit-shopping"
+            className="outfit-shopping"
+            hidden={!shopOpen}
+            aria-label={`Shop ${member.name} outfit`}
+          >
+            <div className="outfit-shop-heading">
+              <h3>{member.name}’s pieces</h3>
+              <span>{concept.title}</span>
+            </div>
+            {conceptIndex === 0 ? (
+              <>
+                <p className="shopping-helper">
+                  Shop each piece below. Illustrations show the styling idea;
+                  retailer pages show the actual garment. Links open in a new
+                  tab.
+                </p>
+                {data.shopping
+                  .filter((p) => p.member === member.name)
+                  .map((p) => (
+                    <ShoppingRow
+                      key={p.id}
+                      product={p}
+                      checklist={checklist}
+                      onStatus={setStatus}
+                      illustration
+                    />
+                  ))}
+                <details className="closet-disclosure">
+                  <summary>
+                    Finish the look · closet pieces & optional accessories
+                  </summary>
+                  <ClosetRows
+                    member={member.name}
+                    checklist={checklist}
+                    onStatus={setStatus}
+                  />
+                </details>
+                <p className="shopping-helper">
+                  Lower-cost route: keep the defining colors and use similar
+                  pieces you already own. Mark them “Already own” to remove
+                  their estimate.
+                </p>
+                <a className="text-link" href="#outfit-checklist">
+                  Review the whole family’s checklist ↗
+                </a>
+              </>
+            ) : (
+              <>
+                <p>
+                  {member.outfit}. {member.shoes}.
+                </p>
+                <p className="shopping-helper">
+                  This is a styling concept, with no verified retailer selection
+                  yet. Start with matching pieces from your closet. The shopping
+                  list below is specifically for Hill Country Heritage.
+                </p>
+                <button
+                  className="text-button"
+                  onClick={() => chooseConcept(0)}
+                >
+                  Shop {member.name.toLowerCase()}’s Heritage outfit
+                </button>
+              </>
+            )}
+            {storageError && (
+              <p className="shopping-helper" role="status">
+                Your browser could not save this checklist. Changes last only
+                for this visit.
+              </p>
+            )}
+          </section>
           <MemberStudy
             key={memberIndex}
             memberIndex={memberIndex}
@@ -436,7 +521,7 @@ export default function App() {
                   className="text-link"
                   onClick={() => {
                     chooseConcept(i);
-                    setMemberIndex(compareMember);
+                    chooseMember(compareMember);
                   }}
                 >
                   Explore this story ↗
@@ -506,11 +591,11 @@ export default function App() {
             <button
               className="text-button"
               onClick={() => {
-                setResetBackup(checked);
-                saveChecked([]);
+                setResetBackup(checklist);
+                saveChecklist({});
                 setNotice("Checklist reset.");
               }}
-              disabled={checked.length === 0}
+              disabled={!Object.values(checklist).some((s) => s !== "need")}
             >
               Reset checklist
             </button>
@@ -521,7 +606,7 @@ export default function App() {
               <button
                 className="text-button"
                 onClick={() => {
-                  saveChecked(resetBackup);
+                  saveChecklist(resetBackup);
                   setResetBackup(null);
                   setNotice("Checklist restored.");
                 }}
@@ -545,22 +630,13 @@ export default function App() {
                 >
                   <div className="product-image">
                     <span className="product-person">{p.member}</span>
-                    <Garment kind={p.kind} color={p.illustrationColor} />
-                    {p.buyFirst && <span className="priority">BUY FIRST</span>}
-                    <label className="check-control">
-                      <input
-                        type="checkbox"
-                        aria-label={`Ready: ${p.member}, ${p.item}`}
-                        checked={checked.includes(p.id)}
-                        onChange={() => toggle(p.id)}
-                      />
-                      <span>
-                        {checked.includes(p.id) ? "Ready" : "Mark ready"}
-                        <span className="sr-only">
-                          : {p.member}, {p.item}
-                        </span>
+                    <RetailLink product={p} className="product-image-link">
+                      <Garment kind={p.kind} color={p.illustrationColor} />
+                      <span className="image-shop-label">
+                        View at {p.store} <span aria-hidden="true">↗</span>
                       </span>
-                    </label>
+                    </RetailLink>
+                    {p.buyFirst && <span className="priority">BUY FIRST</span>}
                   </div>
                   <div className="product-title">
                     <span className="eyebrow">{p.store}</span>
@@ -572,30 +648,27 @@ export default function App() {
                     <span style={{ background: p.illustrationColor }} />
                     {p.color}
                   </p>
+                  <RetailLink product={p} />
+                  <StatusSelect
+                    id={p.id}
+                    name={`${p.member}, ${p.item}`}
+                    status={checklist[p.id] || "need"}
+                    onStatus={setStatus}
+                  />
+                  {p.shoppingCaution && (
+                    <p className="shopping-caution">{p.shoppingCaution}</p>
+                  )}
+                  <Alternative product={p} />
                   <p className="rationale">{p.stylistRationale}</p>
                   <span
                     className={`price-status ${p.priceVerified ? "observed" : ""}`}
                   >
-                    {p.priceVerified
-                      ? "Price observed · Oct 14, 2026"
-                      : "Reference estimate · confirm price"}
+                    {priceLabel(p)}
                   </span>
                   <details className="product-verification">
                     <summary>Verification details</summary>
                     <p>{p.verificationNote} Checked October 14, 2026.</p>
                   </details>
-                  <a
-                    className="product-link"
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${p.product} at ${p.store} (opens in new tab)`}
-                  >
-                    {p.linkStatus === "search-only"
-                      ? "Check retailer listing"
-                      : "View at " + p.store}
-                    <span aria-hidden="true">↗</span>
-                  </a>
                 </article>
               ))}
           </div>
@@ -622,6 +695,78 @@ export default function App() {
             <br />
             <em>A lot more presence.</em>
           </h2>
+          <section
+            id="outfit-checklist"
+            className="outfit-checklist"
+            aria-label="Family outfit checklist"
+          >
+            <div className="checklist-heading">
+              <h3>The outfit plan</h3>
+              <label>
+                Show{" "}
+                <select
+                  aria-label="Show"
+                  value={planFilter}
+                  onChange={(e) => setPlanFilter(e.target.value)}
+                >
+                  <option value="all">All items</option>
+                  {Object.entries(statusLabels).map(([value, label]) => (
+                    <option key={value} value={value}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <p className="shopping-helper">
+              Hill Country Heritage · 12 clothing selections, six footwear
+              checks and optional accessories. Status changes stay in sync
+              everywhere.
+            </p>
+            {data.family.map((name) => {
+              const products = data.shopping.filter(
+                (p) => p.member === name && matchingPlan(p.id),
+              );
+              const hasExtras = extras.some(
+                (p) => p.member === name && matchingPlan(p.id),
+              );
+              if (!products.length && !hasExtras) return null;
+              return (
+                <section
+                  className="member-checklist"
+                  aria-label={`${name} checklist`}
+                  key={name}
+                >
+                  <h4>{name}</h4>
+                  {products.map((p) => (
+                    <ShoppingRow
+                      key={p.id}
+                      product={p}
+                      checklist={checklist}
+                      onStatus={setStatus}
+                    />
+                  ))}
+                  <ClosetRows
+                    member={name}
+                    checklist={checklist}
+                    onStatus={setStatus}
+                    filter={planFilter}
+                  />
+                </section>
+              );
+            })}
+            {![...data.shopping, ...extras].some((p) => matchingPlan(p.id)) && (
+              <p className="checklist-empty" role="status">
+                No items in this status. Choose “All items” to see the full
+                plan.
+              </p>
+            )}
+            <p className="storage-note">
+              {storageError
+                ? "Your browser could not save this checklist. It will last only for this visit."
+                : "Saved in this browser. Already-owned and purchased clothing is excluded from the remaining estimate."}
+            </p>
+          </section>
           <div className="plan-columns">
             <article>
               <span className="plan-number">01</span>
@@ -659,7 +804,9 @@ export default function App() {
             <div>
               <strong>{money(total)}</strong>
               <p>
-                All 12 Heritage clothing references. Three observed prices; nine
+                All 12 Heritage clothing references.{" "}
+                {data.shopping.filter((p) => p.priceVerified).length} observed
+                prices; {data.shopping.filter((p) => !p.priceVerified).length}{" "}
                 estimates.
               </p>
             </div>
@@ -691,12 +838,20 @@ export default function App() {
                 {m.accessories}.
               </p>
             ))}
+            <h3>Heritage closet & optional finishing touches</h3>
+            {extras.map((p) => (
+              <p key={p.id}>
+                {statusLabels[checklist[p.id] || "need"]} — {p.member}: {p.item}
+                {p.optional ? " (optional)" : ""}
+              </p>
+            ))}
             <h3>Heritage shopping checklist</h3>
             {data.shopping.map((p) => (
               <p key={p.id}>
-                {checked.includes(p.id) ? "☑" : "☐"} {p.member} — {p.item},{" "}
-                {p.color} — {money(p.referencePriceUsd)} (
-                {p.priceVerified ? "observed" : "estimate"})
+                {statusLabels[checklist[p.id] || "need"]} — {p.member} —{" "}
+                {p.item}, {p.color} — {money(p.referencePriceUsd)} (
+                {p.priceVerified ? "observed" : "estimate"}) — {p.store} —{" "}
+                {p.url}
               </p>
             ))}
           </div>

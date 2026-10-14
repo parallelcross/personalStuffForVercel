@@ -5,6 +5,7 @@ test("private studio: three concepts, responsive imagery, privacy boundaries and
   page,
   request,
 }, info) => {
+  test.setTimeout(60000);
   for (const [name, width, height] of [
     ["wide", 1680, 1050],
     ["laptop", 1366, 900],

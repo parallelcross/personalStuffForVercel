@@ -2237,3 +2237,76 @@ body:has(.visual-studio) .wordmark > span {
     padding-inline: 20px;
   }
 }
+
+/* Shopping refinements reuse the existing editorial type, surfaces and rules. */
+.outfit-shop-toggle { font-size: 12px; }
+.outfit-shopping[hidden] { display: none; }
+.outfit-shopping { border-bottom: 1px solid #a6ae9d; padding: 28px 0; margin-bottom: 24px; }
+.outfit-shop-heading, .checklist-heading { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
+.outfit-shop-heading h3, .checklist-heading h3 { font-size: 32px; }
+.outfit-shop-heading > span { font-size: 12px; }
+.shopping-helper { font-size: 12px; line-height: 1.7; max-width: 75ch; margin: 12px 0 22px; color: #50594c; }
+.shopping-row { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(120px, .8fr) minmax(180px, 1fr); gap: 24px; align-items: center; padding: 20px 0; border-bottom: 1px solid #bdc1b2; }
+.shopping-row.with-illustration { grid-template-columns: 78px minmax(0, 1.8fr) minmax(120px,.8fr) minmax(180px,1fr); }
+.piece-thumbnail { height: 100px; position: relative; background: #eae5d9; display: grid; place-items: center; }
+.piece-thumbnail .garment { width: 66px; height: 85px; }
+.piece-thumbnail > span { position: absolute; right: 5px; bottom: 1px; }
+.piece-description { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.piece-description > strong { font-family: var(--serif); font-weight: 500; font-size: 25px; line-height: 1.15; }
+.piece-description > span { font-size: 12px; }
+.piece-price { display: flex; flex-direction: column; gap: 5px; }
+.piece-price strong { font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; }
+.piece-price small { font-size: 11px; color: #50594c; }
+.piece-actions { display: flex; flex-direction: column; gap: 8px; }
+.piece-actions .product-link { margin: 0; font-size: 12px; padding: 10px 0; min-height: 44px; }
+.piece-status { display: block; }
+.piece-status select, .checklist-heading select { width: 100%; min-height: 44px; border: 1px solid #88927e; border-radius: 0; background: var(--paper); color: var(--ink); padding: 8px 24px 8px 10px; font: 14px Manrope, sans-serif; }
+.closet-disclosure { margin: 20px 0; }
+.closet-disclosure summary { cursor: pointer; font-size: 12px; min-height: 44px; padding-block: 12px; }
+.closet-row { display: grid; grid-template-columns: minmax(0,1fr) 220px; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid #bdc1b2; }
+.closet-row > div { display: flex; flex-direction: column; gap: 5px; }
+.closet-row strong { font-size: 13px; font-weight: 600; }
+.closet-row span, .closet-row small { font-size: 11px; color: #50594c; }
+.shopping-caution, .piece-description > .shopping-caution { font-size: 11px; line-height: 1.6; color: #793b49; }
+.product .shopping-caution { margin-top: 10px; }
+.product .piece-status { margin: 12px 0; }
+.product-image-link { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; }
+.product-image-link > .garment { height: 200px; width: 75%; filter: drop-shadow(3px 5px 3px #34362b22); margin-top: 12px; }
+.product-person, .priority { pointer-events: none; }
+.image-shop-label { position: absolute; right: 10px; bottom: 9px; font-size: 10px; background: #f3efe5; padding: 4px; }
+.product-image .priority { top: 30px; bottom: auto; font-size: 8px; }
+.product .product-link { min-height: 44px; font-size: 12px; margin-top: 0; }
+.product .product-name { font-size: 12px; }
+.product .product-color { font-size: 12px; }
+.outfit-checklist { margin: 40px 0 64px; scroll-margin-top: 24px; }
+.checklist-heading { flex-wrap: wrap; }
+.checklist-heading label { display: flex; align-items: center; gap: 12px; font-size: 12px; }
+.checklist-heading select { width: auto; }
+.member-checklist { margin-top: 28px; }
+.member-checklist h4 { font: 500 28px var(--serif); padding-bottom: 8px; border-bottom: 1px solid #88927e; }
+.checklist-empty { padding: 24px 0; font-size: 14px; }
+@media (hover: hover) and (pointer: fine) {
+ .piece-thumbnail:hover, .product-image-link:hover { outline: 1px solid #6c7b60; outline-offset: -1px; }
+}
+@media (max-width: 700px) {
+ .outfit-shop-heading { flex-direction: column; gap: 8px; }
+ .shopping-row, .shopping-row.with-illustration { grid-template-columns: 62px minmax(0,1fr); gap: 12px 16px; align-items: start; padding-block: 22px; }
+ .piece-thumbnail { grid-column: 1; grid-row: 1 / 3; height: 90px; }
+ .piece-thumbnail .garment { width: 56px; height: 76px; }
+ .shopping-row .piece-description { grid-column: 1 / -1; }
+ .shopping-row.with-illustration .piece-description { grid-column: 2; }
+ .shopping-row .piece-price { grid-column: 1 / -1; }
+ .shopping-row.with-illustration .piece-price { grid-column: 2; }
+ .piece-actions { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 12px; }
+ .piece-status select, .checklist-heading select { font-size: 16px; }
+ .closet-row { grid-template-columns: minmax(0,1fr); gap: 12px; }
+ .closet-row .piece-status { max-width: 240px; }
+}
+@media print {
+ .outfit-shopping, .outfit-checklist { display: none; }
+}
+.alternative { font-size: 12px; margin-block: 8px; }
+.alternative summary { cursor: pointer; padding-block: 12px; min-height: 44px; }
+.alternative p { font-size: 12px; line-height: 1.7; margin-block: 8px; }
+.alternative small { font-size: 11px; line-height: 1.6; }
+.alternative .product-link { margin-block: 8px; min-height: 44px; }

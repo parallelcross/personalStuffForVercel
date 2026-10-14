@@ -48,3 +48,16 @@ test("public wardrobe data omits private ages and embedded photographs", () => {
   const text = JSON.stringify(data);
   assert.doesNotMatch(text, /year-old|data:image|base64|token|password/i);
 });
+test("optional alternatives reference an existing piece and use direct secure retailer URLs", () => {
+  for (const alternative of data.alternatives) {
+    const original = data.shopping.find((p) => p.id === alternative.forPiece);
+    assert.ok(original);
+    assert.ok(
+      alternative.priceUsd > 0 &&
+        alternative.priceUsd < original.referencePriceUsd,
+    );
+    assert.equal(new URL(alternative.url).protocol, "https:");
+    assert.ok(alternative.lastVerifiedAt);
+    assert.ok(alternative.note);
+  }
+});

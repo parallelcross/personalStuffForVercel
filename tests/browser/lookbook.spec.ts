@@ -64,10 +64,15 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
   await page.getByRole("button", { name: "All", exact: true }).click();
   await expect(page.locator(".product")).toHaveCount(12);
   await expect(page.locator(".budget strong")).toHaveText("$587.78");
-  await page.locator(".check-control input").first().check();
+  await page
+    .locator(".product .piece-status select")
+    .first()
+    .selectOption("purchased");
   await expect(page.locator(".budget strong")).toHaveText("$525.78");
   await page.reload();
-  await expect(page.locator(".check-control input").first()).toBeChecked();
+  await expect(
+    page.locator(".product .piece-status select").first(),
+  ).toHaveValue("purchased");
   await page.getByRole("button", { name: "Mom", exact: true }).click();
   await expect(page.locator(".product")).toHaveCount(1);
   await page.getByRole("button", { name: "All", exact: true }).click();
@@ -134,7 +139,12 @@ test("storage failure preserves usable checklist", async ({ page }) => {
     };
   });
   await page.goto("/");
-  await page.locator(".check-control input").first().check();
+  await page
+    .locator(".product .piece-status select")
+    .first()
+    .selectOption("purchased");
   await expect(page.locator(".budget strong")).toHaveText("$525.78");
-  await expect(page.locator(".storage-note")).toContainText("could not save");
+  await expect(page.locator("#shop .storage-note")).toContainText(
+    "could not save",
+  );
 });
