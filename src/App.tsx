@@ -95,7 +95,7 @@ export default function App() {
       </a>
       <header className="masthead">
         <a className="wordmark" href="#">
-          field <i>&</i> family<span>THE WARDROBE JOURNAL</span>
+          Wear Family<span>PHOTO OUTFIT SELECTION</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#lookbook">The looks</a>
@@ -707,7 +707,7 @@ export default function App() {
       </main>
       <footer>
         <a href="#" className="wordmark">
-          field <i>&</i> family
+          Wear Family<span>PHOTO OUTFIT SELECTION</span>
         </a>
         <span>A WARDROBE FOR THE MEMORY.</span>
         <a href="#">Back to top ↑</a>

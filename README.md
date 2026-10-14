@@ -1,4 +1,4 @@
-# Field & Family
+# Wear Family Photo Outfit Selection
 
 An editorial family wardrobe lookbook built with React, TypeScript and Vite. Three distinct concepts, six outfits per concept, approved AI family visualizations and individual studies, original SVG product illustrations, interactive palettes and comparison, and a browser-local shopping checklist for the recommended **Hill Country Heritage** look.
 
