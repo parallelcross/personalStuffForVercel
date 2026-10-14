@@ -66,10 +66,12 @@ export function MemberPortrait({
     <span className="member-portrait">
       <img
         src={`/images/wardrobe/member-${memberIndex}-small.webp`}
+        srcSet={`/images/wardrobe/member-${memberIndex}-small.webp 768w, /images/wardrobe/member-${memberIndex}.webp 1536w`}
+        sizes="(max-width: 700px) 150vw, 50vw"
         alt={`AI-generated ${name} outfit visualization`}
         loading="lazy"
         width="768"
-        height={memberIndex === 1 ? 549 : 512}
+        height="512"
         style={{ transform: `translateX(-${(conceptIndex * 100) / 3}%)` }}
         onError={() => setFailed(true)}
       />
@@ -98,8 +100,8 @@ export function MemberStudy({
           src={`/images/wardrobe/member-${memberIndex}.webp`}
           alt={`AI-generated three-look study for ${name}: Heritage left, Organic center, Editorial right.`}
           loading="lazy"
-          width={memberIndex === 1 ? 1484 : 1536}
-          height={memberIndex === 1 ? 1060 : 1024}
+          width="1536"
+          height="1024"
         />
       </a>
       <div className="study-labels">
