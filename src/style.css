@@ -2310,3 +2310,16 @@ body:has(.visual-studio) .wordmark > span {
 .alternative p { font-size: 12px; line-height: 1.7; margin-block: 8px; }
 .alternative small { font-size: 11px; line-height: 1.6; }
 .alternative .product-link { margin-block: 8px; min-height: 44px; }
+
+/* Five stories retain the editorial rhythm; every option remains visible. */
+.concept-switch { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.theme-ember { --theme-bg: #f1e3d3; }
+.theme-plaid { --theme-bg: #ece2d0; }
+.autumn-study { display: block; margin-top: 28px; max-width: 640px; }
+.study-labels.autumn-labels { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
+@media (max-width: 700px) {
+  .concept-switch { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .concept-switch button { grid-column: span 2; }
+  .concept-switch button:nth-child(n+4) { grid-column: span 3; border-top: 1px solid var(--line); }
+}
+.compare-art > .member-portrait { height: 100%; width: 50%; margin-inline: auto; aspect-ratio: 1 / 2; }

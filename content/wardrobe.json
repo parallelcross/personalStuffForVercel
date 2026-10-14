@@ -130,7 +130,9 @@
           "layer": false,
           "topKind": "henley"
         }
-      ]
+      ],
+      "deck": "A little heritage. A little wild.",
+      "intro": "Deep wine, worn-in navy, and the warmth of a Texas autumn. A considered mix of texture and tone that lets every personality belong."
     },
     {
       "id": "organic",
@@ -250,7 +252,9 @@
           "layer": false,
           "topKind": "henley"
         }
-      ]
+      ],
+      "deck": "Softly spoken, naturally together.",
+      "intro": "Sun-faded clay, washed linen, and sage. An easy, tactile wardrobe with room to move and the landscape woven into every shade."
     },
     {
       "id": "editorial",
@@ -370,7 +374,253 @@
           "layer": true,
           "topKind": "henley"
         }
-      ]
+      ],
+      "deck": "Clean lines. Quiet confidence.",
+      "intro": "Ink, ecru, and sculptural silhouettes. A more architectural take on the family portrait, with warm leather keeping it grounded."
+    },
+    {
+      "id": "ember",
+      "title": "Hill Country Ember",
+      "label": "Warm autumn",
+      "tagline": "Copper tones, softened by ivory",
+      "palette": [
+        {
+          "name": "Burnt orange",
+          "hex": "#A6532D"
+        },
+        {
+          "name": "Terracotta",
+          "hex": "#AF654C"
+        },
+        {
+          "name": "Copper",
+          "hex": "#A9653D"
+        },
+        {
+          "name": "Warm ivory",
+          "hex": "#F0E5D4"
+        },
+        {
+          "name": "Tobacco",
+          "hex": "#795239"
+        },
+        {
+          "name": "Dark indigo",
+          "hex": "#344558"
+        },
+        {
+          "name": "Olive",
+          "hex": "#65705A"
+        }
+      ],
+      "location": "A limestone path beneath live oaks at golden hour, with dry grasses and understated fall foliage",
+      "why": "Orange moves diagonally through the family in different depths. Ivory on the eldest and youngest gives the warm palette breathing room, while indigo grounds the group.",
+      "textures": [
+        "cotton twill",
+        "textured knit",
+        "cotton gauze",
+        "Oxford cotton",
+        "denim",
+        "suede"
+      ],
+      "members": [
+        {
+          "name": "Dad",
+          "outfit": "Burnt-orange overshirt over an ivory knit polo, dark-indigo jeans",
+          "shoes": "Brown suede boots",
+          "accessories": "Brown leather belt",
+          "topColor": "#A6532D",
+          "bottomColor": "#344558",
+          "texture": "Cotton twill + textured knit",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "polo"
+        },
+        {
+          "name": "Mom",
+          "outfit": "Terracotta textured midi dress",
+          "shoes": "Cognac ankle boots",
+          "accessories": "Understated gold hoops and fine necklace",
+          "topColor": "#AF654C",
+          "bottomColor": "#AF654C",
+          "texture": "Cotton gauze",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Eldest son",
+          "outfit": "Warm-ivory Oxford shirt, tobacco chinos",
+          "shoes": "Cream sneakers",
+          "accessories": "Brown belt if needed",
+          "topColor": "#F0E5D4",
+          "bottomColor": "#795239",
+          "texture": "Oxford cotton + twill",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Daughter",
+          "outfit": "Copper cardigan over an ivory blouse, dark-indigo midi skirt",
+          "shoes": "Cognac loafers",
+          "accessories": "Small gold earrings",
+          "topColor": "#A9653D",
+          "bottomColor": "#344558",
+          "texture": "Soft knit + denim",
+          "shape": "skirt",
+          "layer": true,
+          "topKind": "blouse"
+        },
+        {
+          "name": "Middle son",
+          "outfit": "Muted cinnamon knit polo, sandstone chinos",
+          "shoes": "Brown suede shoes",
+          "accessories": "None",
+          "topColor": "#A66342",
+          "bottomColor": "#B99873",
+          "texture": "Textured knit + twill",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "polo"
+        },
+        {
+          "name": "Youngest son",
+          "outfit": "Oatmeal sweater over a rust collared shirt, deep-brown chinos",
+          "shoes": "Taupe sneakers",
+          "accessories": "None",
+          "topColor": "#D8CCB8",
+          "bottomColor": "#4D3C30",
+          "texture": "Cotton knit + twill",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "shirt"
+        }
+      ],
+      "deck": "Autumn, in a warmer light.",
+      "intro": "Burnt orange, terracotta and copper, grounded by dark indigo. Soft ivory gives the warm tones room to breathe, with six distinct outfits woven into one autumn story."
+    },
+    {
+      "id": "plaid",
+      "title": "Plaid & Copper",
+      "label": "Pattern & texture",
+      "tagline": "A cozy Hill Country autumn",
+      "palette": [
+        {
+          "name": "Rust",
+          "hex": "#A55238"
+        },
+        {
+          "name": "Terracotta",
+          "hex": "#AF654C"
+        },
+        {
+          "name": "Camel",
+          "hex": "#B58A5B"
+        },
+        {
+          "name": "Cream",
+          "hex": "#F0E5D4"
+        },
+        {
+          "name": "Tobacco",
+          "hex": "#795239"
+        },
+        {
+          "name": "Dark denim",
+          "hex": "#344558"
+        },
+        {
+          "name": "Olive",
+          "hex": "#65705A"
+        }
+      ],
+      "location": "A limestone path beneath live oaks at golden hour, with dry grasses and understated fall foliage",
+      "why": "Three plaids share a warm palette but vary in scale: a medium check on Dad, a larger woven plaid on the daughter, and a finer check on the middle son. Solid outfits give the patterns space.",
+      "textures": [
+        "brushed cotton plaid",
+        "cotton twill",
+        "soft knit",
+        "woven plaid",
+        "denim",
+        "suede"
+      ],
+      "members": [
+        {
+          "name": "Dad",
+          "outfit": "Muted rust-and-navy medium-plaid shirt under an open tobacco chore jacket, dark-indigo jeans",
+          "shoes": "Brown suede boots",
+          "accessories": "Brown leather belt",
+          "topColor": "#795239",
+          "bottomColor": "#344558",
+          "texture": "Brushed plaid + cotton twill",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Mom",
+          "outfit": "Terracotta textured midi dress",
+          "shoes": "Cognac ankle boots",
+          "accessories": "Understated gold hoops and fine necklace",
+          "topColor": "#AF654C",
+          "bottomColor": "#AF654C",
+          "texture": "Cotton gauze",
+          "shape": "dress",
+          "layer": false,
+          "topKind": "dress"
+        },
+        {
+          "name": "Eldest son",
+          "outfit": "Cream Oxford shirt, olive chinos",
+          "shoes": "Brown suede shoes",
+          "accessories": "Brown belt if needed",
+          "topColor": "#F0E5D4",
+          "bottomColor": "#65705A",
+          "texture": "Oxford cotton + twill",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Daughter",
+          "outfit": "Cream sweater, rust-and-camel large-plaid midi skirt",
+          "shoes": "Cognac ankle boots",
+          "accessories": "Small gold earrings",
+          "topColor": "#F0E5D4",
+          "bottomColor": "#A9653D",
+          "texture": "Soft knit + woven plaid",
+          "shape": "skirt",
+          "layer": false,
+          "topKind": "blouse"
+        },
+        {
+          "name": "Middle son",
+          "outfit": "Small-scale burnt-orange-and-cream plaid shirt, sandstone chinos",
+          "shoes": "Brown suede shoes",
+          "accessories": "None",
+          "topColor": "#A6532D",
+          "bottomColor": "#B99873",
+          "texture": "Brushed cotton plaid + twill",
+          "shape": "trousers",
+          "layer": false,
+          "topKind": "shirt"
+        },
+        {
+          "name": "Youngest son",
+          "outfit": "Solid oatmeal sweater over a rust Henley, dark-indigo jeans",
+          "shoes": "Taupe sneakers",
+          "accessories": "None",
+          "topColor": "#D8CCB8",
+          "bottomColor": "#344558",
+          "texture": "Cotton knit + denim",
+          "shape": "trousers",
+          "layer": true,
+          "topKind": "henley"
+        }
+      ],
+      "deck": "A little pattern. Plenty of warmth.",
+      "intro": "Rust, cream and copper, with three thoughtfully spaced plaids. Different check sizes bring personality; solid terracotta, ivory and oatmeal keep the family portrait calm."
     }
   ],
   "shopping": [
@@ -628,8 +878,14 @@
     }
   ],
   "estimatedTotals": {
-    "allPrimaryClothingUsdApprox": [590, 605],
-    "closetAndLowerCostUsdApprox": [315, 325]
+    "allPrimaryClothingUsdApprox": [
+      590,
+      605
+    ],
+    "closetAndLowerCostUsdApprox": [
+      315,
+      325
+    ]
   },
   "alternatives": [
     {

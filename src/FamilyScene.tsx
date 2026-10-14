@@ -62,17 +62,26 @@ export function MemberPortrait({
     return (
       <span className="portrait-unavailable">Styling preview unavailable</span>
     );
+  const autumn = conceptIndex >= 3;
+  const file = autumn
+    ? `autumn-member-${memberIndex}`
+    : `member-${memberIndex}`;
+  const panels = autumn ? 2 : 3;
+  const panel = autumn ? conceptIndex - 3 : conceptIndex;
   return (
     <span className="member-portrait">
       <img
-        src={`/images/wardrobe/member-${memberIndex}-small.webp`}
-        srcSet={`/images/wardrobe/member-${memberIndex}-small.webp 768w, /images/wardrobe/member-${memberIndex}.webp 1536w`}
+        src={`/images/wardrobe/${file}-small.webp`}
+        srcSet={`/images/wardrobe/${file}-small.webp 768w, /images/wardrobe/${file}.webp ${autumn ? 1024 : 1536}w`}
         sizes="(max-width: 700px) 150vw, 50vw"
         alt={`AI-generated ${name} outfit visualization`}
         loading="lazy"
         width="768"
-        height="512"
-        style={{ transform: `translateX(-${(conceptIndex * 100) / 3}%)` }}
+        height={autumn ? 768 : 512}
+        style={{
+          width: `${panels * 100}%`,
+          transform: `translateX(-${(panel * 100) / panels}%)`,
+        }}
         onError={() => setFailed(true)}
       />
     </span>
@@ -89,7 +98,7 @@ export function MemberStudy({
   if (!showVisualizations) return null;
   return (
     <details className="member-study">
-      <summary>Compare all three looks for {name.toLowerCase()}</summary>
+      <summary>Compare all five looks for {name.toLowerCase()}</summary>
       <a
         href={`/images/wardrobe/member-${memberIndex}.webp`}
         target="_blank"
@@ -108,6 +117,25 @@ export function MemberStudy({
         <span>Hill Country Heritage</span>
         <span>Texas Organic</span>
         <span>Austin Editorial</span>
+      </div>
+      <a
+        className="autumn-study"
+        href={`/images/wardrobe/autumn-member-${memberIndex}.webp`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Open Ember and Plaid study for ${name} in a new tab`}
+      >
+        <img
+          src={`/images/wardrobe/autumn-member-${memberIndex}.webp`}
+          alt={`AI-generated two-look study for ${name}: Hill Country Ember left, Plaid & Copper right.`}
+          loading="lazy"
+          width="1024"
+          height="1024"
+        />
+      </a>
+      <div className="study-labels autumn-labels">
+        <span>Hill Country Ember</span>
+        <span>Plaid &amp; Copper</span>
       </div>
       <p>
         AI-generated wardrobe visualizations. Approximate likeness, proportions

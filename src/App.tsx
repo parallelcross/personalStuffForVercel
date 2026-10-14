@@ -25,16 +25,6 @@ import {
   type Checklist,
   type PieceStatus,
 } from "./shopping";
-const descriptions = [
-  "A little heritage. A little wild.",
-  "Softly spoken, naturally together.",
-  "Clean lines. Quiet confidence.",
-];
-const intros = [
-  "Deep wine, worn-in navy, and the warmth of a Texas autumn. A considered mix of texture and tone that lets every personality belong.",
-  "Sun-faded clay, washed linen, and sage. An easy, tactile wardrobe with room to move and the landscape woven into every shade.",
-  "Ink, ecru, and sculptural silhouettes. A more architectural take on the family portrait, with warm leather keeping it grounded.",
-];
 export default function App() {
   const [conceptIndex, setConceptIndex] = useState(() => {
     const id = new URLSearchParams(location.search).get("concept");
@@ -150,14 +140,14 @@ export default function App() {
             <p>
               Thoughtfully coordinated. Never too matched.
               <br />
-              Three wardrobe stories for the moments
+              Five wardrobe stories for the moments
               <br className="desktop-break" /> you’ll want to keep.
             </p>
             <a className="button button-dark" href="#lookbook">
               Explore the looks <span aria-hidden="true">↗</span>
             </a>
             <div className="hero-footnote">
-              <span>03 CONCEPTS</span>
+              <span>05 CONCEPTS</span>
               <span>06 INDIVIDUALS</span>
               <span>ONE FAMILY</span>
             </div>
@@ -200,12 +190,12 @@ export default function App() {
             <br />
             <em>Everyone still feels like themselves.</em>
           </p>
-          <span className="note-number">01—03</span>
+          <span className="note-number">01—05</span>
         </div>
         <section id="lookbook" className={`lookbook theme-${concept.id}`}>
           <div className="section-top">
             <span className="eyebrow">01 / THE LOOKBOOK</span>
-            <span className="small">Three ways to tell your story</span>
+            <span className="small">Five ways to tell your story</span>
           </div>
           <div className="concept-switch" aria-label="Wardrobe concept">
             {data.concepts.map((c, i) => (
@@ -235,9 +225,9 @@ export default function App() {
               ) : (
                 <h2>{concept.title}</h2>
               )}
-              <p className="concept-deck">{descriptions[conceptIndex]}</p>
+              <p className="concept-deck">{concept.deck}</p>
             </div>
-            <p className="intro-text">{intros[conceptIndex]}</p>
+            <p className="intro-text">{concept.intro}</p>
           </div>
           <div className="scene-spread">
             <FamilyScene
@@ -498,10 +488,19 @@ export default function App() {
             {data.concepts.map((c, i) => (
               <article className={`comparison theme-${c.id}`} key={c.id}>
                 <div className="compare-art">
-                  <Outfit
-                    member={c.members[compareMember]}
-                    index={compareMember}
-                  />
+                  {i >= 3 ? (
+                    <MemberPortrait
+                      key={`${i}-${compareMember}`}
+                      memberIndex={compareMember}
+                      conceptIndex={i}
+                      name={data.family[compareMember]}
+                    />
+                  ) : (
+                    <Outfit
+                      member={c.members[compareMember]}
+                      index={compareMember}
+                    />
+                  )}
                   <span className="compare-number">0{i + 1}</span>
                 </div>
                 <div className="compare-palette">

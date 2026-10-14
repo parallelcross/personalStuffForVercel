@@ -1,6 +1,6 @@
 # Wear Family Photo Outfit Selection
 
-An editorial family wardrobe lookbook built with React, TypeScript and Vite. Three distinct concepts, six outfits per concept, approved AI family visualizations and individual studies, original SVG product illustrations, interactive palettes and comparison, and a browser-local shopping checklist for the recommended **Hill Country Heritage** look.
+An editorial family wardrobe lookbook built with React, TypeScript and Vite. Five distinct concepts, six outfits per concept, approved AI family visualizations and individual studies, original SVG product illustrations, interactive palettes and comparison, and a browser-local shopping checklist for the recommended **Hill Country Heritage** look.
 
 ## Develop
 
@@ -35,7 +35,7 @@ For the production preview on port 4173:
 TEST_BASE_URL=http://127.0.0.1:4173 npm run test:e2e
 ```
 
-Tests cover all 18 outfits, concept and swatch selection, comparison, shopping filters, checkbox persistence, calculated budgets, reset, storage failure, keyboard access, reduced motion, print content, missing local assets and axe WCAG A/AA checks. Viewports: desktop 1440, tablet 820, mobile 390, plus a 320px overflow check. These browser emulations do not replace checking Safari and Android on real phones. Test screenshots and reports are ignored by Git.
+Tests cover all 30 outfits, concept and swatch selection, comparison, shopping filters, checkbox persistence, calculated budgets, reset, storage failure, keyboard access, reduced motion, print content, missing local assets and axe WCAG A/AA checks. Viewports: desktop 1440, tablet 820, mobile 390, plus a 320px overflow check. These browser emulations do not replace checking Safari and Android on real phones. Test screenshots and reports are ignored by Git.
 
 `node scripts/capture.mjs` captures visual review images in `.qa/` and regenerates the original social-sharing PNG while the dev server is running. Create `.qa/` first if needed. Format source with `npm run format`.
 
@@ -51,7 +51,7 @@ Shopping artwork is original stylized SVG. Family and individual outfit views ar
 
 ## Privacy
 
-The user approved publication of the reviewed AI-generated family visualizations on October 14, 2026. These recognizable generated images are public. Only the 18 optimized WebP files listed with SHA-256 hashes in `content/published-assets.json` are approved: three group images and six individual three-look studies, each in full and small sizes. Their metadata was removed; no EXIF or XMP is present.
+The user approved publication of the reviewed AI-generated family visualizations on October 14, 2026. These recognizable generated images are public. Only the 34 optimized WebP files listed with SHA-256 hashes in `content/published-assets.json` are approved: five group images, six individual three-look studies and six additional two-look studies, each in full and small sizes. Their metadata was removed; no EXIF or XMP is present.
 
 Original family photographs, names, children's ages, private reference materials, and design mockups remain excluded from Git and deployment. Public roles are Dad, Mom, Eldest son, Daughter, Middle son and Youngest son. Never import `.local-reference/` or publish new images without separate approval. Keep `.env*`, credentials, `.codex/`, `.agents/`, `.vercel/`, browser reports and local reference files out of Git. The production build runs a privacy audit that rejects unapproved raster images and private reference paths.
 
@@ -63,7 +63,7 @@ Original family photographs, names, children's ages, private reference materials
 4. Use **Install Command: `npm install`**, **Build Command: `npm run build`**, and **Output Directory: `dist`**.
 5. Use Node.js **22.x**. No environment variables are required.
 6. Click **Deploy**. Vercel will build the repository root. Later pushes to main will deploy automatically through the integration.
-7. Open the deployed URL and check navigation, all three concepts, the checklist and print plan.
+7. Open the deployed URL and check navigation, all five concepts, the checklist and print plan.
 8. Vercel's `VERCEL_PROJECT_PRODUCTION_URL` system variable automatically supplies absolute social-image URLs, canonical metadata and `og:url` during the build. Keep **Automatically expose System Environment Variables** enabled. If you later add a custom domain, redeploy to refresh this metadata. Local builds retain relative image URLs without guessing a public domain. See [Vercel's system-variable documentation](https://vercel.com/docs/environment-variables/system-environment-variables).
 
 `vercel.json` declares the requested build settings and basic security headers. This is a static, anchor-navigated site. Unknown routes correctly return 404 rather than masking missing assets with HTML. No Vercel CLI production deployment is part of this workflow.
@@ -85,3 +85,5 @@ Images are AI-generated styling studies, not actual photographs or exact product
 The inline list, Shopping Edit, and final family checklist share one status per piece: Need to buy, Already own, or Purchased. The final plan includes six footwear checks and optional accessories, without inventing product sources or adding them to the clothing budget. Legacy ready checks migrate without guessing whether they were owned or purchased. State stays local under `wear-family-checklist-v2`; reset supports Undo. Copy and print include the statuses and retailer URLs.
 
 For review captures: `CAPTURE_STAGE=before node scripts/capture-shopping.mjs` before edits, then `CAPTURE_STAGE=after node scripts/capture-shopping.mjs`. The default target is the local review server on port 5174; override `TEST_BASE_URL` as needed. Screenshots stay in ignored `.qa/shopping-before` and `.qa/shopping-after`. The browser suite checks outbound popup destinations with intercepted responses so retailer outages do not fail application tests; live retailer research is separate.
+
+The fourth and fifth concepts are Hill Country Ember (orange solids and texture) and Plaid & Copper (three varied checks balanced by solids). Each has seven palette colors, six complete outfit plans and generated family/individual imagery. The original three concepts and Heritage shopping checklist remain unchanged. The new concepts have no curated retailer selections yet; the site labels that limitation explicitly.

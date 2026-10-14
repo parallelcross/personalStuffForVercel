@@ -1,7 +1,55 @@
 {
   "approvedOn": "2026-10-14",
-  "scope": "User approved corrected Heritage likeness and requested updating all images. Generated family concepts and six individual outfit comparisons only; original reference photos remain private.",
+  "scope": "User requested five website concepts with generated family and individual imagery. Original reference photographs remain private.",
   "files": [
+    {
+      "path": "images/wardrobe/autumn-member-0-small.webp",
+      "sha256": "d16787af5a11b2b3298a05cda7cdebf1b16c28c3a72fab9a0424c558415fccd6"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-0.webp",
+      "sha256": "4931efa71164c571192db7618f5b82dd09c6bee9ef9ea878ac0606abcd542063"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-1-small.webp",
+      "sha256": "8367e6b96ffd9a9b24514842d6c5222032d4808228eddf14ba6050154c2a1132"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-1.webp",
+      "sha256": "a8f826ea20be26ec85cbcce81d6963bfe9262190de70da2d0d6f90b607f2b4bb"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-2-small.webp",
+      "sha256": "2903efaaae9e3339adafe0b83ebd109839a33f4079319f58671045c5849c4160"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-2.webp",
+      "sha256": "cce2e0d520ce86d90d10eb4121a444788fa69919e6c61cd9ffef63bb47654c29"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-3-small.webp",
+      "sha256": "f3c23b85164fe14c039c143271c1ab9c187c34630db39af710e97c184ce14225"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-3.webp",
+      "sha256": "897e968904a6cd39aaf68d5d85fafb38ab7811c5786cfe4f9adfd6ac5425c345"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-4-small.webp",
+      "sha256": "c8f96845322888b8be9a477707a38367876ae84a3d9808c6cc5113d4d37e8479"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-4.webp",
+      "sha256": "7ca0414a201407c5e8d058f33c1cd5c188b066e6a41c20822b008bc6129b4341"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-5-small.webp",
+      "sha256": "c2df0071f62d7725a981d513ea6af9f9491cfaf87da313f913f1111b51c61524"
+    },
+    {
+      "path": "images/wardrobe/autumn-member-5.webp",
+      "sha256": "34113bac571fc838e3593c4b791095e12c56edd1f0a56a77c9a6b39d512b7b40"
+    },
     {
       "path": "images/wardrobe/editorial-small.webp",
       "sha256": "5e4549cfd0ea9996348e89840cb84a02930fdd37abe36aa23bfc6fb9c21dd6d4"
@@ -9,6 +57,14 @@
     {
       "path": "images/wardrobe/editorial.webp",
       "sha256": "327c3ed7390f30f74582ee3e2d076774e573f97df1c32d36524a12e24299b90b"
+    },
+    {
+      "path": "images/wardrobe/ember-small.webp",
+      "sha256": "83cf4f4e47ecaa64a1178a2692264d78de252342313519c7b34fa20ef4d307bc"
+    },
+    {
+      "path": "images/wardrobe/ember.webp",
+      "sha256": "5f598a243ead60cfc2f58aacbf90ab3432e98cb84b3547d2ab92df6883674d3f"
     },
     {
       "path": "images/wardrobe/heritage-small.webp",
@@ -73,6 +129,14 @@
     {
       "path": "images/wardrobe/organic.webp",
       "sha256": "2cba84ddf09867a2e6778dd825948f7300e381016eb053bb39a0f63966df3949"
+    },
+    {
+      "path": "images/wardrobe/plaid-small.webp",
+      "sha256": "0305b7e005f7fe0d41b48b082b34f5efa81e2f6f70dc982e3fa1da6eb638ee05"
+    },
+    {
+      "path": "images/wardrobe/plaid.webp",
+      "sha256": "414fc7e0d529dd49b7ce1c07e8651b54e3fcfc844415deefbe3a380173504e34"
     }
   ]
 }

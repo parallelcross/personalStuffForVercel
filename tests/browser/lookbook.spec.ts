@@ -19,6 +19,8 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
     "Hill Country Heritage",
     "Texas Organic",
     "Austin Editorial",
+    "Hill Country Ember",
+    "Plaid & Copper",
   ]) {
     await page.getByRole("button", { name: new RegExp(title) }).click();
     await expect(page.locator(".concept-intro h1")).toHaveText(title);
@@ -58,7 +60,7 @@ test("complete lookbook, interactions, persistence, accessibility and assets", a
   await page.getByRole("button", { name: /Hill Country Heritage/ }).click();
   await page.locator(".outfit-choice").first().click();
   await page.locator(".compare-select select").selectOption("3");
-  await expect(page.locator(".comparison")).toHaveCount(3);
+  await expect(page.locator(".comparison")).toHaveCount(5);
   await page.getByRole("button", { name: "Buy first", exact: true }).click();
   await expect(page.locator(".product")).toHaveCount(6);
   await page.getByRole("button", { name: "All", exact: true }).click();

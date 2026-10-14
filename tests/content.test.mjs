@@ -4,8 +4,8 @@ import { readFileSync } from "node:fs";
 const data = JSON.parse(
   readFileSync(new URL("../content/wardrobe.json", import.meta.url)),
 );
-test("three complete concepts, six outfits and seven valid colors each", () => {
-  assert.equal(data.concepts.length, 3);
+test("five complete concepts, six outfits and seven valid colors each", () => {
+  assert.equal(data.concepts.length, 5);
   for (const c of data.concepts) {
     assert.equal(c.members.length, 6);
     assert.equal(c.palette.length, 7);

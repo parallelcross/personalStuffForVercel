@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-test("private studio: three concepts, responsive imagery, privacy boundaries and recovery", async ({
+test("private studio: five concepts, responsive imagery, privacy boundaries and recovery", async ({
   page,
   request,
 }, info) => {
-  test.setTimeout(60000);
+  test.setTimeout(90000);
   for (const [name, width, height] of [
     ["wide", 1680, 1050],
     ["laptop", 1366, 900],
@@ -17,6 +17,8 @@ test("private studio: three concepts, responsive imagery, privacy boundaries and
       ["heritage", "Hill Country Heritage"],
       ["organic", "Texas Organic"],
       ["editorial", "Austin Editorial"],
+      ["ember", "Hill Country Ember"],
+      ["plaid", "Plaid & Copper"],
     ]) {
       await page.goto(`/?concept=${id}`);
       await expect(page.locator(".concept-intro h1")).toHaveText(title);
@@ -48,11 +50,12 @@ test("private studio: three concepts, responsive imagery, privacy boundaries and
         for (let i = 0; i < 6; i++) {
           await page.locator(".outfit-choice").nth(i).click();
           await page.locator(".member-study summary").click();
-          await expect(page.locator(".member-study img")).toBeVisible();
+          await expect(page.locator(".member-study img").first()).toBeVisible();
           await expect
             .poll(() =>
               page
                 .locator(".member-study img")
+                .first()
                 .evaluate(
                   (el: HTMLImageElement) => el.complete && el.naturalWidth > 0,
                 ),
