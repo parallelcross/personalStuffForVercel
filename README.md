@@ -47,7 +47,7 @@ Research date: **October 14, 2026**. The 12 primary clothing references total **
 
 `verifiedLive` intentionally stays false: page observations are not a live inventory feed. `priceVerified` and `lastVerifiedAt` identify the six price observations; `lastCheckedAt` records the research attempt for every item. After new research, update both fields and the accompanying note. Product links serve as primary-source references. No affiliate tracking is added. Two optional Quince alternatives were confirmed in a real browser: a navy overshirt at $52 and a pale-blue Oxford at $42. Their prices are dated observations; comparing them does not change the primary-plan budget.
 
-Shopping artwork is original stylized SVG. Family and individual outfit views are clearly labeled AI-generated wardrobe visualizations, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Cormorant Garamond and Source Sans 3 are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
+Shopping artwork is original stylized SVG. Family and individual outfit views are clearly labeled AI-generated wardrobe visualizations, not product photography or an exact depiction of fit. Merchant image reuse rights were not established, so no merchant imagery is copied or hotlinked. Bodoni Moda and Source Sans 3 are distributed through Fontsource under their included open font licenses; see `THIRD_PARTY_NOTICES.md`.
 
 ## Privacy
 
@@ -91,3 +91,11 @@ The inline list, Shopping Edit, and final family checklist share one status per 
 For review captures: `CAPTURE_STAGE=before node scripts/capture-shopping.mjs` before edits, then `CAPTURE_STAGE=after node scripts/capture-shopping.mjs`. The default target is the local review server on port 5174; override `TEST_BASE_URL` as needed. Screenshots stay in ignored `.qa/shopping-before` and `.qa/shopping-after`. The browser suite checks outbound popup destinations with intercepted responses so retailer outages do not fail application tests; live retailer research is separate.
 
 The fourth and fifth concepts are Hill Country Ember (orange solids and texture) and Plaid & Copper (three varied checks balanced by solids). Each has seven palette colors, six complete outfit plans and generated family/individual imagery. The original three concepts and Heritage shopping checklist remain unchanged. The new concepts have no curated retailer selections yet; the site labels that limitation explicitly.
+
+## October 15 editorial redesign
+
+The Gallery direction presents the complete family photo beside five concept choices, followed by six outfit studies. Every concept comparison uses the approved individual imagery. Product shopping uses a two-column list with inline purchase status and expandable verification notes; the consolidated checklist, closet pieces, budget, undo, copy and print remain intact.
+
+`src/ConceptGallery.tsx` owns concept presentation, `src/ProductEntry.tsx` owns shopping entries, and `src/Icons.tsx` provides a consistent authored icon. Design tokens remain centralized. Bodoni Moda replaces Cormorant Garamond; four local font faces are loaded and there is no new runtime service.
+
+The three working explorations, before/after captures and review page live in ignored `.qa/redesign/`. They are local review artifacts and are excluded from the production bundle. All original wardrobe images and structured shopping facts are unchanged.

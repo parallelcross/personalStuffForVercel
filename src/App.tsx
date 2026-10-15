@@ -1,20 +1,10 @@
-import { useState } from "react";
-import {
-  FamilyScene,
-  MemberPortrait,
-  MemberStudy,
-  privatePreview,
-  showVisualizations,
-} from "./FamilyScene";
+import { useRef, useState } from "react";
+import { MemberPortrait, MemberStudy, privatePreview } from "./FamilyScene";
 import data from "../content/wardrobe.json";
-import { Garment, Outfit } from "./Garment";
-import {
-  Alternative,
-  ShoppingRow,
-  ClosetRows,
-  RetailLink,
-  StatusSelect,
-} from "./ShoppingPieces";
+import { ConceptGallery } from "./ConceptGallery";
+import { ProductEntry } from "./ProductEntry";
+import { Arrow } from "./Icons";
+import { ShoppingRow, ClosetRows } from "./ShoppingPieces";
 import {
   money,
   priceLabel,
@@ -26,6 +16,7 @@ import {
   type PieceStatus,
 } from "./shopping";
 export default function App() {
+  const outfitHeading = useRef<HTMLHeadingElement>(null);
   const [conceptIndex, setConceptIndex] = useState(() => {
     const id = new URLSearchParams(location.search).get("concept");
     return Math.max(
@@ -84,6 +75,21 @@ export default function App() {
     url.searchParams.set("member", data.family[i]);
     history.replaceState(null, "", url);
   };
+  const chooseOutfit = (i: number) => {
+    chooseMember(i);
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      requestAnimationFrame(() => {
+        const heading = outfitHeading.current;
+        const details = heading?.closest(".outfit-detail");
+        if (!heading || !details) return;
+        const bounds = details.getBoundingClientRect();
+        if (bounds.top < 24 || bounds.bottom > window.innerHeight) {
+          heading.focus({ preventScroll: true });
+          heading.scrollIntoView({ behavior: "instant", block: "start" });
+        }
+      });
+    }
+  };
   const matchingPlan = (id: string) =>
     planFilter === "all" || (checklist[id] || "need") === planFilter;
   const copy = async () => {
@@ -104,7 +110,7 @@ export default function App() {
       </a>
       <header className="masthead">
         <a className="wordmark" href="#">
-          Wear Family<span>PHOTO OUTFIT SELECTION</span>
+          Wear Family<span>Photo Outfit Selection</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#lookbook">The looks</a>
@@ -113,330 +119,200 @@ export default function App() {
             Shopping list <span className="nav-count">{checked.length}/12</span>
           </a>
         </nav>
-        <span className="edition">FALL EDITION · No. 01</span>
+        <span className="edition">The fall portrait wardrobe</span>
       </header>
-      <main
-        id="main"
-        className={showVisualizations ? "visual-studio" : "public-studio"}
-      >
+      <main id="main" className="visual-studio">
         {privatePreview && (
           <p className="private-banner">
             Local design review · Approved visualizations are public.{" "}
             <a href="/__private/prototypes">Compare design studies</a>
           </p>
         )}
-        <section className="hero">
-          <div className="hero-copy">
-            <span className="eyebrow">
-              THE FALL PORTRAIT EDIT / TEXAS HILL COUNTRY
-            </span>
-            <h1>
-              Six personalities.
-              <br />
-              One beautiful
-              <br />
-              <em>frame.</em>
-            </h1>
-            <p>
-              Thoughtfully coordinated. Never too matched.
-              <br />
-              Five wardrobe stories for the moments
-              <br className="desktop-break" /> you’ll want to keep.
-            </p>
-            <a className="button button-dark" href="#lookbook">
-              Explore the looks <span aria-hidden="true">↗</span>
-            </a>
-            <div className="hero-footnote">
-              <span>05 CONCEPTS</span>
-              <span>06 INDIVIDUALS</span>
-              <span>ONE FAMILY</span>
-            </div>
-          </div>
-          <div
-            className="hero-art"
-            aria-label="Illustrated heritage wardrobe mood board"
-          >
-            <span className="art-corner">A STUDY IN AUTUMN</span>
-            <div className="art-paper paper-one">
-              <Garment kind="jacket" color="#263247" />
-              <span>01 / THE ANCHOR</span>
-            </div>
-            <div className="art-paper paper-two">
-              <Garment kind="dress" color="#793b49" />
-              <span>02 / THE MOVEMENT</span>
-            </div>
-            <div className="art-swatch-strip">
-              {data.concepts[0].palette.map((p) => (
-                <span key={p.hex} style={{ background: p.hex }} />
-              ))}
-            </div>
-            <div className="art-knit">
-              <Garment kind="polo" color="#65705a" />
-            </div>
-            <span className="art-script">
-              a season
-              <br />
-              to remember
-            </span>
-            <span className="art-caption">
-              ORIGINAL GARMENT STUDIES · NOT PRODUCT PHOTOGRAPHY
-            </span>
-          </div>
-        </section>
-        <div className="editor-note">
-          <span className="eyebrow">THE ART OF TOGETHER</span>
-          <p>
-            Shared colors. Different textures.
-            <br />
-            <em>Everyone still feels like themselves.</em>
-          </p>
-          <span className="note-number">01—05</span>
-        </div>
         <section id="lookbook" className={`lookbook theme-${concept.id}`}>
-          <div className="section-top">
-            <span className="eyebrow">01 / THE LOOKBOOK</span>
-            <span className="small">Five ways to tell your story</span>
-          </div>
-          <div className="concept-switch" aria-label="Wardrobe concept">
-            {data.concepts.map((c, i) => (
-              <button
-                key={c.id}
-                aria-pressed={i === conceptIndex}
-                onClick={() => chooseConcept(i)}
-              >
-                <span className="concept-no">0{i + 1}</span>
-                <span>
-                  {c.title}
-                  {i === 0 && <small>THE RECOMMENDED LOOK</small>}
-                </span>
-                <span className="concept-arrow" aria-hidden="true">
-                  ↗
-                </span>
-              </button>
-            ))}
-          </div>
-          <div className="concept-intro" key={concept.id}>
-            <div>
-              <span className="eyebrow">
-                {concept.label} / {concept.tagline}
+          <ConceptGallery
+            conceptIndex={conceptIndex}
+            colorIndex={colorIndex}
+            chooseConcept={chooseConcept}
+            setColorIndex={setColorIndex}
+          />
+          <div className="wardrobe-workspace">
+            <div className="board-heading" id="outfits">
+              <h2>
+                Six individuals.
+                <br />
+                <em>One family.</em>
+              </h2>
+              <span>
+                Select a person to see their outfit and shop the pieces.
               </span>
-              {showVisualizations ? (
-                <h1>{concept.title}</h1>
-              ) : (
-                <h2>{concept.title}</h2>
-              )}
-              <p className="concept-deck">{concept.deck}</p>
             </div>
-            <p className="intro-text">{concept.intro}</p>
-          </div>
-          <div className="scene-spread">
-            <FamilyScene
-              key={concept.id}
-              id={concept.id}
-              title={concept.title}
-            />
-            <div className="palette-area">
-              <div
-                className="palette"
-                aria-label={`${concept.title} color palette`}
-              >
-                {concept.palette.map((p, i) => (
-                  <button
-                    key={p.hex}
-                    aria-label={`${p.name}, ${p.hex}`}
-                    aria-pressed={colorIndex === i}
-                    onClick={() => setColorIndex(i)}
-                  >
-                    <span className="swatch" style={{ background: p.hex }}>
-                      {colorIndex === i && <span className="swatch-dot" />}
-                    </span>
-                    <span>{p.name}</span>
-                  </button>
-                ))}
-              </div>
-              <p className="palette-note" aria-live="polite">
-                <span>THE PALETTE</span> {concept.palette[colorIndex].name}{" "}
-                <span className="hex">{concept.palette[colorIndex].hex}</span>
-                <small>Tap a shade to explore</small>
-              </p>
-            </div>
-          </div>
-          <div className="board-heading" id="outfits">
-            <h3>The outfit plan.</h3>
-            <span>
-              SELECT AN OUTFIT FOR THE DETAILS <span aria-hidden="true">↓</span>
-            </span>
-          </div>
-          <div className="outfit-board">
-            {concept.members.map((m, i) => (
-              <button
-                key={m.name}
-                className={`outfit-choice ${memberIndex === i ? "selected" : ""}`}
-                onClick={() => chooseMember(i)}
-                aria-pressed={memberIndex === i}
-                aria-label={`View ${m.name} outfit`}
-              >
-                <span className="outfit-index">0{i + 1}</span>
-                {showVisualizations ? (
+            <div className="outfit-board">
+              {concept.members.map((m, i) => (
+                <button
+                  key={m.name}
+                  className={`outfit-choice ${memberIndex === i ? "selected" : ""}`}
+                  onClick={() => chooseOutfit(i)}
+                  aria-pressed={memberIndex === i}
+                  aria-controls="selected-outfit"
+                  aria-label={`View ${m.name} outfit`}
+                >
                   <MemberPortrait
                     memberIndex={i}
                     conceptIndex={conceptIndex}
                     name={m.name}
                   />
-                ) : (
-                  <Outfit member={m} index={i} />
-                )}
-                <span className="outfit-name">
-                  {m.name}
-                  <span aria-hidden="true">
-                    {memberIndex === i ? "−" : "+"}
+                  <span className="outfit-name">
+                    {m.name}
+                    <Arrow direction={memberIndex === i ? "down" : "right"} />
                   </span>
-                </span>
-                <span className="outfit-texture">{m.texture}</span>
-              </button>
-            ))}
-          </div>
-          <p className="illustration-note">
-            {showVisualizations
-              ? "AI-generated individual styling studies; likeness, proportions and garment details are approximate."
-              : "Illustrated styling concepts; silhouettes and colors are approximate."}
-          </p>
-          <div className="outfit-detail" aria-live="polite">
-            <div>
-              <span className="eyebrow">THE DETAILS / 0{memberIndex + 1}</span>
-              <h3>{member.name}</h3>
-              <div className="detail-colors">
-                <span style={{ background: member.topColor }} />
-                <span style={{ background: member.bottomColor }} />
+                  <span className="outfit-texture">{m.texture}</span>
+                </button>
+              ))}
+            </div>
+            <p className="illustration-note">
+              AI-generated individual styling studies; likeness, proportions and
+              garment details are approximate.
+            </p>
+            <div
+              id="selected-outfit"
+              className="outfit-detail"
+              aria-live="polite"
+            >
+              <div className="detail-person">
+                <h3 ref={outfitHeading} tabIndex={-1}>
+                  {member.name}
+                </h3>
+                <span>{concept.title}</span>
+                <div className="detail-colors">
+                  <span style={{ background: member.topColor }} />
+                  <span style={{ background: member.bottomColor }} />
+                </div>
+                <a className="text-link outfit-return" href="#outfits">
+                  Choose another person <Arrow direction="up" />
+                </a>
               </div>
-            </div>
-            <div>
-              <span className="eyebrow">THE OUTFIT</span>
-              <p>{member.outfit}</p>
-            </div>
-            <div>
-              <span className="eyebrow">THE FINISHING TOUCHES</span>
-              <p>
-                {member.shoes}
-                <br />
-                <span className="muted">
+              <div className="detail-outfit">
+                <span className="detail-label">The outfit</span>
+                <p>{member.outfit}.</p>
+                <span className="detail-label">The finishing touches</span>
+                <p>
+                  {member.shoes}.{" "}
                   {member.accessories === "None"
                     ? "Keep accessories minimal."
-                    : member.accessories}
-                </span>
-              </p>
-            </div>
-            <div>
-              <span className="eyebrow">TEXTURE STORY</span>
-              <p>{member.texture}</p>
-              <button
-                className="text-button outfit-shop-toggle"
-                aria-expanded={shopOpen}
-                aria-controls="outfit-shopping"
-                onClick={() => setShopOpen(!shopOpen)}
-              >
-                {shopOpen ? "Close outfit shopping" : "Shop this outfit"}
-              </button>
-            </div>
-          </div>
-          <section
-            id="outfit-shopping"
-            className="outfit-shopping"
-            hidden={!shopOpen}
-            aria-label={`Shop ${member.name} outfit`}
-          >
-            <div className="outfit-shop-heading">
-              <h3>{member.name}’s pieces</h3>
-              <span>{concept.title}</span>
-            </div>
-            {conceptIndex === 0 ? (
-              <>
-                <p className="shopping-helper">
-                  Shop each piece below. Illustrations show the styling idea;
-                  retailer pages show the actual garment. Links open in a new
-                  tab.
+                    : member.accessories + "."}
                 </p>
-                {data.shopping
-                  .filter((p) => p.member === member.name)
-                  .map((p) => (
-                    <ShoppingRow
-                      key={p.id}
-                      product={p}
+              </div>
+              <div className="detail-texture">
+                <span className="detail-label">The texture</span>
+                <p>{member.texture}</p>
+                <button
+                  className="button button-light outfit-shop-toggle"
+                  aria-expanded={shopOpen}
+                  aria-controls="outfit-shopping"
+                  onClick={() => setShopOpen(!shopOpen)}
+                >
+                  {shopOpen ? "Close outfit shopping" : "Shop this outfit"}
+                  <Arrow direction={shopOpen ? "up" : "down"} />
+                </button>
+              </div>
+            </div>
+            <section
+              id="outfit-shopping"
+              className="outfit-shopping"
+              hidden={!shopOpen}
+              aria-label={`Shop ${member.name} outfit`}
+            >
+              <div className="outfit-shop-heading">
+                <h3>{member.name}’s pieces</h3>
+                <span>{concept.title}</span>
+              </div>
+              {conceptIndex === 0 ? (
+                <>
+                  <p className="shopping-helper">
+                    Shop each piece below. Illustrations show the styling idea;
+                    retailer pages show the actual garment. Links open in a new
+                    tab.
+                  </p>
+                  {data.shopping
+                    .filter((p) => p.member === member.name)
+                    .map((p) => (
+                      <ShoppingRow
+                        key={p.id}
+                        product={p}
+                        checklist={checklist}
+                        onStatus={setStatus}
+                        illustration
+                      />
+                    ))}
+                  <details className="closet-disclosure">
+                    <summary>
+                      Finish the look · closet pieces & optional accessories
+                    </summary>
+                    <ClosetRows
+                      member={member.name}
                       checklist={checklist}
                       onStatus={setStatus}
-                      illustration
                     />
-                  ))}
-                <details className="closet-disclosure">
-                  <summary>
-                    Finish the look · closet pieces & optional accessories
-                  </summary>
-                  <ClosetRows
-                    member={member.name}
-                    checklist={checklist}
-                    onStatus={setStatus}
-                  />
-                </details>
-                <p className="shopping-helper">
-                  Lower-cost route: keep the defining colors and use similar
-                  pieces you already own. Mark them “Already own” to remove
-                  their estimate.
+                  </details>
+                  <p className="shopping-helper">
+                    Lower-cost route: keep the defining colors and use similar
+                    pieces you already own. Mark them “Already own” to remove
+                    their estimate.
+                  </p>
+                  <a className="text-link" href="#outfit-checklist">
+                    Review the whole family’s checklist{" "}
+                    <Arrow direction="right" />
+                  </a>
+                </>
+              ) : (
+                <>
+                  <p>
+                    {member.outfit}. {member.shoes}.
+                  </p>
+                  <p className="shopping-helper">
+                    This is a styling concept, with no verified retailer
+                    selection yet. Start with matching pieces from your closet.
+                    The shopping list below is specifically for Hill Country
+                    Heritage.
+                  </p>
+                  <button
+                    className="text-button"
+                    onClick={() => chooseConcept(0)}
+                  >
+                    Shop {member.name.toLowerCase()}’s Heritage outfit
+                  </button>
+                </>
+              )}
+              {storageError && (
+                <p className="shopping-helper" role="status">
+                  Your browser could not save this checklist. Changes last only
+                  for this visit.
                 </p>
-                <a className="text-link" href="#outfit-checklist">
-                  Review the whole family’s checklist ↗
-                </a>
-              </>
-            ) : (
-              <>
-                <p>
-                  {member.outfit}. {member.shoes}.
-                </p>
-                <p className="shopping-helper">
-                  This is a styling concept, with no verified retailer selection
-                  yet. Start with matching pieces from your closet. The shopping
-                  list below is specifically for Hill Country Heritage.
-                </p>
-                <button
-                  className="text-button"
-                  onClick={() => chooseConcept(0)}
-                >
-                  Shop {member.name.toLowerCase()}’s Heritage outfit
-                </button>
-              </>
-            )}
-            {storageError && (
-              <p className="shopping-helper" role="status">
-                Your browser could not save this checklist. Changes last only
-                for this visit.
-              </p>
-            )}
-          </section>
-          <MemberStudy
-            key={memberIndex}
-            memberIndex={memberIndex}
-            name={member.name}
-          />
-          <div className="styling-notes">
-            <div>
-              <span className="eyebrow">WHY IT WORKS</span>
-              <p>{concept.why}</p>
-            </div>
-            <div>
-              <span className="eyebrow">PICTURE IT HERE</span>
-              <p>{concept.location}.</p>
-            </div>
-            <div>
-              <span className="eyebrow">THE MATERIAL MIX</span>
-              <p>{concept.textures.join(" · ")}</p>
+              )}
+            </section>
+            <MemberStudy
+              key={memberIndex}
+              memberIndex={memberIndex}
+              name={member.name}
+            />
+            <div className="styling-notes">
+              <div>
+                <h3>Why it works</h3>
+                <p>{concept.why}</p>
+              </div>
+              <div>
+                <h3>Picture it here</h3>
+                <p>{concept.location}.</p>
+              </div>
+              <div>
+                <h3>The material mix</h3>
+                <p>{concept.textures.join(" · ")}</p>
+              </div>
             </div>
           </div>
         </section>
         <section className="recommendation">
-          <div className="recommendation-seal" aria-hidden="true">
-            F<span>&</span>F
-          </div>
           <div>
-            <span className="eyebrow">OUR CONSIDERED CHOICE</span>
             <h2>Heritage, with heart.</h2>
             <p>
               Hill Country Heritage brings the strongest balance to a group of
@@ -453,7 +329,7 @@ export default function App() {
               className="text-link"
               onClick={() => chooseConcept(0)}
             >
-              Return to the recommended look ↗
+              Return to the recommended look <Arrow direction="right" />
             </a>
           </div>
           <div className="rec-palette">
@@ -464,7 +340,7 @@ export default function App() {
         </section>
         <section id="compare" className="compare section-pad">
           <div className="section-top">
-            <span className="eyebrow">02 / FIND YOUR FEELING</span>
+            <h2>Find your feeling.</h2>
             <label className="compare-select">
               Compare outfits for{" "}
               <select
@@ -479,29 +355,20 @@ export default function App() {
               </select>
             </label>
           </div>
-          <h2>
-            Same family.
-            <br />
-            <em>A different point of view.</em>
-          </h2>
+          <p className="section-intro">
+            Same family. A different point of view. Compare one person across
+            all five wardrobes.
+          </p>
           <div className="comparison-grid">
             {data.concepts.map((c, i) => (
               <article className={`comparison theme-${c.id}`} key={c.id}>
                 <div className="compare-art">
-                  {i >= 3 ? (
-                    <MemberPortrait
-                      key={`${i}-${compareMember}`}
-                      memberIndex={compareMember}
-                      conceptIndex={i}
-                      name={data.family[compareMember]}
-                    />
-                  ) : (
-                    <Outfit
-                      member={c.members[compareMember]}
-                      index={compareMember}
-                    />
-                  )}
-                  <span className="compare-number">0{i + 1}</span>
+                  <MemberPortrait
+                    key={`${i}-${compareMember}`}
+                    memberIndex={compareMember}
+                    conceptIndex={i}
+                    name={data.family[compareMember]}
+                  />
                 </div>
                 <div className="compare-palette">
                   {c.palette.map((p) => (
@@ -512,7 +379,6 @@ export default function App() {
                     />
                   ))}
                 </div>
-                <span className="eyebrow">{c.label}</span>
                 <h3>{c.title}</h3>
                 <p>{c.members[compareMember].outfit}.</p>
                 <a
@@ -523,23 +389,19 @@ export default function App() {
                     chooseMember(compareMember);
                   }}
                 >
-                  Explore this story ↗
+                  Explore this story <Arrow direction="right" />
                 </a>
               </article>
             ))}
           </div>
         </section>
         <section id="shop" className="shop section-pad">
-          <div className="section-top">
-            <span className="eyebrow">03 / THE SHOPPING EDIT</span>
-            <span className="small">HILL COUNTRY HERITAGE</span>
-          </div>
           <div className="shop-heading">
             <div>
               <h2>
-                Fewer guesses.
+                The shopping
                 <br />
-                <em>Better pieces.</em>
+                <em>edit.</em>
               </h2>
               <p>
                 Twelve considered starting points for the recommended look.
@@ -548,7 +410,7 @@ export default function App() {
               </p>
             </div>
             <div className="budget" aria-live="polite">
-              <span className="eyebrow">REMAINING CLOTHING ESTIMATE</span>
+              <span>Remaining clothing estimate</span>
               <strong>{money(remaining)}</strong>
               <span>
                 {checked.length} of 12 pieces ready · {money(total)} full plan
@@ -623,52 +485,12 @@ export default function App() {
                   (filter === "Buy first" && p.buyFirst),
               )
               .map((p) => (
-                <article
-                  className={`product ${checked.includes(p.id) ? "is-ready" : ""}`}
+                <ProductEntry
                   key={p.id}
-                >
-                  <div className="product-image">
-                    <span className="product-person">{p.member}</span>
-                    <RetailLink product={p} className="product-image-link">
-                      <Garment kind={p.kind} color={p.illustrationColor} />
-                      <span className="image-shop-label">
-                        View at {p.store} <span aria-hidden="true">↗</span>
-                      </span>
-                    </RetailLink>
-                    {p.buyFirst && <span className="priority">BUY FIRST</span>}
-                  </div>
-                  <div className="product-title">
-                    <span className="eyebrow">{p.store}</span>
-                    <span>{money(p.referencePriceUsd)}</span>
-                  </div>
-                  <h3>{p.item}</h3>
-                  <p className="product-name">{p.product}</p>
-                  <p className="product-color">
-                    <span style={{ background: p.illustrationColor }} />
-                    {p.color}
-                  </p>
-                  <RetailLink product={p} />
-                  <StatusSelect
-                    id={p.id}
-                    name={`${p.member}, ${p.item}`}
-                    status={checklist[p.id] || "need"}
-                    onStatus={setStatus}
-                  />
-                  {p.shoppingCaution && (
-                    <p className="shopping-caution">{p.shoppingCaution}</p>
-                  )}
-                  <Alternative product={p} />
-                  <p className="rationale">{p.stylistRationale}</p>
-                  <span
-                    className={`price-status ${p.priceVerified ? "observed" : ""}`}
-                  >
-                    {priceLabel(p)}
-                  </span>
-                  <details className="product-verification">
-                    <summary>Verification details</summary>
-                    <p>{p.verificationNote} Checked October 14, 2026.</p>
-                  </details>
-                </article>
+                  product={p}
+                  checklist={checklist}
+                  onStatus={setStatus}
+                />
               ))}
           </div>
           <p className="storage-note">
@@ -679,20 +501,19 @@ export default function App() {
         </section>
         <section id="plan" className="plan section-pad">
           <div className="section-top">
-            <span className="eyebrow">04 / BEFORE THE CAMERA</span>
             <div className="plan-actions">
               <button className="text-button" onClick={copy}>
-                Copy outfit list ↗
+                Copy outfit list <Arrow direction="external" />
               </button>
               <button className="text-button" onClick={() => window.print()}>
-                Print plan ↗
+                Print plan <Arrow direction="external" />
               </button>
             </div>
           </div>
           <h2>
-            A little preparation.
+            Ready for the
             <br />
-            <em>A lot more presence.</em>
+            <em>moment.</em>
           </h2>
           <section
             id="outfit-checklist"
@@ -768,7 +589,6 @@ export default function App() {
           </section>
           <div className="plan-columns">
             <article>
-              <span className="plan-number">01</span>
               <h3>Buy the anchors first.</h3>
               <p>
                 The wine dress and navy jacket set the tone. Then the cream
@@ -778,8 +598,7 @@ export default function App() {
               <span className="small">PRIORITIZE FIT, THEN COLOR</span>
             </article>
             <article>
-              <span className="plan-number">02</span>
-              <h3>Start in your closets.</h3>
+              <h3>Fill in from our closets.</h3>
               <p>
                 Brown and cognac shoes. Clean off-white sneakers. Simple belts
                 and gold earrings. Stone or olive trousers that already fit.
@@ -788,7 +607,6 @@ export default function App() {
               <span className="small">LESS TO BUY, MORE TO WEAR AGAIN</span>
             </article>
             <article>
-              <span className="plan-number">03</span>
               <h3>Let the setting do its part.</h3>
               <p>
                 Golden grass, pale limestone, and mature oaks. Aim for golden
@@ -861,10 +679,12 @@ export default function App() {
       </main>
       <footer>
         <a href="#" className="wordmark">
-          Wear Family<span>PHOTO OUTFIT SELECTION</span>
+          Wear Family<span>Photo Outfit Selection</span>
         </a>
-        <span>A WARDROBE FOR THE MEMORY.</span>
-        <a href="#">Back to top ↑</a>
+        <span>A wardrobe for the memory.</span>
+        <a href="#">
+          Back to top <Arrow direction="up" />
+        </a>
       </footer>
     </>
   );

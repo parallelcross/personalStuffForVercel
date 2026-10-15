@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import data from "../content/wardrobe.json";
+import { Arrow } from "./Icons";
 import { Garment } from "./Garment";
 import {
   type Product,
@@ -29,7 +30,7 @@ export function RetailLink({
     >
       {children || (
         <>
-          View at {p.store} <span aria-hidden="true">↗</span>
+          View at {p.store} <Arrow direction="external" />
         </>
       )}
     </a>
@@ -89,7 +90,7 @@ export function ShoppingRow({
       {illustration && (
         <RetailLink product={p} className="piece-thumbnail">
           <Garment kind={p.kind} color={p.illustrationColor} />
-          <span aria-hidden="true">↗</span>
+          <Arrow direction="external" />
         </RetailLink>
       )}
       <div className="piece-description">
@@ -184,7 +185,7 @@ export function Alternative({ product }: { product: Product }) {
         rel="noopener noreferrer"
         aria-label={`View alternative ${alternative.product} at ${alternative.store} (opens in new tab)`}
       >
-        View at {alternative.store} <span aria-hidden="true">↗</span>
+        View at {alternative.store} <Arrow direction="external" />
       </a>
       <small>
         Instead of this piece, not an extra purchase. Plan totals use the

@@ -1,510 +1,472 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T21:48:06.604688+00:00",
+  "generatedAt": "2026-10-15T21:00:22.025658Z",
   "title": "Design System: Wear Family Photo Outfit Selection",
   "extensions": {
     "colorMeta": {
-      "paper": {
-        "role": "neutral",
-        "displayName": "Warm paper",
-        "canonical": "#faf8f3",
+      "stage": {
+        "role": "primary",
+        "displayName": "Gallery olive",
         "tonalRamp": [
-          "oklch(15% 0.00695 88.64)",
-          "oklch(26% 0.00695 88.64)",
-          "oklch(38% 0.00695 88.64)",
-          "oklch(49% 0.00695 88.64)",
-          "oklch(61% 0.00695 88.64)",
-          "oklch(72% 0.00695 88.64)",
-          "oklch(84% 0.00695 88.64)",
-          "oklch(95% 0.00695 88.64)"
+          "oklch(15.00% 0.01445 157.90)",
+          "oklch(26.43% 0.01445 157.90)",
+          "oklch(37.86% 0.01445 157.90)",
+          "oklch(49.29% 0.01445 157.90)",
+          "oklch(60.71% 0.01445 157.90)",
+          "oklch(72.14% 0.01445 157.90)",
+          "oklch(83.57% 0.01445 157.90)",
+          "oklch(95.00% 0.01445 157.90)"
         ]
       },
-      "surface": {
-        "role": "neutral",
-        "displayName": "Linen inset",
-        "canonical": "#f0ede5",
+      "stage-surface": {
+        "role": "primary",
+        "displayName": "Inset olive",
         "tonalRamp": [
-          "oklch(15% 0.01113 89.72)",
-          "oklch(26% 0.01113 89.72)",
-          "oklch(38% 0.01113 89.72)",
-          "oklch(49% 0.01113 89.72)",
-          "oklch(61% 0.01113 89.72)",
-          "oklch(72% 0.01113 89.72)",
-          "oklch(84% 0.01113 89.72)",
-          "oklch(95% 0.01113 89.72)"
+          "oklch(15.00% 0.02034 153.60)",
+          "oklch(26.43% 0.02034 153.60)",
+          "oklch(37.86% 0.02034 153.60)",
+          "oklch(49.29% 0.02034 153.60)",
+          "oklch(60.71% 0.02034 153.60)",
+          "oklch(72.14% 0.02034 153.60)",
+          "oklch(83.57% 0.02034 153.60)",
+          "oklch(95.00% 0.02034 153.60)"
         ]
       },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Charcoal",
-        "canonical": "#282923",
+      "highlight": {
+        "role": "primary",
+        "displayName": "Pale citron",
         "tonalRamp": [
-          "oklch(15% 0.01083 114.79)",
-          "oklch(26% 0.01083 114.79)",
-          "oklch(38% 0.01083 114.79)",
-          "oklch(49% 0.01083 114.79)",
-          "oklch(61% 0.01083 114.79)",
-          "oklch(72% 0.01083 114.79)",
-          "oklch(84% 0.01083 114.79)",
-          "oklch(95% 0.01083 114.79)"
-        ]
-      },
-      "muted": {
-        "role": "neutral",
-        "displayName": "Secondary ink",
-        "canonical": "#5e6259",
-        "tonalRamp": [
-          "oklch(15% 0.01491 126.60)",
-          "oklch(26% 0.01491 126.60)",
-          "oklch(38% 0.01491 126.60)",
-          "oklch(49% 0.01491 126.60)",
-          "oklch(61% 0.01491 126.60)",
-          "oklch(72% 0.01491 126.60)",
-          "oklch(84% 0.01491 126.60)",
-          "oklch(95% 0.01491 126.60)"
+          "oklch(15.00% 0.04909 112.39)",
+          "oklch(26.43% 0.04909 112.39)",
+          "oklch(37.86% 0.04909 112.39)",
+          "oklch(49.29% 0.04909 112.39)",
+          "oklch(60.71% 0.04909 112.39)",
+          "oklch(72.14% 0.04909 112.39)",
+          "oklch(83.57% 0.04909 112.39)",
+          "oklch(95.00% 0.04909 112.39)"
         ]
       },
       "accent": {
         "role": "primary",
         "displayName": "Evergreen",
-        "canonical": "#384d40",
         "tonalRamp": [
-          "oklch(15% 0.03410 157.29)",
-          "oklch(26% 0.03410 157.29)",
-          "oklch(38% 0.03410 157.29)",
-          "oklch(49% 0.03410 157.29)",
-          "oklch(61% 0.03410 157.29)",
-          "oklch(72% 0.03410 157.29)",
-          "oklch(84% 0.03410 157.29)",
-          "oklch(95% 0.03410 157.29)"
+          "oklch(15.00% 0.04036 149.84)",
+          "oklch(26.43% 0.04036 149.84)",
+          "oklch(37.86% 0.04036 149.84)",
+          "oklch(49.29% 0.04036 149.84)",
+          "oklch(60.71% 0.04036 149.84)",
+          "oklch(72.14% 0.04036 149.84)",
+          "oklch(83.57% 0.04036 149.84)",
+          "oklch(95.00% 0.04036 149.84)"
         ]
       },
       "accent-hover": {
         "role": "primary",
         "displayName": "Deep evergreen",
-        "canonical": "#263a2d",
         "tonalRamp": [
-          "oklch(15% 0.03452 155.51)",
-          "oklch(26% 0.03452 155.51)",
-          "oklch(38% 0.03452 155.51)",
-          "oklch(49% 0.03452 155.51)",
-          "oklch(61% 0.03452 155.51)",
-          "oklch(72% 0.03452 155.51)",
-          "oklch(84% 0.03452 155.51)",
-          "oklch(95% 0.03452 155.51)"
+          "oklch(15.00% 0.03613 150.50)",
+          "oklch(26.43% 0.03613 150.50)",
+          "oklch(37.86% 0.03613 150.50)",
+          "oklch(49.29% 0.03613 150.50)",
+          "oklch(60.71% 0.03613 150.50)",
+          "oklch(72.14% 0.03613 150.50)",
+          "oklch(83.57% 0.03613 150.50)",
+          "oklch(95.00% 0.03613 150.50)"
         ]
       },
-      "control-border": {
-        "role": "neutral",
-        "displayName": "Control edge",
-        "canonical": "#818579",
+      "wine": {
+        "role": "secondary",
+        "displayName": "Portrait wine",
         "tonalRamp": [
-          "oklch(15% 0.01833 121.98)",
-          "oklch(26% 0.01833 121.98)",
-          "oklch(38% 0.01833 121.98)",
-          "oklch(49% 0.01833 121.98)",
-          "oklch(61% 0.01833 121.98)",
-          "oklch(72% 0.01833 121.98)",
-          "oklch(84% 0.01833 121.98)",
-          "oklch(95% 0.01833 121.98)"
-        ]
-      },
-      "line": {
-        "role": "neutral",
-        "displayName": "Quiet rule",
-        "canonical": "#d3d1c7",
-        "tonalRamp": [
-          "oklch(15% 0.01378 97.47)",
-          "oklch(26% 0.01378 97.47)",
-          "oklch(38% 0.01378 97.47)",
-          "oklch(49% 0.01378 97.47)",
-          "oklch(61% 0.01378 97.47)",
-          "oklch(72% 0.01378 97.47)",
-          "oklch(84% 0.01378 97.47)",
-          "oklch(95% 0.01378 97.47)"
-        ]
-      },
-      "inverse": {
-        "role": "neutral",
-        "displayName": "Warm inverse",
-        "canonical": "#f7f4ec",
-        "tonalRamp": [
-          "oklch(15% 0.01107 89.72)",
-          "oklch(26% 0.01107 89.72)",
-          "oklch(38% 0.01107 89.72)",
-          "oklch(49% 0.01107 89.72)",
-          "oklch(61% 0.01107 89.72)",
-          "oklch(72% 0.01107 89.72)",
-          "oklch(84% 0.01107 89.72)",
-          "oklch(95% 0.01107 89.72)"
-        ]
-      },
-      "inverse-muted": {
-        "role": "neutral",
-        "displayName": "Inverse secondary",
-        "canonical": "#d4ddd2",
-        "tonalRamp": [
-          "oklch(15% 0.01772 140.02)",
-          "oklch(26% 0.01772 140.02)",
-          "oklch(38% 0.01772 140.02)",
-          "oklch(49% 0.01772 140.02)",
-          "oklch(61% 0.01772 140.02)",
-          "oklch(72% 0.01772 140.02)",
-          "oklch(84% 0.01772 140.02)",
-          "oklch(95% 0.01772 140.02)"
-        ]
-      },
-      "inverse-border": {
-        "role": "neutral",
-        "displayName": "Inverse edge",
-        "canonical": "#849086",
-        "tonalRamp": [
-          "oklch(15% 0.02023 150.38)",
-          "oklch(26% 0.02023 150.38)",
-          "oklch(38% 0.02023 150.38)",
-          "oklch(49% 0.02023 150.38)",
-          "oklch(61% 0.02023 150.38)",
-          "oklch(72% 0.02023 150.38)",
-          "oklch(84% 0.02023 150.38)",
-          "oklch(95% 0.02023 150.38)"
+          "oklch(15.00% 0.05935 7.92)",
+          "oklch(26.43% 0.05935 7.92)",
+          "oklch(37.86% 0.05935 7.92)",
+          "oklch(49.29% 0.05935 7.92)",
+          "oklch(60.71% 0.05935 7.92)",
+          "oklch(72.14% 0.05935 7.92)",
+          "oklch(83.57% 0.05935 7.92)",
+          "oklch(95.00% 0.05935 7.92)"
         ]
       },
       "attention": {
         "role": "secondary",
         "displayName": "Clay caution",
-        "canonical": "#7b4133",
         "tonalRamp": [
-          "oklch(15% 0.08396 34.58)",
-          "oklch(26% 0.08396 34.58)",
-          "oklch(38% 0.08396 34.58)",
-          "oklch(49% 0.08396 34.58)",
-          "oklch(61% 0.08396 34.58)",
-          "oklch(72% 0.08396 34.58)",
-          "oklch(84% 0.08396 34.58)",
-          "oklch(95% 0.08396 34.58)"
+          "oklch(15.00% 0.09183 36.82)",
+          "oklch(26.43% 0.09183 36.82)",
+          "oklch(37.86% 0.09183 36.82)",
+          "oklch(49.29% 0.09183 36.82)",
+          "oklch(60.71% 0.09183 36.82)",
+          "oklch(72.14% 0.09183 36.82)",
+          "oklch(83.57% 0.09183 36.82)",
+          "oklch(95.00% 0.09183 36.82)"
         ]
       },
-      "hover": {
-        "role": "primary",
-        "displayName": "Quiet green wash",
-        "canonical": "#eef1e9",
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
         "tonalRamp": [
-          "oklch(15% 0.01106 123.46)",
-          "oklch(26% 0.01106 123.46)",
-          "oklch(38% 0.01106 123.46)",
-          "oklch(49% 0.01106 123.46)",
-          "oklch(61% 0.01106 123.46)",
-          "oklch(72% 0.01106 123.46)",
-          "oklch(84% 0.01106 123.46)",
-          "oklch(95% 0.01106 123.46)"
+          "oklch(15.00% 0.00951 93.57)",
+          "oklch(26.43% 0.00951 93.57)",
+          "oklch(37.86% 0.00951 93.57)",
+          "oklch(49.29% 0.00951 93.57)",
+          "oklch(60.71% 0.00951 93.57)",
+          "oklch(72.14% 0.00951 93.57)",
+          "oklch(83.57% 0.00951 93.57)",
+          "oklch(95.00% 0.00951 93.57)"
         ]
       },
-      "selected": {
-        "role": "primary",
-        "displayName": "Selected wash",
-        "canonical": "#e6ece4",
+      "surface": {
+        "role": "neutral",
+        "displayName": "Linen paper",
         "tonalRamp": [
-          "oklch(15% 0.01241 137.79)",
-          "oklch(26% 0.01241 137.79)",
-          "oklch(38% 0.01241 137.79)",
-          "oklch(49% 0.01241 137.79)",
-          "oklch(61% 0.01241 137.79)",
-          "oklch(72% 0.01241 137.79)",
-          "oklch(84% 0.01241 137.79)",
-          "oklch(95% 0.01241 137.79)"
+          "oklch(15.00% 0.01221 96.43)",
+          "oklch(26.43% 0.01221 96.43)",
+          "oklch(37.86% 0.01221 96.43)",
+          "oklch(49.29% 0.01221 96.43)",
+          "oklch(60.71% 0.01221 96.43)",
+          "oklch(72.14% 0.01221 96.43)",
+          "oklch(83.57% 0.01221 96.43)",
+          "oklch(95.00% 0.01221 96.43)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Olive ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01773 151.81)",
+          "oklch(26.43% 0.01773 151.81)",
+          "oklch(37.86% 0.01773 151.81)",
+          "oklch(49.29% 0.01773 151.81)",
+          "oklch(60.71% 0.01773 151.81)",
+          "oklch(72.14% 0.01773 151.81)",
+          "oklch(83.57% 0.01773 151.81)",
+          "oklch(95.00% 0.01773 151.81)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Secondary ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01722 142.16)",
+          "oklch(26.43% 0.01722 142.16)",
+          "oklch(37.86% 0.01722 142.16)",
+          "oklch(49.29% 0.01722 142.16)",
+          "oklch(60.71% 0.01722 142.16)",
+          "oklch(72.14% 0.01722 142.16)",
+          "oklch(83.57% 0.01722 142.16)",
+          "oklch(95.00% 0.01722 142.16)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control edge",
+        "tonalRamp": [
+          "oklch(15.00% 0.01747 127.00)",
+          "oklch(26.43% 0.01747 127.00)",
+          "oklch(37.86% 0.01747 127.00)",
+          "oklch(49.29% 0.01747 127.00)",
+          "oklch(60.71% 0.01747 127.00)",
+          "oklch(72.14% 0.01747 127.00)",
+          "oklch(83.57% 0.01747 127.00)",
+          "oklch(95.00% 0.01747 127.00)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Quiet rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.01540 119.16)",
+          "oklch(26.43% 0.01540 119.16)",
+          "oklch(37.86% 0.01540 119.16)",
+          "oklch(49.29% 0.01540 119.16)",
+          "oklch(60.71% 0.01540 119.16)",
+          "oklch(72.14% 0.01540 119.16)",
+          "oklch(83.57% 0.01540 119.16)",
+          "oklch(95.00% 0.01540 119.16)"
+        ]
+      },
+      "inverse": {
+        "role": "neutral",
+        "displayName": "Warm white",
+        "tonalRamp": [
+          "oklch(15.00% 0.00951 93.57)",
+          "oklch(26.43% 0.00951 93.57)",
+          "oklch(37.86% 0.00951 93.57)",
+          "oklch(49.29% 0.00951 93.57)",
+          "oklch(60.71% 0.00951 93.57)",
+          "oklch(72.14% 0.00951 93.57)",
+          "oklch(83.57% 0.00951 93.57)",
+          "oklch(95.00% 0.00951 93.57)"
+        ]
+      },
+      "inverse-muted": {
+        "role": "neutral",
+        "displayName": "Sage white",
+        "tonalRamp": [
+          "oklch(15.00% 0.01796 140.02)",
+          "oklch(26.43% 0.01796 140.02)",
+          "oklch(37.86% 0.01796 140.02)",
+          "oklch(49.29% 0.01796 140.02)",
+          "oklch(60.71% 0.01796 140.02)",
+          "oklch(72.14% 0.01796 140.02)",
+          "oklch(83.57% 0.01796 140.02)",
+          "oklch(95.00% 0.01796 140.02)"
+        ]
+      },
+      "inverse-border": {
+        "role": "neutral",
+        "displayName": "Gallery rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.02595 145.27)",
+          "oklch(26.43% 0.02595 145.27)",
+          "oklch(37.86% 0.02595 145.27)",
+          "oklch(49.29% 0.02595 145.27)",
+          "oklch(60.71% 0.02595 145.27)",
+          "oklch(72.14% 0.02595 145.27)",
+          "oklch(83.57% 0.02595 145.27)",
+          "oklch(95.00% 0.02595 145.27)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Concept and fallback hero heading."
+        "purpose": "Implemented display role; see DESIGN.md for responsive usage."
       },
-      "display-mobile": {
-        "displayName": "Display Mobile",
-        "purpose": "Concept heading only at screen widths ≤700px."
-      },
-      "section": {
-        "displayName": "Section",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "recommendation-heading": {
-        "displayName": "Recommendation Heading",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Implemented headline role; see DESIGN.md for responsive usage."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+        "purpose": "Implemented title role; see DESIGN.md for responsive usage."
       },
-      "comparison-title-mobile": {
-        "displayName": "Comparison Title Mobile",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "product-title": {
+        "displayName": "Product Title",
+        "purpose": "Implemented product title role; see DESIGN.md for responsive usage."
       },
-      "product": {
-        "displayName": "Product",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "product-mobile": {
-        "displayName": "Product Mobile",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "member": {
-        "displayName": "Member",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "member-name": {
+        "displayName": "Member Name",
+        "purpose": "Normal CSS weight 400 inherits from the button; the available Bodoni normal face resolves to 500 without synthesis."
       },
       "deck": {
         "displayName": "Deck",
-        "purpose": "Concept deck; font-style: italic."
-      },
-      "concept": {
-        "displayName": "Concept",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "concept-mobile": {
-        "displayName": "Concept Mobile",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+        "purpose": "Italic 400 concept statement; font-style: italic."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "ui-body": {
-        "displayName": "Ui Body",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "action": {
-        "displayName": "Action",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "control": {
-        "displayName": "Control",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "price": {
-        "displayName": "Price",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+        "purpose": "Implemented body role; see DESIGN.md for responsive usage."
       },
       "detail": {
         "displayName": "Detail",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "detail-body": {
-        "displayName": "Detail Body",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+        "purpose": "Implemented detail role; see DESIGN.md for responsive usage."
       },
       "caption": {
         "displayName": "Caption",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+        "purpose": "Implemented caption role; see DESIGN.md for responsive usage."
       },
-      "caption-body": {
-        "displayName": "Caption Body",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "label": {
+        "displayName": "Label",
+        "purpose": "Semibold action text."
       },
-      "caution": {
-        "displayName": "Caution",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "control": {
+        "displayName": "Control",
+        "purpose": "Implemented control role; see DESIGN.md for responsive usage."
       },
-      "micro": {
-        "displayName": "Micro",
-        "purpose": "Existing edition and footer text."
-      },
-      "micro-caption": {
-        "displayName": "Micro Caption",
-        "purpose": "Existing compact preparation notes."
-      },
-      "micro-board": {
-        "displayName": "Micro Board",
-        "purpose": "Existing compact board metadata."
-      },
-      "micro-concept": {
-        "displayName": "Micro Concept",
-        "purpose": "Existing compact concept subtitles."
-      },
-      "wordmark": {
-        "displayName": "Wordmark",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "wordmark-caption": {
-        "displayName": "Wordmark Caption",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
+      "chapter": {
+        "displayName": "Chapter",
+        "purpose": "Implemented chapter role; see DESIGN.md for responsive usage."
       },
       "budget": {
         "displayName": "Budget",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "cost": {
-        "displayName": "Cost",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "seal": {
-        "displayName": "Seal",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "seal-mobile": {
-        "displayName": "Seal Mobile",
-        "purpose": "Screen role mapped in DESIGN.md Typography; exact values are in frontmatter."
-      },
-      "seal-ampersand": {
-        "displayName": "Seal Ampersand",
-        "purpose": "Recommendation ampersand; font-style: italic."
-      },
-      "seal-ampersand-mobile": {
-        "displayName": "Seal Ampersand Mobile",
-        "purpose": "Recommendation ampersand at ≤700px; font-style: italic."
+        "purpose": "Remaining estimate; tabular numerals."
       }
     },
     "shadows": [
       {
-        "name": "selection-underline",
-        "value": "inset 0 -2px var(--ink)",
-        "purpose": "Persistent selected concept and portrait indication."
+        "name": "selected-underline",
+        "value": "inset 0 -2px var(--highlight)",
+        "purpose": "Active concept and portrait, structural rather than elevation."
       },
       {
-        "name": "completed-product",
-        "value": "inset 0 0 0 1px var(--accent)",
-        "purpose": "Completed product illustration boundary."
+        "name": "portrait-hover-underline",
+        "value": "inset 0 -2px var(--inverse-border)",
+        "purpose": "Fine-pointer portrait hover."
       },
       {
-        "name": "shopping-garment",
-        "value": "drop-shadow(3px 5px 3px #34362b22)",
-        "purpose": "Existing shopping illustration depth; not a card-elevation rule."
+        "name": "swatch-dot-ring",
+        "value": "0 0 0 1px var(--paper)",
+        "purpose": "Contrast around the selected swatch dot."
       }
     ],
     "motion": [
       {
-        "name": "concept-switch",
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Filled action press/release easing."
+      },
+      {
+        "name": "press-duration",
+        "value": "160ms",
+        "purpose": "One-pixel pointer press on filled actions; keyboard focus and reduced motion are immediate."
+      },
+      {
+        "name": "release-duration",
+        "value": "100ms",
+        "purpose": "Release of filled action transform."
+      },
+      {
+        "name": "content-switch",
         "value": "none",
-        "purpose": "Immediate concept switches; intro and outfit-detail animation disabled."
+        "purpose": "Concept and member content changes immediately; never crossfade faces."
       },
       {
-        "name": "outfit-hover",
-        "value": "background 180ms",
-        "purpose": "Existing fine-pointer portrait-hover background transition."
-      },
-      {
-        "name": "press",
-        "value": "scale(0.98)",
-        "purpose": "Buttons and filled link actions while pressed; disabled under reduced motion."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
-        "purpose": "Global reduced-motion response."
+        "name": "portrait-detail-scroll",
+        "value": "instant",
+        "purpose": "At ≤900px, move focus and scroll to detail only when its bounds are outside the viewport."
       }
     ],
     "breakpoints": [
       {
-        "name": "studio-small",
+        "name": "phone",
         "value": "600px"
       },
       {
-        "name": "mobile",
-        "value": "700px"
-      },
-      {
-        "name": "scene-stack",
+        "name": "portrait-detail-focus",
         "value": "900px"
       },
       {
-        "name": "compact-desktop",
-        "value": "1100px"
+        "name": "tablet",
+        "value": "950px"
       },
       {
-        "name": "wide",
-        "value": "1600px"
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "wide-container",
+        "value": "1700px"
       }
     ]
   },
   "components": [
     {
+      "name": "Light action",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Gallery action with brief pointer press feedback.",
+      "html": "<button class=\"ds-button ds-light\">See the six outfits <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 20px;min-height:48px;border:1px solid transparent;border-radius:0;font:600 var(--text-sm)/1.4 var(--font-body);cursor:pointer;transition:transform var(--release-duration) var(--ease-out);touch-action:manipulation}.ds-button:active:not(:focus-visible){transform:translateY(1px);transition-duration:var(--press-duration)}.ds-button:focus-visible{outline:2px solid var(--focus,var(--highlight));outline-offset:5px;transition:none}.ds-button:disabled{opacity:.55;cursor:default}.ds-arrow{flex-shrink:0}.ds-button:disabled:active{transform:none}@media(prefers-reduced-motion:reduce){.ds-button{transition:none!important}.ds-button:active{transform:none}}.ds-light{background:var(--highlight);color:var(--stage)}@media(hover:hover) and (pointer:fine){.ds-light:hover{background:var(--inverse)}}"
+    },
+    {
       "name": "Dark action",
       "kind": "button",
       "refersTo": "button-dark",
-      "description": "Filled action retained by the fallback hero.",
-      "html": "<a class=\"ds-dark\" href=\"#lookbook\">Explore the looks</a>",
-      "css": ".ds-dark{display:inline-flex;align-items:center;min-height:48px;padding:15px 22px;background:var(--ink);color:var(--paper);text-decoration:none;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-dark:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-dark:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-dark:hover{background:var(--accent-hover)}}@media(prefers-reduced-motion:reduce){.ds-dark:active{transform:none}}"
+      "description": "Evergreen action for a pale field.",
+      "html": "<button class=\"ds-button ds-dark\">Review the plan <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 20px;min-height:48px;border:1px solid transparent;border-radius:0;font:600 var(--text-sm)/1.4 var(--font-body);cursor:pointer;transition:transform var(--release-duration) var(--ease-out);touch-action:manipulation}.ds-button:active:not(:focus-visible){transform:translateY(1px);transition-duration:var(--press-duration)}.ds-button:focus-visible{outline:2px solid var(--focus,var(--highlight));outline-offset:5px;transition:none}.ds-button:disabled{opacity:.55;cursor:default}.ds-arrow{flex-shrink:0}.ds-button:disabled:active{transform:none}@media(prefers-reduced-motion:reduce){.ds-button{transition:none!important}.ds-button:active{transform:none}}.ds-dark{--focus:var(--accent);background:var(--accent);color:var(--paper)}@media(hover:hover) and (pointer:fine){.ds-dark:hover{background:var(--accent-hover)}}"
     },
     {
-      "name": "Text button",
+      "name": "Text action",
       "kind": "button",
-      "refersTo": "text-button",
-      "description": "Underlined actions for outfit shopping and plan utilities.",
-      "html": "<button class=\"ds-text-button\">Print plan</button>",
-      "css": ".ds-text-button{background:none;color:var(--ink);border:0;border-bottom:1px solid;padding:10px 0;min-height:44px;white-space:nowrap;cursor:pointer;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-text-button:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-text-button:active:not(:disabled){transform:scale(.98)}.ds-text-button:disabled{color:var(--muted);opacity:1;cursor:default}@media(prefers-reduced-motion:reduce){.ds-text-button:active{transform:none}}"
+      "refersTo": "text-action",
+      "description": "Open underlined action with a full touch target.",
+      "html": "<button class=\"ds-text\">Copy outfit list <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 0;border:0;background:transparent;color:var(--ink);text-align:left;text-decoration:underline;text-underline-offset:5px;font:600 var(--text-sm)/1.4 var(--font-body);cursor:pointer}.ds-text:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-text:active:not(:focus-visible){transform:translateY(1px)}@media(hover:hover) and (pointer:fine){.ds-text:hover{text-decoration-thickness:2px}}@media(prefers-reduced-motion:reduce){.ds-text:active{transform:none}}"
     },
     {
-      "name": "Text link",
-      "kind": "button",
-      "refersTo": "text-link",
-      "description": "Evergreen editorial action with an underline.",
-      "html": "<a class=\"ds-link\" href=\"#shop\">Shop the look</a>",
-      "css": ".ds-link{display:inline-block;padding:7px 0;min-height:36px;color:var(--accent);text-decoration:none;border-bottom:1px solid;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-link:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}@media(hover:hover) and (pointer:fine){.ds-link:hover{color:var(--accent-hover)}}"
-    },
-    {
-      "name": "Shopping filter",
-      "kind": "chip",
-      "refersTo": "shopping-filter",
-      "description": "A square text filter with a persistent selected edge.",
-      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">Everyone</button>",
-      "css": ".ds-filter{background:none;color:var(--ink);border:1px solid transparent;padding:10px 13px;min-height:44px;cursor:pointer;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-filter[aria-pressed=\"true\"]{border-color:var(--accent)}.ds-filter:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-filter:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-filter:hover{border-color:var(--control-border)}}@media(max-width:1100px){.ds-filter{padding:9px}}@media(max-width:700px){.ds-filter{padding:8px 10px}}@media(prefers-reduced-motion:reduce){.ds-filter:active{transform:none}}"
-    },
-    {
-      "name": "Status select",
+      "name": "Checklist select",
       "kind": "input",
       "refersTo": "status-select",
-      "description": "Native shopping status control.",
-      "html": "<select class=\"ds-select\" aria-label=\"Item status\"><option>Need</option><option>Already own</option><option>Purchased</option></select>",
-      "css": ".ds-select{width:100%;min-height:44px;padding:8px 24px 8px 10px;border:1px solid var(--control-border);border-radius:0;background:var(--paper);color:var(--ink);font:400 var(--type-body)/var(--leading-ui) var(--sans)}.ds-select:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}"
+      "description": "Native status control on paper; accessible label identifies the piece.",
+      "html": "<label class=\"ds-status\"><span class=\"ds-status-label\">Status: outfit piece</span><select aria-label=\"Status: outfit piece\"><option>Need to buy</option><option>Already own</option><option>Purchased</option></select></label>",
+      "css": ".ds-status{display:block;color:var(--ink);font-family:var(--font-body)}.ds-status-label{display:block;font-size:var(--text-sm);margin-bottom:8px}.ds-status select{width:100%;min-height:44px;padding:9px 28px 9px 12px;border:1px solid var(--control-border);border-radius:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--font-body);color-scheme:light}.ds-status select:focus-visible{outline:2px solid var(--accent);outline-offset:5px}"
     },
     {
-      "name": "Concept navigation",
+      "name": "Wardrobe chapters",
       "kind": "nav",
       "refersTo": "concept-navigation",
-      "description": "Immediate concept choice with a persistent ink underline.",
-      "html": "<nav class=\"ds-concepts\" aria-label=\"Wardrobe concepts\"><button class=\"ds-concept\" aria-pressed=\"true\">Hill Country Heritage<small class=\"ds-concept-small\">THE RECOMMENDED LOOK</small></button><button class=\"ds-concept\" aria-pressed=\"false\">Texas Organic</button></nav>",
-      "css": ".ds-concepts{display:flex;border-block:1px solid var(--line)}.ds-concept{flex:1;min-width:0;min-height:56px;padding:12px 16px;text-align:left;background:none;color:var(--ink);border:0;font:var(--display-weight) 1.25rem/var(--leading-title) var(--serif);cursor:pointer;transition:none}.ds-concept[aria-pressed=\"true\"]{box-shadow:inset 0 -2px var(--ink)}.ds-concept-small{display:block;margin-top:7px;font:600 var(--type-micro)/1.3 var(--sans);letter-spacing:.02em}.ds-concept:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-concept:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-concept:not([aria-pressed=\"true\"]):hover{background:var(--hover)}}@media(max-width:700px){.ds-concept{font-size:1.125rem}}@media(max-width:600px){.ds-concept{padding:12px 8px}}@media(prefers-reduced-motion:reduce){.ds-concept:active{transform:none}}"
+      "description": "Text-state sample of the visible concept rail; real page adds approved thumbnails on desktop.",
+      "html": "<nav class=\"ds-chapters\" aria-label=\"Wardrobe concept\"><button aria-pressed=\"true\"><span>Hill Country Heritage<small>Recommended</small></span></button><button aria-pressed=\"false\">Texas Organic</button><button aria-pressed=\"false\">Austin Editorial</button></nav>",
+      "css": ".ds-chapters{background:var(--stage);padding:20px;display:flex;flex-direction:column;font-family:var(--font-body)}.ds-chapters button{display:flex;align-items:center;min-height:94px;padding:16px 0;border:0;border-bottom:1px solid #667467;background:none;text-align:left;color:var(--inverse-muted);font:400 1rem/1.35 var(--font-body);cursor:pointer}.ds-chapters button[aria-pressed=\"true\"]{color:var(--inverse);box-shadow:inset 0 -2px var(--highlight)}.ds-chapters small{display:block;margin-top:5px;color:var(--highlight);font-size:.75rem;line-height:1.4}.ds-chapters button:focus-visible{outline:2px solid var(--highlight);outline-offset:5px}.ds-chapters button:active:not(:focus-visible){transform:translateY(1px)}@media(hover:hover) and (pointer:fine){.ds-chapters button:hover{background:var(--stage-surface);color:var(--inverse)}}@media(prefers-reduced-motion:reduce){.ds-chapters button:active{transform:none}}"
     },
     {
-      "name": "Palette choice",
+      "name": "Palette selection",
       "kind": "chip",
       "refersTo": "palette-choice",
-      "description": "Named content swatch with a contrasting selected dot; sample uses a neutral interface value only.",
-      "html": "<button class=\"ds-palette\" aria-pressed=\"true\"><span class=\"ds-swatch\"><span class=\"ds-dot\"></span></span>Color name</button>",
-      "css": ".ds-palette{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;min-height:44px;background:none;color:var(--ink);border:0;padding:0;text-align:left;font:400 var(--type-detail)/var(--leading-ui) var(--sans);cursor:pointer}.ds-swatch{display:flex;width:48px;height:40px;align-items:center;justify-content:center;background:var(--surface)}.ds-dot{width:10px;height:10px;border:2px solid var(--ink);border-radius:50%;outline:1px solid var(--paper);background:var(--paper)}.ds-palette:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}.ds-palette:active{transform:scale(.98)}@media(prefers-reduced-motion:reduce){.ds-palette:active{transform:none}}"
+      "description": "Circular content swatch with an explicit selected outline and center dot; neutral preview only.",
+      "html": "<div class=\"ds-palette\"><button aria-label=\"Example palette color\" aria-pressed=\"true\"><span class=\"ds-swatch\"><span class=\"ds-dot\"></span></span></button><span>Color name</span></div>",
+      "css": ".ds-palette{display:flex;gap:16px;align-items:center;background:var(--stage);color:var(--inverse-muted);padding:16px;font:400 var(--text-xs)/1.5 var(--font-body)}.ds-palette button{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:7px 2px;border:0;background:none;cursor:pointer}.ds-swatch{display:flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;background:var(--surface);border:1px solid #f7f5ee66}.ds-palette [aria-pressed=\"true\"] .ds-swatch{outline:1px solid var(--inverse);outline-offset:4px}.ds-dot{width:7px;height:7px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);box-shadow:0 0 0 1px var(--paper)}.ds-palette button:focus-visible{outline:2px solid var(--highlight);outline-offset:5px}.ds-palette button:active:not(:focus-visible){transform:translateY(1px)}@media(hover:hover) and (pointer:fine){.ds-palette button:hover .ds-swatch{outline:1px solid var(--inverse);outline-offset:3px}}@media(prefers-reduced-motion:reduce){.ds-palette button:active{transform:none}}"
     },
     {
-      "name": "Product text stack",
+      "name": "Shopping filters",
+      "kind": "nav",
+      "refersTo": "shopping-filter",
+      "description": "Open filter labels carry selected state through weight and a bottom rule.",
+      "html": "<div class=\"ds-filters\" aria-label=\"Filter shopping list\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Buy first</button><button aria-pressed=\"false\">Mom</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:4px 18px;color:var(--ink);background:var(--surface);padding:16px}.ds-filters button{min-height:44px;padding:10px 0;background:transparent;border:0;border-bottom:2px solid transparent;color:inherit;font:400 var(--text-sm)/1.6 var(--font-body);cursor:pointer}.ds-filters [aria-pressed=\"true\"]{border-color:var(--accent);font-weight:600}.ds-filters button:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-filters button:active:not(:focus-visible){transform:translateY(1px)}@media(hover:hover) and (pointer:fine){.ds-filters button:hover{border-bottom-color:var(--control-border)}}@media(prefers-reduced-motion:reduce){.ds-filters button:active{transform:none}}"
+    },
+    {
+      "name": "Open product row",
       "kind": "card",
-      "refersTo": "product",
-      "description": "Open product text hierarchy; no invented image or price.",
-      "html": "<article class=\"ds-product\"><h3 class=\"ds-product-title\">Outfit piece</h3><p class=\"ds-product-name\">Retailer description</p><small class=\"ds-product-status\">Unverified reference</small><a class=\"ds-product-link\" href=\"#shop\">View shopping details</a></article>",
-      "css": ".ds-product{display:flex;flex-direction:column;min-width:0;color:var(--ink);font-family:var(--sans)}.ds-product-title{margin:5px 0 0;font:var(--display-weight) var(--type-product)/var(--leading-title) var(--serif);letter-spacing:-.01em;text-wrap:balance}.ds-product-name{margin:7px 0 0;min-height:35px;color:var(--muted);font:400 var(--type-detail)/var(--leading-ui) var(--sans)}.ds-product-status{color:var(--muted);font:400 var(--type-caption)/var(--leading-body) var(--sans)}.ds-product-link{display:flex;min-height:44px;border-top:1px solid var(--line);padding:13px 0 5px;color:var(--accent);text-decoration:none;font:600 var(--type-ui)/var(--leading-ui) var(--sans);}.ds-product-link:focus-visible{outline:2px solid var(--accent);outline-offset:5px;}@media(hover:hover) and (pointer:fine){.ds-product-link:hover{color:var(--accent-hover)}}@media(max-width:700px){.ds-product-title{font-size:var(--type-member)}.ds-product-name{min-height:50px}}"
+      "refersTo": "product-row",
+      "description": "Product text hierarchy and disclosure, without fabricated price or product image.",
+      "html": "<article class=\"ds-product\"><div class=\"ds-product-meta\">Family member · Retailer</div><h3>Outfit piece</h3><p>Retailer product description</p><small>Reference information · verify with retailer</small><details><summary>Why this piece &amp; verification</summary><p>Stylist rationale and dated verification limits appear here.</p></details></article>",
+      "css": ".ds-product{padding:30px 0;border-top:1px solid var(--control-border);background:var(--surface);color:var(--ink);font:400 var(--text-sm)/1.5 var(--font-body)}.ds-product-meta{margin-bottom:8px;color:var(--muted)}.ds-product h3{margin:0;font:500 1.7rem/1.2 var(--font-display);letter-spacing:-.025em;text-wrap:balance}.ds-product p{margin:10px 0;color:var(--muted)}.ds-product small{font-size:var(--text-xs);color:var(--muted)}.ds-product details{margin-top:12px}.ds-product summary{min-height:44px;padding:12px 0;cursor:pointer}.ds-product summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-product details[open]>summary{margin-bottom:14px}@media(max-width:600px){.ds-product{padding:26px 0}.ds-product h3{font-size:1.5rem}}"
+    },
+    {
+      "name": "Verification disclosure",
+      "kind": "custom",
+      "refersTo": "disclosure",
+      "description": "Ruled native disclosure keeps lengthy verification close to the shopping task.",
+      "html": "<details class=\"ds-disclosure\"><summary>About prices, availability &amp; illustrations</summary><p>Reference prices and observed prices retain their dates and verification limits. Styling illustrations are labeled as illustrations.</p></details>",
+      "css": ".ds-disclosure{border-top:1px solid var(--control-border);border-bottom:1px solid var(--control-border);color:var(--ink);background:var(--surface);font:400 var(--text-sm)/1.6 var(--font-body)}.ds-disclosure summary{min-height:44px;padding:12px 0;cursor:pointer}.ds-disclosure summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.ds-disclosure summary::marker{font-size:.75em}.ds-disclosure[open]>summary{margin-bottom:14px}.ds-disclosure p{max-width:75ch;color:var(--muted);padding-bottom:18px;margin:0}"
     }
   ],
   "narrative": {
-    "northStar": "Quiet editorial spread",
-    "overview": "The wardrobe studio pairs a quiet editorial spread with a catalog-style six-person outfit board. Warm paper, expressive serif titles, practical sans-serif details and restrained rules let the approved family imagery carry the visual richness. The five wardrobe concepts keep distinct clothing palettes within one consistent interface.\n\nThe original composition studies established the editorial family view and direct individual selection. Surrounding garments from the rejected stylist-board study competed with faces and required too much rearrangement on phones. Preserve the complete family image without cropping; separately framed individual studies are not a scale chart.",
+    "northStar": "The wardrobe gallery",
+    "overview": "The family photograph is the exhibit. Deep olive walls, warm white lettering and high-contrast Bodoni titles create an intimate photographic gallery; restrained Source Sans 3 keeps choosing and shopping clear. The clothing supplies the changing color story while the interface remains consistent across all five wardrobes.\n\nThe gallery opens into a rich wine recommendation and pale shopping paper. Open rows, ruled boundaries and square native controls make practical information feel like part of the editorial composition. Complete family framing and honest image captions are essential to that trust.",
     "keyCharacteristics": [
-      "Image-led editorial composition with open paper fields.",
-      "Substantial serif names and clear sans-serif shopping details.",
-      "Quiet boundaries, persistent selection and immediate concept switching."
+      "A dark photographic stage with a pale, open shopping ledger.",
+      "Expressive serif titles paired with clear sans-serif utility text.",
+      "Visible chapter choices, six individual studies and explicit selection states.",
+      "Immediate content changes with brief, purposeful press feedback."
     ],
-    "rules": [],
+    "rules": [
+      {
+        "name": "The Clothing Color Rule",
+        "body": "Keep interface colors stable; wardrobe swatches come from structured concept data and do not retheme controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Photograph Rule",
+        "body": "Preserve the complete family view at its original 3:2 ratio; individual study crops are separately framed comparisons, not a scale chart.",
+        "section": "layout"
+      },
+      {
+        "name": "The Open Ledger Rule",
+        "body": "Use typography, alignment and rules to organize shopping information; keep each product row open to its surrounding paper field.",
+        "section": "elevation"
+      }
+    ],
     "dos": [
-      "**Do** preserve the five concepts, six individualized outfits per concept, existing section order, responsive grids and image framing.",
-      "**Do** use the interface tokens independently from the wardrobe palette values in structured content.",
-      "**Do** label generated images as approximate AI wardrobe visualizations and preserve complete family framing.",
-      "**Do** keep concept switches immediate, selection persistent, visible keyboard focus and global reduced-motion support.",
-      "**Do** preserve shopping facts, verification limits, safe external-link attributes and accessible labels.",
-      "**Do** keep original photos and design mockups private; only the reviewed generated copies recorded in `content/published-assets.json` may be public."
+      "**Do** preserve five distinct concepts and six individualized outfits per concept while keeping one coherent interface.",
+      "**Do** separate interface tokens from clothing colors and keep complete family images uncropped.",
+      "**Do** use local Bodoni Moda and Source Sans 3, clear headings, readable shopping details and visible focus.",
+      "**Do** keep concept and member changes immediate, selection explicit, and reduced-motion behavior available.",
+      "**Do** retain accurate price-status labels, dated verification limits, accessible external-link names and safe new-tab attributes.",
+      "**Do** label generated studies as approximate AI wardrobe visualizations and garment drawings as styling illustrations.",
+      "**Do** keep original photos and design mockups private; only approved generated copies recorded in `content/published-assets.json` may be public."
     ],
     "donts": [
-      "**Don't** reintroduce Manrope or synthesize missing font weights/styles.",
-      "**Don't** use the subtle divider color as a substitute for a meaningful control boundary.",
-      "**Don't** indicate selection with color alone or crossfade family images into double-exposed faces.",
+      "**Don't** use faint dividers as the only boundary of an actionable field or indicate selection with color alone.",
+      "**Don't** add floating card shadows, enclosing product-card chrome or decorative animation to the flat editorial system.",
+      "**Don't** crossfade family images, distort their aspect ratio or suggest that generated imagery proves fit or exact likeness.",
+      "**Don't** fabricate live prices, availability, product imagery or purchase links.",
       "**Don't** import, embed, hotlink, log, commit or deploy private original photos or reference HTML containing them.",
-      "**Don't** publish new imagery without separate approval; an approved public website copy is public.",
-      "**Don't** push, create a repository or deploy without the user's explicit instruction and review of what will be public."
+      "**Don't** publish new imagery without separate approval; a public website makes approved copies public.",
+      "**Don't** push, create a repository or deploy without explicit instruction and review of what will be public."
     ]
   }
 }

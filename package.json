@@ -19,7 +19,7 @@
     "verify:privacy": "node scripts/verify-public.mjs"
   },
   "dependencies": {
-    "@fontsource/cormorant-garamond": "^5.2.0",
+    "@fontsource/bodoni-moda": "^5.3.0",
     "@fontsource/source-sans-3": "^5.3.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

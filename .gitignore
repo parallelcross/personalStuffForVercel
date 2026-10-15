@@ -19,3 +19,10 @@ playwright-report/
 .codex/
 # Original brief is retained locally; public content lives in sanitized JSON.
 CODEX_PROMPT.md
+
+# Local design exploration and review artifacts
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/review/
+.impeccable/surfaces/

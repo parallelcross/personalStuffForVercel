@@ -173,3 +173,34 @@ test("legacy checklist migration, closet tracking and corrupt storage recovery",
   await page.reload();
   await expect(page.locator(".budget strong")).toHaveText("$587.78");
 });
+
+test("narrow portrait selection reveals details without hijacking comparison navigation", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/?concept=heritage");
+  for (const name of ["Dad", "Mom"]) {
+    const portrait = page.getByRole("button", {
+      name: `View ${name} outfit`,
+      exact: true,
+    });
+    await expect(portrait).toHaveAttribute("aria-controls", "selected-outfit");
+    await portrait.focus();
+    await page.keyboard.press("Enter");
+    const heading = page.locator("#selected-outfit h3");
+    await expect(heading).toHaveText(name);
+    await expect(heading).toBeFocused();
+    await expect(heading).toBeInViewport();
+    await expect(
+      page.getByRole("button", { name: "Shop this outfit", exact: true }),
+    ).toBeInViewport();
+    await page.getByRole("link", { name: "Choose another person" }).click();
+    await expect(page.locator("#outfits")).toBeInViewport();
+  }
+  await page.locator(".compare-select select").selectOption("3");
+  await page.locator(".comparison").nth(1).getByRole("link").click();
+  await expect(page.locator(".concept-intro h1")).toHaveText("Texas Organic");
+  await expect(page.locator(".concept-intro h1")).toBeInViewport();
+  await expect(page.locator("#selected-outfit h3")).not.toBeFocused();
+});

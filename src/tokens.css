@@ -1,56 +1,35 @@
-/* Interface tokens. Wardrobe palette colors remain in content/wardrobe.json. */
 :root {
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Source Sans 3", Arial, sans-serif;
-  --display-weight: 500;
-  --paper: #faf8f3;
-  --surface: #f0ede5;
-  --ink: #282923;
-  --muted: #5e6259;
-  --accent: #384d40;
-  --accent-hover: #263a2d;
-  --control-border: #818579;
-  --line: #d3d1c7;
-  --inverse: #f7f4ec;
-  --inverse-muted: #d4ddd2;
-  --inverse-border: #849086;
-  --attention: #7b4133;
-  --hover: #eef1e9;
-  --selected: #e6ece4;
-}
-
-:root {
-  font-family: var(--sans);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: var(--leading-body);
-  --type-display: clamp(2.625rem, 4.5vw, 4rem);
-  --type-section: clamp(2.625rem, 5.2vw, 4.5rem);
-  --type-title: 2rem;
-  --type-product: 1.625rem;
-  --type-member: 1.5rem;
-  --type-deck: 1.5rem;
-  --type-body: 1rem;
-  --type-ui: 0.9375rem;
-  --type-detail: 0.875rem;
-  --type-caption: 0.8125rem;
-  --type-label: 0.75rem;
-  --type-micro: 0.6875rem;
-  --type-seal: 3rem;
-  --type-seal-ampersand: 1.5rem;
-  --leading-heading: 1.08;
-  --leading-title: 1.2;
-  --leading-body: 1.6;
-  --leading-ui: 1.45;
-  --tracking-heading: -0.02em;
-  --tracking-label: 0.08em;
-  --theme-bg: var(--paper);
-  color-scheme: light;
-}
-
-@media (max-width: 700px) {
-  :root {
-    --type-seal: 2rem;
-    --type-seal-ampersand: 1.125rem;
-  }
+  --paper: #f7f5ee;
+  --surface: #eae8df;
+  --ink: #252e27;
+  --muted: #5c645b;
+  --accent: #3b513f;
+  --accent-hover: #26392a;
+  --control-border: #797e73;
+  --line: #c7cabf;
+  --stage: #232b26;
+  --stage-surface: #2d3830;
+  --inverse: #f7f5ee;
+  --inverse-muted: #c5cec3;
+  --inverse-border: #899789;
+  --highlight: #e0e4bf;
+  --wine: #4c252d;
+  --attention: #80412f;
+  --hover: #e9ece2;
+  --selected: #e0e6d8;
+  --focus: var(--highlight);
+  --font-display: "Bodoni Moda", Didot, Georgia, serif;
+  --font-body: "Source Sans 3", Arial, sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --title: clamp(2.4rem, 3.5vw, 3.5rem);
+  --section-title: clamp(2.5rem, 4.2vw, 4.5rem);
+  --gutter: clamp(20px, 3.4vw, 64px);
+  --section-space: clamp(56px, 6.5vw, 104px);
+  --content-width: 1560px;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --press-duration: 160ms;
+  --release-duration: 100ms;
 }
