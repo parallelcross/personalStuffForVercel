@@ -23,13 +23,15 @@ test("private studio: five concepts, responsive imagery, privacy boundaries and 
       await page.goto(`/?concept=${id}`);
       await expect(page.locator(".concept-intro h1")).toHaveText(title);
       await expect(page.locator(".family-scene img")).toBeVisible();
-      expect(
-        await page
-          .locator(".family-scene img")
-          .evaluate(
-            (el: HTMLImageElement) => el.complete && el.naturalWidth > 0,
-          ),
-      ).toBe(true);
+      await expect
+        .poll(() =>
+          page
+            .locator(".family-scene img")
+            .evaluate(
+              (el: HTMLImageElement) => el.complete && el.naturalWidth > 0,
+            ),
+        )
+        .toBe(true);
       await expect(page.locator(".outfit-choice")).toHaveCount(6);
       expect(
         await page.evaluate(
